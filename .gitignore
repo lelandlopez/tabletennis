@@ -1,3 +1,9 @@
 *.log
 */Debug/*
+Debug/*
 */ps.txt
+*/csv/*.csv
+csv/*.csv
+*/predictions.csv
+*/test_before.csv
+*/test.csv
