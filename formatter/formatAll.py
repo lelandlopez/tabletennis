@@ -9,10 +9,13 @@ import sys
 import time
 import pickle
 sys.path.insert(1, './')
+from helpers import helpers
 from formatter import formatter
 
 start = time.time()
-df = pd.read_csv('./csv/static/matchDF.csv')
+
+df = helpers.createDF()
+
 lenargs = len(sys.argv)
 if  lenargs == 1:
     df = formatter(df)
