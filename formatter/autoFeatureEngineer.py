@@ -142,6 +142,12 @@ class autoFeatureEngineer:
             df[col] = df[col].astype(type)
         return df
 
+    def applyOnBoth(self, df, namesArr, func):
+        for i in namesArr:
+            df[i[0]] = df[i[1]].apply(func)
+        return df
+
+
     def cleanData(self):
         def clean():
             def dropDuplicateIds():

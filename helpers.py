@@ -17,4 +17,4 @@ class helpers:
         df1 = pd.read_csv('./csv/static/matchDF.csv')
         df = pd.read_csv('./csv/static/matchDF_1.csv')
         frames = [df, df1]
-        return pd.concat(frames)
+        return pd.concat(frames).reset_index()
