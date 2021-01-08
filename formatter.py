@@ -16,18 +16,12 @@ def formatter(df, save = False):
     from autoFeatureEngineer import autoFeatureEngineer
     afe = autoFeatureEngineer(save)
 
-    df = df[df['lScore'].str.isnumeric()].copy()
-
-    k = df.shape[0]
-    df = df[df['lGames'].str.len() > 2]
-    print('dropped: ', k-df.shape[0])
+    df = afe.dropBadGames(df)
     df = afe.dropBadSequencer(df, 'datetime')
     df = afe.formatSequencer(df, 'datetime')
 
     df.loc[df['lScore'] > df['rScore'], ['lWin', 'rWin']] = [True, False]
     df.loc[df['lScore'] < df['rScore'], ['lWin', 'rWin']] = [False, True]
-
-
 
     df = afe.applyOnBoth(df, 
             [['lGames', 'lGames'], ['rGames', 'rGames']], 
@@ -51,6 +45,11 @@ def formatter(df, save = False):
     df.loc[df['lScore'] < df['rScore'], 'toScore'] = df['rScore']
     df['toScore'] = df['toScore'].astype(float)
 
+    df = afe.applyOnBoth(df, 
+            [['lFirstGameW', 'lDiffGames'], ['rFirstGameW', 'rDiffGames']],
+            lambda x: x[0] > 0)
+
+    print(df[['lFirstGameW', 'lDiffGames', 'rFirstGameW', 'rDiffGames']])
 
     df = afe.split(df, ['Player', 'Score', 'Win', 'Games_len', 'DiffGamesSum'], ['id', 'datetime', 'toScore'])
 

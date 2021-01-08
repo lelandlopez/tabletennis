@@ -244,6 +244,12 @@ class autoFeatureEngineer:
             df.to_csv('./csv/afterSplit.csv', index=False)
         return df
 
+    @helpers.printTime
+    def dropBadGames(self, df):
+        df = df[df['lGames'].str.len() > 2]
+        return df
+
+
 
     def dropVariance():
         k = self.df.shape[1]

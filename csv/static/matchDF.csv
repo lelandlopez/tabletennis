@@ -29404,7 +29404,7 @@ Taranik E.,But N.,3,1,"['11', '4', '11', '11']","['8', '11', '7', '2']",02.01. 0
 Lesnaya Y.,Orobinskaya Y.,0,3,"['8', '10', '8']","['11', '12', '11']",02.01. 01:00,drC2EeId
 Orobinskaya Y.,But N.,0,3,"['9', '9', '7']","['11', '11', '11']",02.01. 01:30,fJmeFJId
 Lesnaya Y.,Taranik E.,3,1,"['11', '12', '11', '11']","['5', '14', '8', '8']",02.01. 02:00,Y9naEwY2
-<<<<<<< HEAD
+<<<<<<< HEAD,,,,,,,
 Tsvetkov V.,Matveyev I.,0,3,"['10', '2', '9']","['12', '11', '11']",03.01. 21:05,6FWtFoQK
 Kolmin A.,Vologzhanin V.,1,3,"['11', '8', '6', '8']","['9', '11', '11', '11']",03.01. 21:00,KbYYG7e8
 Gerasimov A.,Kharlakin O.,3,0,"['11', '11', '11']","['5', '6', '4']",03.01. 20:45,x4AP6NX0
@@ -30284,18 +30284,18 @@ Tregler T.,Vrablik J.,3,0,"['11', '12', '11']","['6', '10', '7']",04.01. 03:35,z
 Prokopcov D.,Zelinka J.,-,-,[],[],04.01. 03:45,IJs8yuxa
 Obeslo M.,Reitspies D.,1,3,"['12', '8', '9', '8']","['10', '11', '11', '11']",04.01. 04:30,dAtCzai5
 Seibert J.,Tymofieiev O.,2,3,"['11', '6', '11', '7', '4']","['9', '11', '7', '11', '11']",04.01. 02:15,joeFZI6B
-Tregler T.,Zelinka J.,-,-,[],[],04.01. 23:15,UyfJYxMH
+Tregler T.,Zelinka J.,2,3,"['11', '11', '9', '8', '8']","['6', '6', '11', '11', '11']",04.01. 23:30,UyfJYxMH
 Prokopcov D.,Seibert J.,-,-,[],[],04.01. 21:35,C0qOXdyO
-Obeslo M.,Tymofieiev O.,-,-,[],[],04.01. 22:10,Q3mSWGjU
-Vrablik J.,Reitspies D.,-,-,[],[],04.01. 22:45,2POXi0Mu
+Obeslo M.,Tymofieiev O.,3,0,"['11', '11', '11']","['5', '6', '9']",04.01. 22:10,Q3mSWGjU
+Vrablik J.,Reitspies D.,3,2,"['9', '11', '6', '11', '11']","['11', '7', '11', '9', '6']",04.01. 22:45,2POXi0Mu
 Tregler T.,Seibert J.,3,1,"['7', '11', '11', '11']","['11', '3', '9', '5']",04.01. 23:15,tGNyiKyn
-Prokopcov D.,Obeslo M.,-,-,[],[],04.01. 23:45,biItjvih
-Vrablik J.,Zelinka J.,-,-,[],[],05.01. 00:15,xrHpkb6b
-Tymofieiev O.,Reitspies D.,-,-,[],[],05.01. 00:45,W4GllIL4
-Tregler T.,Obeslo M.,-,-,[],[],05.01. 01:15,ruKhmxyB
-Vrablik J.,Seibert J.,-,-,[],[],05.01. 01:45,Q39cndjH
+Prokopcov D.,Obeslo M.,2,3,"['7', '11', '11', '5', '9']","['11', '9', '4', '11', '11']",05.01. 00:00,biItjvih
+Vrablik J.,Zelinka J.,3,1,"['11', '8', '11', '11']","['8', '11', '8', '9']",05.01. 01:55,xrHpkb6b
+Tymofieiev O.,Reitspies D.,0,3,"['1', '7', '7']","['11', '11', '11']",05.01. 01:05,W4GllIL4
+Tregler T.,Obeslo M.,3,1,"['9', '11', '11', '11']","['11', '7', '5', '7']",05.01. 01:25,ruKhmxyB
+Vrablik J.,Seibert J.,3,0,"['11', '11', '11']","['5', '3', '5']",05.01. 00:45,Q39cndjH
 Zelinka J.,Reitspies D.,-,-,[],[],05.01. 02:15,2TWQUTKq
-Prokopcov D.,Tymofieiev O.,-,-,[],[],05.01. 02:45,W2yVTmzj
+Prokopcov D.,Tymofieiev O.,3,2,"['11', '11', '5', '9', '13']","['9', '4', '11', '11', '11']",05.01. 02:55,W2yVTmzj
 Averyanov A.,Grabskiy A.,1,3,"['11', '6', '10', '2']","['9', '11', '12', '11']",03.01. 21:15,nPU00izl
 Makarov V.,Vedmid S.,0,3,"['10', '4', '10']","['12', '11', '12']",03.01. 21:00,0zHVvT0s
 Oplachko A.,Moroz K.,3,0,"['11', '11', '11']","['7', '9', '2']",03.01. 21:00,lEKYbTzG
@@ -30723,18 +30723,18 @@ Lebed A.,Taranik E.,3,2,"['6', '11', '13', '10', '11']","['11', '4', '11', '12',
 Rafikova D.,Orobinskaya Y.,1,3,"['11', '10', '13', '10']","['13', '12', '11', '12']",04.01. 08:45,bJjH9AVi
 Bulatova V.,But N.,0,3,"['4', '6', '4']","['11', '11', '11']",04.01. 09:15,4WLH7l04
 Orobinskaya Y.,Zaytseva V.,3,1,"['11', '10', '11', '11']","['7', '12', '8', '4']",04.01. 09:15,QuND8Upb
-Henninger M.,Wenger N.,-,-,[],[],05.01. 21:30,KUGJN9da
-Cheaib D.,Chtchetinine E.,-,-,[],[],05.01. 22:10,YXKNMTB5
-Muhlbach H.,Muhlbach C.,-,-,[],[],05.01. 22:50,SfKRLmRB
-Huzjak J.,Qiu L.,-,-,[],[],05.01. 23:30,6oJVK7tI
-Henninger M.,Cheaib D.,-,-,[],[],06.01. 00:10,nczTJReO
-Muhlbach H.,Chtchetinine E.,-,-,[],[],06.01. 00:50,QmZWIoBU
-Huzjak J.,Muhlbach C.,-,-,[],[],06.01. 01:30,29AxvVtt
-Qiu L.,Wenger N.,-,-,[],[],06.01. 02:10,GCEtwkdn
-Henninger M.,Muhlbach H.,-,-,[],[],06.01. 02:50,by4ox9Bh
-Cheaib D.,Wenger N.,-,-,[],[],06.01. 03:30,xS2kyTQb
-Huzjak J.,Chtchetinine E.,-,-,[],[],06.01. 04:10,617gzmt5
-=======
+Henninger M.,Wenger N.,3,1,"['11', '9', '11', '11']","['5', '11', '5', '9']",05.01. 21:30,KUGJN9da
+Cheaib D.,Chtchetinine E.,3,2,"['11', '9', '9', '11', '11']","['6', '11', '11', '5', '2']",05.01. 22:10,YXKNMTB5
+Muhlbach H.,Muhlbach C.,3,2,"['9', '11', '8', '11', '11']","['11', '9', '11', '8', '4']",05.01. 22:50,SfKRLmRB
+Huzjak J.,Qiu L.,3,1,"['11', '11', '7', '11']","['7', '9', '11', '3']",05.01. 23:30,6oJVK7tI
+Henninger M.,Cheaib D.,0,3,"['10', '7', '8']","['12', '11', '11']",06.01. 00:10,nczTJReO
+Muhlbach H.,Chtchetinine E.,0,3,"['7', '4', '6']","['11', '11', '11']",06.01. 00:50,QmZWIoBU
+Huzjak J.,Muhlbach C.,3,0,"['11', '11', '11']","['3', '9', '3']",06.01. 01:30,29AxvVtt
+Qiu L.,Wenger N.,3,1,"['11', '9', '11', '11']","['3', '11', '3', '8']",06.01. 02:10,GCEtwkdn
+Henninger M.,Muhlbach H.,0,3,"['8', '8', '14']","['11', '11', '16']",06.01. 02:50,by4ox9Bh
+Cheaib D.,Wenger N.,3,1,"['8', '11', '11', '11']","['11', '3', '7', '6']",06.01. 03:30,xS2kyTQb
+Huzjak J.,Chtchetinine E.,1,3,"['15', '11', '4', '9']","['17', '8', '11', '11']",06.01. 04:10,617gzmt5
+=======,,,,,,,
 Havir,Liber,-,-,[],[],14.01. 07:00,GGxUgxC1
 Hodon,Prag,-,-,[],[],17.01. 05:00FRO,SfpHdvSr
 Hradec Kralo,Havlickuv Br,-,-,[],[],17.01. 05:00FRO,MHqLebsk
@@ -30770,7 +30770,7 @@ Qiu L.,Wenger N.,3,1,"['11', '9', '11', '11']","['3', '11', '3', '8']",06.01. 02
 Henninger M.,Muhlbach H.,0,3,"['8', '8', '14']","['11', '11', '16']",06.01. 02:50,by4ox9Bh
 Cheaib D.,Wenger N.,3,1,"['8', '11', '11', '11']","['11', '3', '7', '6']",06.01. 03:30,xS2kyTQb
 Huzjak J.,Chtchetinine E.,1,3,"['15', '11', '4', '9']","['17', '8', '11', '11']",06.01. 04:10,617gzmt5
->>>>>>> master
+>>>>>>> master,,,,,,,
 Qiu L.,Muhlbach C.,-,-,[],[],06.01. 21:30,ph6cZ6eB
 Cheaib D.,Muhlbach H.,-,-,[],[],06.01. 22:10,SGe2YQAH
 Muhlbach C.,Wenger N.,-,-,[],[],06.01. 22:50,Q1E5XpQN
@@ -30788,8 +30788,8 @@ Huzjak J.,Wenger N.,-,-,[],[],07.01. 23:30,bJAFurIp
 Muhlbach H.,Qiu L.,-,-,[],[],08.01. 00:10,CMEJv2Xj
 Cheaib D.,Muhlbach C.,-,-,[],[],08.01. 00:50,QP213oAi
 Henninger M.,Chtchetinine E.,-,-,[],[],08.01. 01:30,4G1525Pc
-<<<<<<< HEAD
-=======
+<<<<<<< HEAD,,,,,,,
+=======,,,,,,,
 Karpovkin G.,Anisimov E.,0,3,"['6', '11', '7']","['11', '13', '11']",05.01. 22:15,OpWrLOlh
 Belugin O.,Duka A.,3,1,"['11', '11', '5', '11']","['6', '6', '11', '8']",05.01. 21:45,69yvM4Zo
 Savinskiy A.,Doncenko A.,3,2,"['11', '8', '12', '7', '11']","['5', '11', '10', '11', '7']",05.01. 21:45,8YXfIMYA
@@ -30902,7 +30902,7 @@ Sirotkin A.,Troyanov Y.,1,3,"['11', '5', '11', '10']","['9', '11', '13', '12']",
 Rachkov V.,Malahov K.,3,2,"['13', '2', '11', '4', '11']","['11', '11', '9', '11', '3']",04.01. 22:45,8lCu0ARm
 Sergeevich I.,Vorozheykin A.,3,0,"['11', '13', '11']","['8', '11', '4']",04.01. 22:45,QspOyepM
 Minchenkov I.,Bochkarev A.,1,3,"['13', '10', '11', '9']","['15', '12', '7', '11']",04.01. 22:30,QPMz1jCs
->>>>>>> master
+>>>>>>> master,,,,,,,
 Lisov A.,Gribkov A.,3,1,"['9', '11', '11', '11']","['11', '8', '4', '8']",04.01. 21:20,AgOl4GOj
 Poletaev I.,Tolmachev I.,3,0,"['11', '11', '11']","['9', '8', '8']",04.01. 21:15,MkRyQcoA
 Merezhko A.,Bogomolov A.,3,1,"['11', '9', '11', '16']","['9', '11', '8', '14']",04.01. 21:00,Uy44PQfa
@@ -30927,11 +30927,11 @@ Putilovsky V.,Zhurba N.,0,3,"['9', '9', '1']","['11', '11', '11']",04.01. 16:00,
 Ivanov Va.,Korogodsky I.,3,0,"['11', '11', '11']","['9', '5', '5']",04.01. 15:45,4I29PUlM
 Kharchenko E.,Evlakhin D.,2,3,"['6', '11', '6', '11', '5']","['11', '7', '11', '4', '11']",04.01. 15:45,QT4xJSRk
 Serebrennikov A.,Pravednov A.,3,0,"['11', '11', '13']","['7', '5', '11']",04.01. 15:30,dha1RjK9
-<<<<<<< HEAD
+<<<<<<< HEAD,,,,,,,
 Putilovsky V.,Serebrennikov A.,3,0,"['14', '12', '11']","['12', '10', '7']",04.01. 15:00,hMD3DBrL
 Ogay S.,Serebrennikov A.,0,3,"['9', '3', '11']","['11', '11', '13']",04.01. 13:50,EVEaEiTE
 Serebrennikov A.,Pravednov A.,3,2,"['11', '3', '11', '8', '11']","['4', '11', '5', '11', '6']",04.01. 12:00,K8FeFXD8
-=======
+=======,,,,,,,
 Evlakhin D.,Abelmasov I.,2,3,"['11', '8', '10', '11', '9']","['8', '11', '12', '8', '11']",04.01. 15:15,IRD7G6u3
 Korogodsky I.,Girevenkov A.,0,3,"['7', '6', '3']","['11', '11', '11']",04.01. 15:15,je0wUP92
 Putilovsky V.,Serebrennikov A.,3,0,"['14', '12', '11']","['12', '10', '7']",04.01. 15:00,hMD3DBrL
@@ -30961,7 +30961,7 @@ Kharchenko E.,Sukharnikov N.,1,3,"['8', '8', '11', '9']","['11', '11', '4', '11'
 Pravednov A.,Ogay S.,3,2,"['14', '12', '8', '8', '11']","['12', '10', '11', '11', '5']",04.01. 11:00,b3Iam8BG
 Abelmasov I.,Shirshov V.,3,0,"['11', '11', '11']","['8', '9', '6']",04.01. 10:45,8EDFi2o5
 Girevenkov A.,Ivanov Va.,2,3,"['14', '11', '4', '4', '5']","['12', '8', '11', '11', '11']",04.01. 10:45,MHHJjM0B
->>>>>>> master
+>>>>>>> master,,,,,,,
 Serebrennikov A.,Zhurba N.,1,3,"['7', '11', '11', '6']","['11', '6', '13', '11']",04.01. 10:35,MNdhGDb2
 Kolesnikov D.,Yanshaev A.,3,0,"['11', '11', '11']","['8', '8', '8']",04.01. 10:15,8AuVgZ4E
 Troyanov Y.,Merkushin Y.,3,1,"['7', '11', '11', '11']","['11', '4', '5', '5']",04.01. 10:15,t4mqWVC7
@@ -30969,8 +30969,8 @@ Minkov M.,Balakin D.,2,3,"['11', '2', '11', '10', '12']","['7', '11', '7', '12',
 Gribkov A.,Nikulin S.,1,3,"['11', '9', '9', '11']","['6', '11', '11', '13']",04.01. 09:45,UJtRfFk8
 Korogodsky I.,Afanasiyev A.,3,0,"['11', '11', '11']","['9', '5', '7']",04.01. 09:45,2DluXBc1
 Chernov V.,Kasatkin V.,0,3,"['9', '11', '8']","['11', '13', '11']",04.01. 09:35,nwtnfrac
-<<<<<<< HEAD
-=======
+<<<<<<< HEAD,,,,,,,
+=======,,,,,,,
 Merkushin Y.,Troyanov Y.,0,3,"['10', '8', '2']","['12', '11', '11']",04.01. 09:15,EFdbqvgo
 Yanshaev A.,Nikulin S.,3,1,"['11', '8', '11', '11']","['9', '11', '6', '4']",04.01. 09:15,KCJelldA
 Balakin D.,Minkov M.,1,3,"['11', '11', '7', '9']","['13', '6', '11', '11']",04.01. 09:00,6Hqukh7i
@@ -30989,95 +30989,95 @@ Chernov V.,Minkov M.,1,3,"['11', '1', '10', '6']","['8', '11', '12', '11']",04.0
 Afanasiyev A.,Merkushin Y.,2,3,"['11', '7', '8', '11', '10']","['8', '11', '11', '4', '12']",04.01. 06:45,IBXammfJ
 Kolesnikov D.,Yanshaev A.,3,1,"['11', '9', '11', '13']","['9', '11', '9', '11']",04.01. 06:45,ImNvhWdo
 Kasatkin V.,Balakin D.,3,1,"['2', '11', '11', '11']","['11', '7', '7', '2']",04.01. 06:30,E1cZe6Jr
->>>>>>> master
+>>>>>>> master,,,,,,,
 Karpovkin G.,Simonov K.,2,3,"['8', '11', '11', '6', '6']","['11', '6', '7', '11', '11']",04.01. 06:15,0reE0qfA
 Kharchenko E.,Novikov I.,3,1,"['8', '11', '11', '11']","['11', '6', '9', '5']",04.01. 06:15,4EMoryvq
 Sadkov A.,Tikhnenko D.,2,3,"['6', '11', '5', '16', '9']","['11', '7', '11', '14', '11']",04.01. 06:00,phlTain2
 Anisimov E.,Vorozheykin A.,3,0,"['11', '11', '11']","['8', '9', '9']",04.01. 05:45,MidA1Pv4
 Korneev D.,Evlakhin D.,3,1,"['11', '9', '11', '11']","['9', '11', '4', '8']",04.01. 05:45,f5fIa39G
 Yakovlev A.,Kulikov S.,0,3,"['6', '11', '5']","['11', '13', '11']",04.01. 05:30,n7VP0XWe
-<<<<<<< HEAD
+<<<<<<< HEAD,,,,,,,
 Andreev S.,Suslov A.,1,3,"['4', '5', '11', '8']","['11', '11', '4', '11']",04.01. 02:05,QXjkTurD
 Muslikov S.,Vologzhanin V.,3,2,"['10', '11', '10', '11', '11']","['12', '7', '12', '8', '5']",03.01. 22:00,Usi9b6lL
-Minchenkov I.,Bochkarev A.,-,-,[],[],04.01. 22:30,QPMz1jCs
-Rachkov V.,Malahov K.,-,-,[],[],04.01. 22:45,8lCu0ARm
-Sergeevich I.,Vorozheykin A.,-,-,[],[],04.01. 22:45,QspOyepM
-Sirotkin A.,Troyanov Y.,-,-,[],[],04.01. 23:00,GCQuPH0G
-Kolmin A.,Pashkov N.,-,-,[],[],04.01. 23:15,KOFqaUtf
-Nemashkalo V.,Kasatkin V.,-,-,[],[],04.01. 23:15,MD9OGg8d
-Bochkarev A.,Sirotkin A.,-,-,[],[],04.01. 23:30,UFUqOyGM
-Malahov K.,Nemashkalo V.,-,-,[],[],04.01. 23:45,OIm7uwoc
-Vorozheykin A.,Kolmin A.,-,-,[],[],04.01. 23:45,4YrSzFaS
-Troyanov Y.,Minchenkov I.,-,-,[],[],05.01. 00:00,CvKlNeVS
-Kasatkin V.,Rachkov V.,-,-,[],[],05.01. 00:15,zgiBvc03
-Pashkov N.,Sergeevich I.,-,-,[],[],05.01. 00:15,MDVgWY7q
-Minchenkov I.,Sirotkin A.,-,-,[],[],05.01. 00:30,Em6GIFwp
-Rachkov V.,Nemashkalo V.,-,-,[],[],05.01. 00:45,UFjFwHF9
-Sergeevich I.,Kolmin A.,-,-,[],[],05.01. 00:45,zHZcVhNk
-Bochkarev A.,Troyanov Y.,-,-,[],[],05.01. 01:00,rNAKHZhj
-Malahov K.,Kasatkin V.,-,-,[],[],05.01. 01:15,86kJxyVF
-Vorozheykin A.,Pashkov N.,-,-,[],[],05.01. 01:15,IuP2UCxd
-Kim S. I.,Sverdlov M.,-,-,[],[],05.01. 02:30,EoFmbld0
-Churin K.,Petrov D.,-,-,[],[],05.01. 02:45,AD8ddSQC
-Chernjavskiy M.,Selkin V.,-,-,[],[],05.01. 03:00,hxEic8B6
-Evlakhin D.,Novikov I.,-,-,[],[],05.01. 03:15,p6J0kEEL
-Sverdlov M.,Chernjavskiy M.,-,-,[],[],05.01. 03:30,dWN6TWi2
-Petrov D.,Evlakhin D.,-,-,[],[],05.01. 03:45,vTI4lYTR
-Selkin V.,Kim S. I.,-,-,[],[],05.01. 04:00,AmRmhGU2
-Novikov I.,Churin K.,-,-,[],[],05.01. 04:15,tx5Wqhxq
-Kim S. I.,Chernjavskiy M.,-,-,[],[],05.01. 04:30,lvQiizp9
-Churin K.,Evlakhin D.,-,-,[],[],05.01. 04:45,bDayqCik
-Sverdlov M.,Selkin V.,-,-,[],[],05.01. 05:00,W2FdjfaF
-Petrov D.,Novikov I.,-,-,[],[],05.01. 05:15,x4burW6e
-Kasatkin V.,Balakin D.,-,-,[],[],05.01. 06:30,l470entJ
-Demic Y.,Kaplan S.,-,-,[],[],05.01. 06:45,0ryJDTem
-Kolesnikov D.,Andrusenko M.,-,-,[],[],05.01. 06:45,GAanJkYP
-Chernov V.,Vlasov A.,-,-,[],[],05.01. 07:00,27erKVIJ
-Fedorov V.,Pinkovskii P.,-,-,[],[],05.01. 07:15,88zNCmBg
-Tunitsyn D.,Bazilevskii V.,-,-,[],[],05.01. 07:15,MixFE9ts
-Balakin D.,Chernov V.,-,-,[],[],05.01. 07:30,WQcqsjM1
-Andrusenko M.,Tunitsyn D.,-,-,[],[],05.01. 07:45,faVymtAK
-Kaplan S.,Fedorov V.,-,-,[],[],05.01. 07:45,ncAGub2f
-Vlasov A.,Kasatkin V.,-,-,[],[],05.01. 08:00,r11mtAy8
-Bazilevskii V.,Kolesnikov D.,-,-,[],[],05.01. 08:15,YkUun0PQ
-Pinkovskii P.,Demic Y.,-,-,[],[],05.01. 08:15,Qm9KvIH0
-Kasatkin V.,Chernov V.,-,-,[],[],05.01. 08:30,nZRTl2u8
-Demic Y.,Fedorov V.,-,-,[],[],05.01. 08:45,6aQHwxX6
-Kolesnikov D.,Tunitsyn D.,-,-,[],[],05.01. 08:45,vX68sKXs
-Balakin D.,Vlasov A.,-,-,[],[],05.01. 09:00,QPQXmMfE
-Andrusenko M.,Bazilevskii V.,-,-,[],[],05.01. 09:15,hzBCtvml
-Kaplan S.,Pinkovskii P.,-,-,[],[],05.01. 09:15,pjPLxdnD
-Putilovsky V.,Pavlenko R.,-,-,[],[],05.01. 10:30,naZQB7Qa
-Shagarov O.,Safonov V.,-,-,[],[],05.01. 10:45,GvRs8PPO
-Sidorin V.,Shirshov V.,-,-,[],[],05.01. 10:45,rRSZ9oeC
-Myagkov S.,Serebrennikov A.,-,-,[],[],05.01. 11:00,UNOVARu6
-Churin K.,Migalov I.,-,-,[],[],05.01. 11:15,Esu0wTxO
-Merkushin Y.,Lyfenko N.,-,-,[],[],05.01. 11:15,hdAQW82P
-Pavlenko R.,Pravednov A.,-,-,[],[],05.01. 11:30,bgD31uPD
-Safonov V.,Marshalov V.,-,-,[],[],05.01. 11:45,840ZiSiH
-Shirshov V.,Suntsov A.,-,-,[],[],05.01. 11:45,hYw4xmhU
-Putilovsky V.,Myagkov S.,-,-,[],[],05.01. 12:00,AVuXqDgt
-Shagarov O.,Merkushin Y.,-,-,[],[],05.01. 12:15,neawin7N
-Sidorin V.,Churin K.,-,-,[],[],05.01. 12:15,h8AAcWNu
-Pravednov A.,Serebrennikov A.,-,-,[],[],05.01. 12:30,hfVyqX8n
-Marshalov V.,Lyfenko N.,-,-,[],[],05.01. 12:45,UJlrj6MT
-Suntsov A.,Migalov I.,-,-,[],[],05.01. 12:45,xlSw95AI
-Pavlenko R.,Myagkov S.,-,-,[],[],05.01. 13:00,WpUuriOh
-Safonov V.,Merkushin Y.,-,-,[],[],05.01. 13:15,6utAoQUp
-Shirshov V.,Churin K.,-,-,[],[],05.01. 13:15,Wb9Edjwn
-Serebrennikov A.,Putilovsky V.,-,-,[],[],05.01. 13:30,0KYqsBwa
-Lyfenko N.,Shagarov O.,-,-,[],[],05.01. 13:45,KrUiA97o
-Migalov I.,Sidorin V.,-,-,[],[],05.01. 13:45,QL8IeAhh
-Myagkov S.,Pravednov A.,-,-,[],[],05.01. 14:00,vBXmtVh5
-Churin K.,Suntsov A.,-,-,[],[],05.01. 14:15,vPCMfU7b
-Merkushin Y.,Marshalov V.,-,-,[],[],05.01. 14:15,bZSe9TMi
-Serebrennikov A.,Pavlenko R.,-,-,[],[],05.01. 14:30,MZMhuk8B
-Lyfenko N.,Safonov V.,-,-,[],[],05.01. 14:45,GAN08mxb
-Migalov I.,Shirshov V.,-,-,[],[],05.01. 14:45,Mm2RglN4
-Pravednov A.,Putilovsky V.,-,-,[],[],05.01. 15:00,KKudv9NH
-Marshalov V.,Shagarov O.,-,-,[],[],05.01. 15:15,f1M477i4
-Suntsov A.,Sidorin V.,-,-,[],[],05.01. 15:15,0v1Vh8xB
-=======
+Minchenkov I.,Bochkarev A.,1,3,"['13', '10', '11', '9']","['15', '12', '7', '11']",04.01. 22:30,QPMz1jCs
+Rachkov V.,Malahov K.,3,2,"['13', '2', '11', '4', '11']","['11', '11', '9', '11', '3']",04.01. 22:45,8lCu0ARm
+Sergeevich I.,Vorozheykin A.,3,0,"['11', '13', '11']","['8', '11', '4']",04.01. 22:45,QspOyepM
+Sirotkin A.,Troyanov Y.,1,3,"['11', '5', '11', '10']","['9', '11', '13', '12']",04.01. 23:00,GCQuPH0G
+Kolmin A.,Pashkov N.,1,3,"['8', '12', '7', '7']","['11', '10', '11', '11']",04.01. 23:15,KOFqaUtf
+Nemashkalo V.,Kasatkin V.,1,3,"['7', '9', '11', '10']","['11', '11', '9', '12']",04.01. 23:15,MD9OGg8d
+Bochkarev A.,Sirotkin A.,2,3,"['8', '7', '11', '13', '2']","['11', '11', '8', '11', '11']",04.01. 23:30,UFUqOyGM
+Malahov K.,Nemashkalo V.,3,0,"['13', '11', '11']","['11', '9', '1']",04.01. 23:45,OIm7uwoc
+Vorozheykin A.,Kolmin A.,3,1,"['4', '14', '11', '11']","['11', '12', '8', '8']",04.01. 23:45,4YrSzFaS
+Troyanov Y.,Minchenkov I.,3,2,"['5', '11', '11', '10', '11']","['11', '8', '7', '12', '7']",05.01. 00:00,CvKlNeVS
+Kasatkin V.,Rachkov V.,3,0,"['11', '11', '13']","['6', '8', '11']",05.01. 00:15,zgiBvc03
+Pashkov N.,Sergeevich I.,2,3,"['11', '8', '11', '4', '7']","['9', '11', '4', '11', '11']",05.01. 00:15,MDVgWY7q
+Minchenkov I.,Sirotkin A.,3,1,"['9', '11', '11', '13']","['11', '8', '9', '11']",05.01. 00:30,Em6GIFwp
+Rachkov V.,Nemashkalo V.,0,3,"['10', '11', '7']","['12', '13', '11']",05.01. 00:45,UFjFwHF9
+Sergeevich I.,Kolmin A.,0,3,"['9', '11', '3']","['11', '13', '11']",05.01. 00:45,zHZcVhNk
+Bochkarev A.,Troyanov Y.,1,3,"['11', '7', '10', '6']","['5', '11', '12', '11']",05.01. 01:00,rNAKHZhj
+Malahov K.,Kasatkin V.,1,3,"['1', '9', '11', '4']","['11', '11', '5', '11']",05.01. 01:15,86kJxyVF
+Vorozheykin A.,Pashkov N.,1,3,"['11', '4', '9', '8']","['6', '11', '11', '11']",05.01. 01:15,IuP2UCxd
+Kim S. I.,Sverdlov M.,3,2,"['13', '4', '11', '5', '11']","['11', '11', '5', '11', '8']",05.01. 02:30,EoFmbld0
+Churin K.,Petrov D.,2,3,"['7', '11', '10', '11', '6']","['11', '9', '12', '7', '11']",05.01. 02:45,AD8ddSQC
+Chernjavskiy M.,Selkin V.,3,1,"['8', '12', '11', '11']","['11', '10', '5', '6']",05.01. 03:00,hxEic8B6
+Evlakhin D.,Novikov I.,3,1,"['11', '7', '11', '13']","['8', '11', '7', '11']",05.01. 03:15,p6J0kEEL
+Sverdlov M.,Chernjavskiy M.,3,0,"['11', '11', '11']","['9', '5', '8']",05.01. 03:35,dWN6TWi2
+Petrov D.,Evlakhin D.,3,2,"['11', '11', '10', '9', '11']","['8', '8', '12', '11', '6']",05.01. 03:45,vTI4lYTR
+Selkin V.,Kim S. I.,3,0,"['12', '11', '11']","['10', '6', '5']",05.01. 04:00,AmRmhGU2
+Novikov I.,Churin K.,2,3,"['11', '6', '11', '9', '13']","['5', '11', '5', '11', '15']",05.01. 04:15,tx5Wqhxq
+Kim S. I.,Chernjavskiy M.,0,3,"['7', '7', '10']","['11', '11', '12']",05.01. 04:30,lvQiizp9
+Churin K.,Evlakhin D.,2,3,"['10', '11', '11', '3', '8']","['12', '9', '9', '11', '11']",05.01. 04:45,bDayqCik
+Sverdlov M.,Selkin V.,3,1,"['11', '11', '7', '11']","['8', '8', '11', '9']",05.01. 05:00,W2FdjfaF
+Petrov D.,Novikov I.,3,1,"['11', '6', '12', '11']","['7', '11', '10', '3']",05.01. 05:15,x4burW6e
+Kasatkin V.,Balakin D.,1,3,"['9', '5', '11', '3']","['11', '11', '8', '11']",05.01. 06:30,l470entJ
+Demic Y.,Kaplan S.,2,3,"['4', '11', '11', '11', '9']","['11', '2', '13', '8', '11']",05.01. 06:50,0ryJDTem
+Kolesnikov D.,Andrusenko M.,1,3,"['9', '4', '11', '8']","['11', '11', '6', '11']",05.01. 06:45,GAanJkYP
+Chernov V.,Vlasov A.,0,3,"['9', '3', '1']","['11', '11', '11']",05.01. 07:00,27erKVIJ
+Fedorov V.,Pinkovskii P.,2,3,"['11', '6', '13', '9', '8']","['5', '11', '11', '11', '11']",05.01. 07:15,88zNCmBg
+Tunitsyn D.,Bazilevskii V.,1,3,"['4', '12', '9', '7']","['11', '10', '11', '11']",05.01. 07:15,MixFE9ts
+Balakin D.,Chernov V.,3,0,"['11', '11', '11']","['9', '8', '2']",05.01. 07:30,WQcqsjM1
+Andrusenko M.,Tunitsyn D.,2,3,"['9', '9', '11', '11', '9']","['11', '11', '9', '6', '11']",05.01. 07:45,faVymtAK
+Kaplan S.,Fedorov V.,1,3,"['6', '6', '11', '7']","['11', '11', '3', '11']",05.01. 07:45,ncAGub2f
+Vlasov A.,Kasatkin V.,3,2,"['11', '11', '6', '11', '11']","['8', '7', '11', '13', '5']",05.01. 08:00,r11mtAy8
+Bazilevskii V.,Kolesnikov D.,0,3,"['8', '8', '9']","['11', '11', '11']",05.01. 08:15,YkUun0PQ
+Pinkovskii P.,Demic Y.,2,3,"['11', '15', '4', '9', '6']","['8', '13', '11', '11', '11']",05.01. 08:15,Qm9KvIH0
+Kasatkin V.,Chernov V.,3,0,"['11', '11', '11']","['8', '9', '5']",05.01. 08:30,nZRTl2u8
+Demic Y.,Fedorov V.,3,1,"['11', '11', '6', '11']","['6', '6', '11', '9']",05.01. 08:45,6aQHwxX6
+Kolesnikov D.,Tunitsyn D.,2,3,"['7', '13', '7', '11', '6']","['11', '11', '11', '7', '11']",05.01. 08:45,vX68sKXs
+Balakin D.,Vlasov A.,1,3,"['2', '11', '9', '8']","['11', '8', '11', '11']",05.01. 09:05,QPQXmMfE
+Andrusenko M.,Bazilevskii V.,3,1,"['11', '3', '11', '13']","['7', '11', '5', '11']",05.01. 09:20,hzBCtvml
+Kaplan S.,Pinkovskii P.,3,0,"['11', '11', '11']","['8', '4', '6']",05.01. 09:20,pjPLxdnD
+Putilovsky V.,Pavlenko R.,2,3,"['11', '4', '11', '8', '9']","['7', '11', '7', '11', '11']",05.01. 10:50,naZQB7Qa
+Shagarov O.,Safonov V.,2,3,"['8', '11', '12', '11', '7']","['11', '7', '10', '13', '11']",05.01. 10:50,GvRs8PPO
+Sidorin V.,Shirshov V.,3,1,"['11', '9', '11', '11']","['7', '11', '8', '6']",05.01. 10:45,rRSZ9oeC
+Myagkov S.,Serebrennikov A.,0,3,"['6', '6', '10']","['11', '11', '12']",05.01. 11:30,UNOVARu6
+Churin K.,Migalov I.,3,0,"['11', '11', '11']","['6', '4', '8']",05.01. 11:15,Esu0wTxO
+Merkushin Y.,Lyfenko N.,3,0,"['12', '11', '11']","['10', '9', '7']",05.01. 11:15,hdAQW82P
+Pavlenko R.,Pravednov A.,1,3,"['11', '11', '3', '3']","['5', '13', '11', '11']",05.01. 12:00,bgD31uPD
+Safonov V.,Marshalov V.,2,3,"['11', '8', '11', '8', '7']","['4', '11', '5', '11', '11']",05.01. 11:45,840ZiSiH
+Shirshov V.,Suntsov A.,1,3,"['8', '11', '9', '10']","['11', '7', '11', '12']",05.01. 11:45,hYw4xmhU
+Putilovsky V.,Myagkov S.,2,3,"['7', '6', '11', '11', '6']","['11', '11', '3', '6', '11']",05.01. 12:25,AVuXqDgt
+Shagarov O.,Merkushin Y.,1,3,"['8', '7', '11', '8']","['11', '11', '6', '11']",05.01. 12:15,neawin7N
+Sidorin V.,Churin K.,1,3,"['8', '11', '11', '6']","['11', '13', '2', '11']",05.01. 12:20,h8AAcWNu
+Pravednov A.,Serebrennikov A.,2,3,"['6', '11', '12', '5', '6']","['11', '8', '10', '11', '11']",05.01. 12:45,hfVyqX8n
+Marshalov V.,Lyfenko N.,3,1,"['11', '9', '11', '11']","['5', '11', '3', '5']",05.01. 12:45,UJlrj6MT
+Suntsov A.,Migalov I.,3,2,"['11', '6', '5', '13', '11']","['7', '11', '11', '11', '7']",05.01. 12:45,xlSw95AI
+Pavlenko R.,Myagkov S.,2,3,"['7', '11', '5', '11', '5']","['11', '2', '11', '6', '11']",05.01. 13:30,WpUuriOh
+Safonov V.,Merkushin Y.,2,3,"['4', '9', '11', '14', '8']","['11', '11', '6', '12', '11']",05.01. 13:15,6utAoQUp
+Shirshov V.,Churin K.,2,3,"['11', '9', '11', '7', '9']","['9', '11', '2', '11', '11']",05.01. 13:15,Wb9Edjwn
+Serebrennikov A.,Putilovsky V.,1,3,"['7', '9', '12', '8']","['11', '11', '10', '11']",05.01. 13:55,0KYqsBwa
+Lyfenko N.,Shagarov O.,3,2,"['9', '11', '7', '11', '11']","['11', '7', '11', '4', '7']",05.01. 13:45,KrUiA97o
+Migalov I.,Sidorin V.,3,0,"['11', '11', '11']","['5', '3', '4']",05.01. 13:45,QL8IeAhh
+Myagkov S.,Pravednov A.,3,1,"['11', '12', '6', '11']","['2', '10', '11', '6']",05.01. 14:30,vBXmtVh5
+Churin K.,Suntsov A.,3,2,"['11', '10', '11', '7', '11']","['6', '12', '5', '11', '9']",05.01. 14:15,vPCMfU7b
+Merkushin Y.,Marshalov V.,1,3,"['11', '3', '6', '9']","['8', '11', '11', '11']",05.01. 14:15,bZSe9TMi
+Serebrennikov A.,Pavlenko R.,0,3,"['7', '8', '4']","['11', '11', '11']",05.01. 15:00,MZMhuk8B
+Lyfenko N.,Safonov V.,2,3,"['12', '7', '7', '11', '7']","['10', '11', '11', '4', '11']",05.01. 14:45,GAN08mxb
+Migalov I.,Shirshov V.,3,0,"['11', '11', '11']","['6', '3', '3']",05.01. 14:50,Mm2RglN4
+Pravednov A.,Putilovsky V.,1,3,"['9', '5', '11', '10']","['11', '11', '6', '12']",05.01. 15:20,KKudv9NH
+Marshalov V.,Shagarov O.,2,3,"['4', '11', '11', '7', '10']","['11', '5', '8', '11', '12']",05.01. 15:15,f1M477i4
+Suntsov A.,Sidorin V.,3,1,"['11', '11', '5', '11']","['4', '7', '11', '8']",05.01. 15:15,0v1Vh8xB
+=======,,,,,,,
 Novikov I.,Kharchenko E.,1,3,"['4', '11', '9', '10']","['11', '5', '11', '12']",04.01. 05:15,n7T5zghb
 Simonov K.,Vorozheykin A.,3,1,"['11', '11', '8', '11']","['5', '8', '11', '7']",04.01. 05:15,GnLMWAiN
 Kulikov S.,Tikhnenko D.,1,3,"['9', '11', '9', '10']","['11', '6', '11', '12']",04.01. 05:00,KK5rJiNN
@@ -31227,11 +31227,11 @@ Turabekov T.,Ignatiev D.,3,1,"['11', '2', '11', '11']","['8', '11', '7', '9']",0
 Lyfenko N.,Petrochenko D.,3,0,"['11', '11', '11']","['6', '9', '3']",06.01. 14:15,OA98TiEa
 Novikov I.,Ramensky I.,3,1,"['11', '11', '6', '11']","['8', '7', '11', '6']",06.01. 14:15,A7qZEha6
 Ogay S.,Pavlenko R.,-,-,[],[],06.01. 14:30,h27rPxND
-Ivanov Va.,Safonov V.,-,-,[],[],06.01. 14:45,6ZbDSBT5
-Shirshov V.,Tarasenkov N.,-,-,[],[],06.01. 14:45,SrvvECEC
+Ivanov Va.,Safonov V.,3,0,"['11', '12', '11']","['8', '10', '8']",06.01. 14:45,6ZbDSBT5
+Shirshov V.,Tarasenkov N.,2,3,"['7', '11', '10', '11', '4']","['11', '7', '12', '8', '11']",06.01. 14:50,SrvvECEC
 Ignatiev D.,Zhurba N.,1,3,"['11', '5', '6', '12']","['8', '11', '11', '14']",06.01. 14:10,Wh6nOdxK
-Petrochenko D.,Merkushin Y.,-,-,[],[],06.01. 15:15,Kx3HRVrC
-Ramensky I.,Korneev D.,-,-,[],[],06.01. 15:15,6ZxrDWTI
+Petrochenko D.,Merkushin Y.,2,3,"['11', '11', '3', '14', '9']","['7', '8', '11', '16', '11']",06.01. 15:15,Kx3HRVrC
+Ramensky I.,Korneev D.,0,3,"['11', '9', '8']","['13', '11', '11']",06.01. 15:15,6ZxrDWTI
 Riadynskyi Y.,Kondratenko V.,3,0,"['11', '11', '11']","['2', '6', '7']",05.01. 22:20,fu9xsuJu
 Kononikhin V.,Ponomarenko O.,1,3,"['6', '3', '16', '9']","['11', '11', '14', '11']",05.01. 22:10,UwVhwx17
 Yemelianov T.,Peretiatko A.,3,1,"['12', '11', '12', '11']","['14', '8', '10', '6']",05.01. 22:05,h0hAZEHT
@@ -31383,7 +31383,7 @@ Sokoltsov Y.,Yushko R.,3,2,"['14', '11', '6', '8', '14']","['12', '7', '11', '11
 Kazmyrchuk V.,Lymarenko O.,3,2,"['8', '8', '11', '11', '11']","['11', '11', '6', '8', '8']",04.01. 21:50,6ZnDYqj3
 Karchevsky T.,Strilnyk Y.,3,1,"['11', '11', '8', '11']","['6', '6', '11', '7']",04.01. 21:45,6ySitpBe
 Hasan Y.,Buberenko B.,0,3,"['4', '9', '6']","['11', '11', '11']",04.01. 21:40,OGnZZmXO
->>>>>>> master
+>>>>>>> master,,,,,,,
 Sydorenko V.,Kovalchuk K.,0,3,"['4', '10', '10']","['11', '12', '12']",04.01. 21:35,WK2gEF4l
 Ratushniak V.,Kozachuk I.,3,0,"['11', '11', '11']","['5', '9', '5']",04.01. 21:30,jk9hNAmJ
 Ivanov E.,Melashenko O.,2,3,"['11', '3', '11', '11', '9']","['8', '11', '6', '13', '11']",04.01. 21:25,4WcMePAr
@@ -31402,8 +31402,8 @@ Karchevsky T.,Buberenko A.,3,0,"['11', '11', '11']","['3', '4', '8']",04.01. 20:
 Hasan Y.,Kolbasenko O.,3,2,"['15', '10', '9', '11', '11']","['13', '12', '11', '7', '3']",04.01. 20:10,x0pNxjm6
 Sydorenko V.,Bielokon Y.,3,2,"['9', '11', '6', '11', '11']","['11', '4', '11', '8', '5']",04.01. 20:05,Eyn950v7
 Ratushniak V.,Kalachevskyi D.,2,3,"['11', '8', '11', '3', '7']","['7', '11', '9', '11', '11']",04.01. 20:00,vTfRAtbd
-<<<<<<< HEAD
-=======
+<<<<<<< HEAD,,,,,,,
+=======,,,,,,,
 Shapoval A.,Balakiriev M.,3,1,"['11', '7', '11', '11']","['9', '11', '8', '9']",04.01. 19:25,UkFDyje7
 Khakhamidi P.,Kuleshov G.,3,0,"['11', '11', '11']","['5', '7', '7']",04.01. 18:55,zTF9xWu1
 Kyilo V.,Sokolov S.,3,0,"['11', '12', '11']","['3', '10', '9']",04.01. 18:25,MPB5wCQf
@@ -31547,143 +31547,143 @@ Zholubak M.,Mosiuk M.,3,0,"['11', '11', '11']","['2', '2', '9']",03.01. 22:00,tE
 Onykyienko V.,Sharanyuk O.,3,1,"['8', '11', '11', '11']","['11', '6', '9', '8']",03.01. 21:55,GltquGrG
 Bereza V.,Mytsyk A.,3,2,"['11', '5', '7', '18', '11']","['9', '11', '11', '16', '9']",03.01. 21:45,W0298x9U
 Pakhnyuk V.,Solomko S.,3,0,"['11', '11', '11']","['6', '9', '6']",03.01. 21:40,zceEBmJf
->>>>>>> master
+>>>>>>> master,,,,,,,
 Kostuk B.,Kolesnik Y.,0,3,"['3', '6', '7']","['11', '11', '11']",03.01. 21:35,v1rdmYyT
 Mosiuk M.,Korovychenko V.,2,3,"['11', '7', '11', '8', '8']","['1', '11', '8', '11', '11']",03.01. 21:30,4hT74WBR
 Tolstykh R.,Bielokon Y.,1,3,"['8', '11', '8', '2']","['11', '8', '11', '11']",03.01. 21:25,bDovtdT9
 Koshkodan I.,Kolesnykov V.,3,2,"['5', '7', '11', '11', '11']","['11', '11', '9', '5', '5']",03.01. 21:15,Icb59IgO
-<<<<<<< HEAD
-Sokoltsov Y.,Yushko R.,-,-,[],[],04.01. 21:55,0YuMWNKF
-Omelchuk I.,Zholubak M.,-,-,[],[],04.01. 22:00,4hcznfQJ
-Tolstykh R.,Bielokon Y.,-,-,[],[],04.01. 22:05,6VYfT3WD
-Sachuk S.,Kolbasenko O.,-,-,[],[],04.01. 22:10,O8hAbX9P
-Sklyarenko A.,Ishchuk V.,-,-,[],[],04.01. 22:15,pSQeu4Q1
-Martyniuk A.,Zaporozhets D.,-,-,[],[],04.01. 22:20,80dS48Wb
-Polysynskyi M.,Melashenko O.,-,-,[],[],04.01. 22:25,prFJfqQl
-Kozachuk I.,Kalachevskyi D.,-,-,[],[],04.01. 22:30,2wGwoEuQ
-Onykyienko V.,Danchenko V.,-,-,[],[],04.01. 22:35,KYxaSNoK
-Khripun R.,Mrykh M.,-,-,[],[],04.01. 22:40,QHvxfiIt
-Strilnyk Y.,Buberenko A.,-,-,[],[],04.01. 22:45,YsKw4m32
-Lymarenko O.,Dushak V.,-,-,[],[],04.01. 22:50,2NeW3So5
-Yushko R.,Reva Y.,-,-,[],[],04.01. 22:55,OYDNg3ue
-Ratushniak V.,Zholubak M.,-,-,[],[],04.01. 23:00,8Kh6tYms
-Sydorenko V.,Tolstykh R.,-,-,[],[],04.01. 23:05,2cS3Rs1Q
-Hasan Y.,Sachuk S.,-,-,[],[],04.01. 23:10,KvvtgBXn
-Karchevsky T.,Ishchuk V.,-,-,[],[],04.01. 23:15,CYIs37I8
-Melnykov V.,Kazmyrchuk V.,-,-,[],[],04.01. 23:20,GQaz3n1B
-Ivanov E.,Sokoltsov Y.,-,-,[],[],04.01. 23:25,IeDRhNf1
-Omelchuk I.,Kozachuk I.,-,-,[],[],04.01. 23:30,nBiAuh3m
-Danchenko V.,Kovalchuk K.,-,-,[],[],04.01. 23:35,46EVM19s
-Mrykh M.,Buberenko B.,-,-,[],[],04.01. 23:40,YsrphVng
-Sklyarenko A.,Strilnyk Y.,-,-,[],[],04.01. 23:45,lbxIX359
-Martyniuk A.,Lymarenko O.,-,-,[],[],04.01. 23:50,bkku26GH
-Polysynskyi M.,Yushko R.,-,-,[],[],04.01. 23:55,WbHVisA7
-Zholubak M.,Kalachevskyi D.,-,-,[],[],05.01. 00:00,GpdEvCIg
-Onykyienko V.,Bielokon Y.,-,-,[],[],05.01. 00:05,ldcbDZJf
-Khripun R.,Kolbasenko O.,-,-,[],[],05.01. 00:10,G6Xlik2a
-Ishchuk V.,Buberenko A.,-,-,[],[],05.01. 00:15,fc8n2RXE
-Kazmyrchuk V.,Zaporozhets D.,-,-,[],[],05.01. 00:20,zFC8pvop
-Sokoltsov Y.,Melashenko O.,-,-,[],[],05.01. 00:25,Y3eEGQn8
-Omelchuk I.,Ratushniak V.,-,-,[],[],05.01. 00:30,fyeIwWXa
-Sydorenko V.,Danchenko V.,-,-,[],[],05.01. 00:35,CWDZLLOm
-Hasan Y.,Mrykh M.,-,-,[],[],05.01. 00:40,fcWhj9H5
-Sklyarenko A.,Karchevsky T.,-,-,[],[],05.01. 00:45,80Cj1omL
-Melnykov V.,Dushak V.,-,-,[],[],05.01. 00:50,UkRBqb0j
-Ivanov E.,Reva Y.,-,-,[],[],05.01. 00:55,CffIFp2E
-Onykyienko V.,Tolstykh R.,-,-,[],[],05.01. 01:05,jNCwLuvf
-Khripun R.,Sachuk S.,-,-,[],[],05.01. 01:10,OWzckTWB
-Martyniuk A.,Kazmyrchuk V.,-,-,[],[],05.01. 01:20,8tQFrIFd
-Polysynskyi M.,Sokoltsov Y.,-,-,[],[],05.01. 01:25,tUbME4HK
-Kovalchuk K.,Bielokon Y.,-,-,[],[],05.01. 01:35,Yo2rKag0
-Buberenko B.,Kolbasenko O.,-,-,[],[],05.01. 01:40,2NZ0lmnI
-Melnykov V.,Lymarenko O.,-,-,[],[],05.01. 01:50,CEjdiAJd
-Ivanov E.,Yushko R.,-,-,[],[],05.01. 01:55,KKcQDOWQ
-Sydorenko V.,Onykyienko V.,-,-,[],[],05.01. 02:05,nk6nJJ86
-Hasan Y.,Khripun R.,-,-,[],[],05.01. 02:10,pnP5m71O
-Zaporozhets D.,Dushak V.,-,-,[],[],05.01. 02:20,QHf0jUY2
-Melashenko O.,Reva Y.,-,-,[],[],05.01. 02:25,Q1zg9rur
-Danchenko V.,Bielokon Y.,-,-,[],[],05.01. 02:35,tC5jIwOC
-Mrykh M.,Kolbasenko O.,-,-,[],[],05.01. 02:40,dMS9nRGU
-Martyniuk A.,Melnykov V.,-,-,[],[],05.01. 02:50,Kvf4kll9
-Polysynskyi M.,Ivanov E.,-,-,[],[],05.01. 02:55,Ongd82fl
-Tolstykh R.,Kovalchuk K.,-,-,[],[],05.01. 03:05,K24fHcwJ
-Sachuk S.,Buberenko B.,-,-,[],[],05.01. 03:10,Ys4F7Ant
-Kazmyrchuk V.,Dushak V.,-,-,[],[],05.01. 03:20,bVh8l83F
-Sokoltsov Y.,Reva Y.,-,-,[],[],05.01. 03:25,I9h07M9f
-Yakubov M.,Tsoi K.,-,-,[],[],05.01. 03:30,Snd2CgZ0
-Kuleshov G.,Khakhamidi P.,-,-,[],[],05.01. 03:35,GQNlhp5q
-Arevkin T.,Mytsyk A.,-,-,[],[],05.01. 03:40,xIwgZGtE
-Lymarenko O.,Zaporozhets D.,-,-,[],[],05.01. 03:50,G6mDmSIL
-Yushko R.,Melashenko O.,-,-,[],[],05.01. 03:55,d0i46tP0
-Podolian A.,Goncharuk O.,-,-,[],[],05.01. 04:00,M9e6BDl7
-Balakiriev M.,Shapoval A.,-,-,[],[],05.01. 04:05,fHMhi4Kk
-Skhabitskiy S.,Voitenko Y.,-,-,[],[],05.01. 04:10,G8xcYzdK
-Yakimenko S.,Semenets S.,-,-,[],[],05.01. 04:30,zDaAAX3D
-Scherbak A.,Kyilo V.,-,-,[],[],05.01. 04:35,lvMdjOZe
-Kolesnykov V.,Udovenko I.,-,-,[],[],05.01. 04:40,OYy1XfBQ
-Yakubov M.,Goncharuk O.,-,-,[],[],05.01. 05:00,fgC2PfVu
-Kuleshov G.,Shapoval A.,-,-,[],[],05.01. 05:05,nPv0krk2
-Arevkin T.,Voitenko Y.,-,-,[],[],05.01. 05:10,nN5pzCqb
-Semenets S.,Tsoi K.,-,-,[],[],05.01. 05:30,YqB6OEpn
-Kyilo V.,Khakhamidi P.,-,-,[],[],05.01. 05:35,lUIrERR2
-Udovenko I.,Mytsyk A.,-,-,[],[],05.01. 05:40,QD4lZVb4
-Vasiuk V.,Korniienko M.,-,-,[],[],05.01. 05:50,QsOSSEJs
-Podolian A.,Yakimenko S.,-,-,[],[],05.01. 06:00,S6AANYah
-Balakiriev M.,Scherbak A.,-,-,[],[],05.01. 06:05,SKHnDos9
-Skhabitskiy S.,Kolesnykov V.,-,-,[],[],05.01. 06:10,Kz4hYkEA
-Zholubak R.,Sliuzenko V.,-,-,[],[],05.01. 06:20,86DXRYYm
-Yakubov M.,Semenets S.,-,-,[],[],05.01. 06:30,vsEEMhFb
-Kuleshov G.,Kyilo V.,-,-,[],[],05.01. 06:35,dfMjC5dF
-Arevkin T.,Udovenko I.,-,-,[],[],05.01. 06:40,Yw8dX9TG
-Bochkovskyi V.,Voronenkov V.,-,-,[],[],05.01. 06:50,M9HyRhlf
-Yakimenko S.,Goncharuk O.,-,-,[],[],05.01. 07:00,M53JLCU4
-Scherbak A.,Shapoval A.,-,-,[],[],05.01. 07:05,YJqKfwRs
-Kolesnykov V.,Voitenko Y.,-,-,[],[],05.01. 07:10,G2c1WTrN
-Vasiuk V.,Sliuzenko V.,-,-,[],[],05.01. 07:20,U5NzoTcG
-Podolian A.,Tsoi K.,-,-,[],[],05.01. 07:30,0d2NKWqB
-Balakiriev M.,Khakhamidi P.,-,-,[],[],05.01. 07:35,GrZOgctl
-Skhabitskiy S.,Mytsyk A.,-,-,[],[],05.01. 07:40,fgd5VmbT
-Voronenkov V.,Korniienko M.,-,-,[],[],05.01. 07:50,8dMvpmDM
-Yakubov M.,Yakimenko S.,-,-,[],[],05.01. 08:00,UV6RJjaH
-Kuleshov G.,Scherbak A.,-,-,[],[],05.01. 08:05,UowThHef
-Arevkin T.,Kolesnykov V.,-,-,[],[],05.01. 08:10,nolXQ76p
-Zholubak R.,Bochkovskyi V.,-,-,[],[],05.01. 08:20,2JLrq7SS
-Podolian A.,Semenets S.,-,-,[],[],05.01. 08:30,8M5VIAEN
-Balakiriev M.,Kyilo V.,-,-,[],[],05.01. 08:35,O8xXiyB0
-Skhabitskiy S.,Udovenko I.,-,-,[],[],05.01. 08:40,QymyQRLj
-Vasiuk V.,Voronenkov V.,-,-,[],[],05.01. 08:50,vuDAvRzp
-Goncharuk O.,Tsoi K.,-,-,[],[],05.01. 09:00,joezIUTT
-Shapoval A.,Khakhamidi P.,-,-,[],[],05.01. 09:05,2ayyieQ6
-Voitenko Y.,Mytsyk A.,-,-,[],[],05.01. 09:10,StRJlBbi
-Bochkovskyi V.,Sliuzenko V.,-,-,[],[],05.01. 09:20,M32Fwojj
-Yakubov M.,Podolian A.,-,-,[],[],05.01. 09:30,S6n2Dlxo
-Kuleshov G.,Balakiriev M.,-,-,[],[],05.01. 09:35,rBhYkFuD
-Arevkin T.,Skhabitskiy S.,-,-,[],[],05.01. 09:40,vHUNmVDc
-Zholubak R.,Korniienko M.,-,-,[],[],05.01. 09:50,0f1Jx55d
-Yakimenko S.,Tsoi K.,-,-,[],[],05.01. 10:00,tAzpxYEo
-Scherbak A.,Khakhamidi P.,-,-,[],[],05.01. 10:05,M1ixkZfJ
-Kolesnykov V.,Mytsyk A.,-,-,[],[],05.01. 10:10,YwURnkT3
-Vasiuk V.,Bochkovskyi V.,-,-,[],[],05.01. 10:20,S0k11lrc
-Semenets S.,Goncharuk O.,-,-,[],[],05.01. 10:30,K0ZmyhUi
-Kyilo V.,Shapoval A.,-,-,[],[],05.01. 10:35,z5uKDIXJ
-Udovenko I.,Voitenko Y.,-,-,[],[],05.01. 10:40,CUSVo9rA
-Zholubak R.,Voronenkov V.,-,-,[],[],05.01. 10:50,6il508c3
-Sliuzenko V.,Korniienko M.,-,-,[],[],05.01. 11:20,lGwAaSC9
-Vasiuk V.,Zholubak R.,-,-,[],[],05.01. 11:50,2JsEbnSF
-Bochkovskyi V.,Korniienko M.,-,-,[],[],05.01. 12:20,dtsIc6sM
-Voronenkov V.,Sliuzenko V.,-,-,[],[],05.01. 12:50,zXuMdQdS
-Kyi Y.,Makarenko R.,-,-,[],[],05.01. 13:55,GWGuQC30
-Lykhytskyi O.,Sulim A.,-,-,[],[],05.01. 14:25,fNFqPWI6
-Mishchenko O.,Makarenko R.,-,-,[],[],05.01. 14:55,l8qOCxmQ
-Kyi Y.,Lykhytskyi O.,-,-,[],[],05.01. 15:25,fkMj8des
-Mishchenko O.,Sulim A.,-,-,[],[],05.01. 15:55,YuLf7GAm
-Lykhytskyi O.,Makarenko R.,-,-,[],[],05.01. 16:25,2FPb6zQg
-Kyi Y.,Sulim A.,-,-,[],[],05.01. 16:55,t6O25fu0
-Mishchenko O.,Lykhytskyi O.,-,-,[],[],05.01. 17:25,OUD74Ef6
-Sulim A.,Makarenko R.,-,-,[],[],05.01. 17:55,z5HB3Y9C
-Mishchenko O.,Kyi Y.,-,-,[],[],05.01. 18:25,URGF2hPI
+<<<<<<< HEAD,,,,,,,
+Sokoltsov Y.,Yushko R.,3,2,"['14', '11', '6', '8', '14']","['12', '7', '11', '11', '12']",04.01. 21:55,0YuMWNKF
+Omelchuk I.,Zholubak M.,3,1,"['11', '11', '9', '11']","['8', '7', '11', '7']",04.01. 22:00,4hcznfQJ
+Tolstykh R.,Bielokon Y.,3,1,"['14', '11', '7', '11']","['12', '9', '11', '9']",04.01. 22:05,6VYfT3WD
+Sachuk S.,Kolbasenko O.,3,1,"['12', '11', '7', '12']","['10', '6', '11', '10']",04.01. 22:10,O8hAbX9P
+Sklyarenko A.,Ishchuk V.,3,2,"['9', '7', '11', '14', '11']","['11', '11', '5', '12', '7']",04.01. 22:15,pSQeu4Q1
+Martyniuk A.,Zaporozhets D.,3,0,"['11', '14', '11']","['6', '12', '7']",04.01. 22:20,80dS48Wb
+Polysynskyi M.,Melashenko O.,3,1,"['10', '11', '13', '11']","['12', '4', '11', '3']",04.01. 22:25,prFJfqQl
+Kozachuk I.,Kalachevskyi D.,2,3,"['7', '11', '8', '11', '5']","['11', '8', '11', '9', '11']",04.01. 22:30,2wGwoEuQ
+Onykyienko V.,Danchenko V.,3,0,"['11', '11', '11']","['8', '4', '8']",04.01. 22:35,KYxaSNoK
+Khripun R.,Mrykh M.,1,3,"['9', '10', '11', '7']","['11', '12', '2', '11']",04.01. 22:40,QHvxfiIt
+Strilnyk Y.,Buberenko A.,0,3,"['10', '9', '7']","['12', '11', '11']",04.01. 22:45,YsKw4m32
+Lymarenko O.,Dushak V.,3,1,"['17', '11', '5', '11']","['15', '9', '11', '4']",04.01. 22:50,2NeW3So5
+Yushko R.,Reva Y.,2,3,"['10', '14', '8', '11', '9']","['12', '12', '11', '8', '11']",04.01. 22:55,OYDNg3ue
+Ratushniak V.,Zholubak M.,3,0,"['12', '13', '11']","['10', '11', '8']",04.01. 23:05,8Kh6tYms
+Sydorenko V.,Tolstykh R.,0,3,"['4', '9', '6']","['11', '11', '11']",04.01. 23:10,2cS3Rs1Q
+Hasan Y.,Sachuk S.,3,2,"['13', '11', '11', '6', '11']","['11', '13', '7', '11', '5']",04.01. 23:10,KvvtgBXn
+Karchevsky T.,Ishchuk V.,3,1,"['11', '4', '12', '11']","['7', '11', '10', '3']",04.01. 23:15,CYIs37I8
+Melnykov V.,Kazmyrchuk V.,3,2,"['13', '6', '3', '11', '11']","['11', '11', '11', '8', '9']",04.01. 23:20,GQaz3n1B
+Ivanov E.,Sokoltsov Y.,0,3,"['4', '10', '4']","['11', '12', '11']",04.01. 23:25,IeDRhNf1
+Omelchuk I.,Kozachuk I.,3,2,"['13', '11', '4', '10', '11']","['11', '5', '11', '12', '3']",04.01. 23:30,nBiAuh3m
+Danchenko V.,Kovalchuk K.,1,3,"['6', '11', '5', '5']","['11', '6', '11', '11']",04.01. 23:35,46EVM19s
+Mrykh M.,Buberenko B.,3,1,"['8', '11', '12', '11']","['11', '5', '10', '3']",04.01. 23:40,YsrphVng
+Sklyarenko A.,Strilnyk Y.,3,2,"['6', '11', '9', '11', '11']","['11', '9', '11', '7', '2']",04.01. 23:45,lbxIX359
+Martyniuk A.,Lymarenko O.,3,0,"['14', '11', '11']","['12', '7', '5']",04.01. 23:55,bkku26GH
+Polysynskyi M.,Yushko R.,3,2,"['11', '11', '8', '10', '11']","['9', '4', '11', '12', '8']",04.01. 23:55,WbHVisA7
+Zholubak M.,Kalachevskyi D.,1,3,"['6', '8', '11', '4']","['11', '11', '6', '11']",05.01. 00:00,GpdEvCIg
+Onykyienko V.,Bielokon Y.,3,0,"['11', '11', '11']","['6', '6', '8']",05.01. 00:05,ldcbDZJf
+Khripun R.,Kolbasenko O.,1,3,"['5', '11', '11', '3']","['11', '13', '9', '11']",05.01. 00:10,G6Xlik2a
+Ishchuk V.,Buberenko A.,1,3,"['13', '12', '9', '7']","['11', '14', '11', '11']",05.01. 00:15,fc8n2RXE
+Kazmyrchuk V.,Zaporozhets D.,1,3,"['11', '3', '8', '7']","['7', '11', '11', '11']",05.01. 00:20,zFC8pvop
+Sokoltsov Y.,Melashenko O.,3,1,"['11', '11', '6', '11']","['6', '8', '11', '9']",05.01. 00:25,Y3eEGQn8
+Omelchuk I.,Ratushniak V.,1,3,"['11', '6', '8', '7']","['6', '11', '11', '11']",05.01. 00:30,fyeIwWXa
+Sydorenko V.,Danchenko V.,1,3,"['7', '6', '11', '8']","['11', '11', '7', '11']",05.01. 00:35,CWDZLLOm
+Hasan Y.,Mrykh M.,3,1,"['7', '15', '12', '14']","['11', '13', '10', '12']",05.01. 00:40,fcWhj9H5
+Sklyarenko A.,Karchevsky T.,0,3,"['15', '8', '6']","['17', '11', '11']",05.01. 00:45,80Cj1omL
+Melnykov V.,Dushak V.,2,3,"['9', '9', '11', '20', '5']","['11', '11', '9', '18', '11']",05.01. 00:50,UkRBqb0j
+Ivanov E.,Reva Y.,3,0,"['11', '11', '11']","['5', '2', '6']",05.01. 00:55,CffIFp2E
+Onykyienko V.,Tolstykh R.,1,3,"['9', '5', '11', '10']","['11', '11', '9', '12']",05.01. 01:05,jNCwLuvf
+Khripun R.,Sachuk S.,3,0,"['11', '12', '11']","['8', '10', '7']",05.01. 01:10,OWzckTWB
+Martyniuk A.,Kazmyrchuk V.,3,0,"['11', '11', '12']","['2', '3', '10']",05.01. 01:30,8tQFrIFd
+Polysynskyi M.,Sokoltsov Y.,3,0,"['11', '11', '12']","['2', '8', '10']",05.01. 01:25,tUbME4HK
+Kovalchuk K.,Bielokon Y.,3,2,"['9', '11', '11', '7', '11']","['11', '8', '9', '11', '5']",05.01. 01:35,Yo2rKag0
+Buberenko B.,Kolbasenko O.,2,3,"['4', '11', '11', '9', '8']","['11', '4', '5', '11', '11']",05.01. 01:40,2NZ0lmnI
+Melnykov V.,Lymarenko O.,3,1,"['15', '9', '11', '11']","['13', '11', '6', '7']",05.01. 02:00,CEjdiAJd
+Ivanov E.,Yushko R.,0,3,"['8', '10', '4']","['11', '12', '11']",05.01. 01:55,KKcQDOWQ
+Sydorenko V.,Onykyienko V.,1,3,"['11', '7', '6', '9']","['9', '11', '11', '11']",05.01. 02:05,nk6nJJ86
+Hasan Y.,Khripun R.,2,3,"['4', '8', '11', '11', '3']","['11', '11', '2', '5', '11']",05.01. 02:10,pnP5m71O
+Zaporozhets D.,Dushak V.,0,3,"['5', '5', '8']","['11', '11', '11']",05.01. 02:20,QHf0jUY2
+Melashenko O.,Reva Y.,0,3,"['8', '7', '4']","['11', '11', '11']",05.01. 02:25,Q1zg9rur
+Danchenko V.,Bielokon Y.,0,3,"['5', '8', '6']","['11', '11', '11']",05.01. 02:35,tC5jIwOC
+Mrykh M.,Kolbasenko O.,2,3,"['4', '11', '9', '11', '7']","['11', '5', '11', '9', '11']",05.01. 02:40,dMS9nRGU
+Martyniuk A.,Melnykov V.,3,1,"['12', '11', '4', '13']","['10', '6', '11', '11']",05.01. 02:50,Kvf4kll9
+Polysynskyi M.,Ivanov E.,3,0,"['11', '11', '11']","['7', '6', '7']",05.01. 02:55,Ongd82fl
+Tolstykh R.,Kovalchuk K.,3,2,"['11', '11', '8', '8', '11']","['6', '5', '11', '11', '5']",05.01. 03:05,K24fHcwJ
+Sachuk S.,Buberenko B.,2,3,"['7', '12', '11', '11', '8']","['11', '10', '9', '13', '11']",05.01. 03:10,Ys4F7Ant
+Kazmyrchuk V.,Dushak V.,1,3,"['8', '8', '11', '11']","['11', '11', '9', '13']",05.01. 03:20,bVh8l83F
+Sokoltsov Y.,Reva Y.,3,0,"['11', '11', '11']","['4', '4', '7']",05.01. 03:25,I9h07M9f
+Yakubov M.,Tsoi K.,1,3,"['8', '8', '11', '6']","['11', '11', '7', '11']",05.01. 03:30,Snd2CgZ0
+Kuleshov G.,Khakhamidi P.,1,3,"['11', '10', '8', '9']","['9', '12', '11', '11']",05.01. 03:35,GQNlhp5q
+Arevkin T.,Mytsyk A.,3,1,"['9', '11', '11', '11']","['11', '6', '8', '9']",05.01. 03:40,xIwgZGtE
+Lymarenko O.,Zaporozhets D.,3,0,"['11', '11', '11']","['4', '9', '8']",05.01. 03:50,G6mDmSIL
+Yushko R.,Melashenko O.,1,3,"['6', '9', '11', '4']","['11', '11', '8', '11']",05.01. 03:55,d0i46tP0
+Podolian A.,Goncharuk O.,3,1,"['11', '11', '8', '11']","['7', '5', '11', '4']",05.01. 04:00,M9e6BDl7
+Balakiriev M.,Shapoval A.,3,0,"['11', '11', '11']","['4', '9', '5']",05.01. 04:05,fHMhi4Kk
+Skhabitskiy S.,Voitenko Y.,3,0,"['11', '11', '11']","['9', '8', '5']",05.01. 04:10,G8xcYzdK
+Yakimenko S.,Semenets S.,3,2,"['11', '8', '11', '7', '11']","['9', '11', '4', '11', '8']",05.01. 04:30,zDaAAX3D
+Scherbak A.,Kyilo V.,3,0,"['12', '11', '11']","['10', '5', '9']",05.01. 04:35,lvMdjOZe
+Kolesnykov V.,Udovenko I.,2,3,"['11', '11', '2', '10', '8']","['9', '2', '11', '12', '11']",05.01. 04:40,OYy1XfBQ
+Yakubov M.,Goncharuk O.,3,0,"['11', '13', '11']","['5', '11', '5']",05.01. 05:00,fgC2PfVu
+Kuleshov G.,Shapoval A.,3,0,"['11', '11', '11']","['8', '2', '6']",05.01. 05:05,nPv0krk2
+Arevkin T.,Voitenko Y.,2,3,"['13', '11', '10', '6', '5']","['11', '3', '12', '11', '11']",05.01. 05:10,nN5pzCqb
+Semenets S.,Tsoi K.,3,2,"['13', '12', '6', '6', '11']","['11', '10', '11', '11', '6']",05.01. 05:30,YqB6OEpn
+Kyilo V.,Khakhamidi P.,1,3,"['3', '11', '9', '6']","['11', '9', '11', '11']",05.01. 05:35,lUIrERR2
+Udovenko I.,Mytsyk A.,3,0,"['11', '11', '13']","['7', '7', '11']",05.01. 05:40,QD4lZVb4
+Vasiuk V.,Korniienko M.,3,1,"['11', '11', '10', '11']","['9', '6', '12', '8']",05.01. 05:50,QsOSSEJs
+Podolian A.,Yakimenko S.,3,0,"['11', '11', '14']","['7', '6', '12']",05.01. 06:00,S6AANYah
+Balakiriev M.,Scherbak A.,2,3,"['2', '11', '6', '12', '5']","['11', '7', '11', '10', '11']",05.01. 06:05,SKHnDos9
+Skhabitskiy S.,Kolesnykov V.,2,3,"['13', '11', '11', '7', '9']","['15', '8', '3', '11', '11']",05.01. 06:10,Kz4hYkEA
+Zholubak R.,Sliuzenko V.,1,3,"['9', '7', '15', '5']","['11', '11', '13', '11']",05.01. 06:20,86DXRYYm
+Yakubov M.,Semenets S.,0,3,"['9', '8', '8']","['11', '11', '11']",05.01. 06:30,vsEEMhFb
+Kuleshov G.,Kyilo V.,3,0,"['11', '11', '11']","['5', '6', '7']",05.01. 06:35,dfMjC5dF
+Arevkin T.,Udovenko I.,0,3,"['4', '6', '6']","['11', '11', '11']",05.01. 06:40,Yw8dX9TG
+Bochkovskyi V.,Voronenkov V.,3,1,"['12', '11', '8', '11']","['10', '9', '11', '6']",05.01. 06:50,M9HyRhlf
+Yakimenko S.,Goncharuk O.,2,3,"['11', '11', '11', '8', '10']","['5', '3', '13', '11', '12']",05.01. 07:00,M53JLCU4
+Scherbak A.,Shapoval A.,3,0,"['11', '11', '11']","['4', '9', '7']",05.01. 07:05,YJqKfwRs
+Kolesnykov V.,Voitenko Y.,3,1,"['8', '11', '11', '11']","['11', '7', '7', '7']",05.01. 07:10,G2c1WTrN
+Vasiuk V.,Sliuzenko V.,1,3,"['11', '3', '7', '9']","['8', '11', '11', '11']",05.01. 07:20,U5NzoTcG
+Podolian A.,Tsoi K.,1,3,"['7', '11', '8', '9']","['11', '5', '11', '11']",05.01. 07:30,0d2NKWqB
+Balakiriev M.,Khakhamidi P.,1,3,"['12', '8', '2', '9']","['10', '11', '11', '11']",05.01. 07:35,GrZOgctl
+Skhabitskiy S.,Mytsyk A.,3,0,"['12', '11', '11']","['10', '7', '8']",05.01. 07:40,fgd5VmbT
+Voronenkov V.,Korniienko M.,3,1,"['11', '11', '7', '11']","['5', '6', '11', '6']",05.01. 07:50,8dMvpmDM
+Yakubov M.,Yakimenko S.,2,3,"['13', '5', '11', '8', '8']","['11', '11', '6', '11', '11']",05.01. 08:00,UV6RJjaH
+Kuleshov G.,Scherbak A.,0,3,"['9', '8', '3']","['11', '11', '11']",05.01. 08:05,UowThHef
+Arevkin T.,Kolesnykov V.,3,2,"['11', '11', '10', '6', '15']","['6', '9', '12', '11', '13']",05.01. 08:10,nolXQ76p
+Zholubak R.,Bochkovskyi V.,1,3,"['7', '11', '7', '5']","['11', '6', '11', '11']",05.01. 08:20,2JLrq7SS
+Podolian A.,Semenets S.,3,1,"['11', '9', '13', '11']","['2', '11', '11', '6']",05.01. 08:30,8M5VIAEN
+Balakiriev M.,Kyilo V.,3,2,"['16', '7', '11', '8', '11']","['14', '11', '2', '11', '8']",05.01. 08:35,O8xXiyB0
+Skhabitskiy S.,Udovenko I.,1,3,"['11', '10', '7', '9']","['7', '12', '11', '11']",05.01. 08:45,QymyQRLj
+Vasiuk V.,Voronenkov V.,1,3,"['11', '9', '7', '7']","['7', '11', '11', '11']",05.01. 08:50,vuDAvRzp
+Goncharuk O.,Tsoi K.,3,0,"['11', '11', '11']","['7', '7', '4']",05.01. 09:00,joezIUTT
+Shapoval A.,Khakhamidi P.,3,2,"['11', '11', '8', '10', '11']","['6', '6', '11', '12', '6']",05.01. 09:10,2ayyieQ6
+Voitenko Y.,Mytsyk A.,3,1,"['7', '11', '11', '11']","['11', '2', '6', '7']",05.01. 09:10,StRJlBbi
+Bochkovskyi V.,Sliuzenko V.,3,1,"['11', '11', '11', '11']","['9', '13', '9', '8']",05.01. 09:25,M32Fwojj
+Yakubov M.,Podolian A.,1,3,"['6', '6', '11', '7']","['11', '11', '8', '11']",05.01. 09:30,S6n2Dlxo
+Kuleshov G.,Balakiriev M.,3,2,"['5', '11', '11', '7', '11']","['11', '7', '4', '11', '0']",05.01. 09:35,rBhYkFuD
+Arevkin T.,Skhabitskiy S.,2,3,"['10', '10', '11', '13', '7']","['12', '12', '2', '11', '11']",05.01. 09:40,vHUNmVDc
+Zholubak R.,Korniienko M.,-,-,[],[],05.01. 12:10Awrd,0f1Jx55d
+Yakimenko S.,Tsoi K.,3,0,"['11', '11', '11']","['8', '4', '5']",05.01. 10:00,tAzpxYEo
+Scherbak A.,Khakhamidi P.,3,0,"['11', '11', '11']","['7', '9', '7']",05.01. 10:05,M1ixkZfJ
+Kolesnykov V.,Mytsyk A.,3,2,"['9', '14', '12', '11', '11']","['11', '12', '14', '3', '9']",05.01. 10:10,YwURnkT3
+Vasiuk V.,Bochkovskyi V.,2,3,"['7', '11', '14', '9', '10']","['11', '7', '12', '11', '12']",05.01. 10:20,S0k11lrc
+Semenets S.,Goncharuk O.,3,1,"['10', '11', '11', '12']","['12', '9', '3', '10']",05.01. 10:30,K0ZmyhUi
+Kyilo V.,Shapoval A.,1,3,"['11', '11', '7', '13']","['13', '6', '11', '15']",05.01. 10:35,z5uKDIXJ
+Udovenko I.,Voitenko Y.,1,3,"['7', '6', '11', '9']","['11', '11', '6', '11']",05.01. 10:40,CUSVo9rA
+Zholubak R.,Voronenkov V.,3,1,"['11', '12', '3', '11']","['7', '10', '11', '9']",05.01. 10:50,6il508c3
+Sliuzenko V.,Korniienko M.,-,-,[],[],05.01. 12:10Awrd,lGwAaSC9
+Vasiuk V.,Zholubak R.,0,3,"['10', '5', '9']","['12', '11', '11']",05.01. 11:50,2JsEbnSF
+Bochkovskyi V.,Korniienko M.,-,-,[],[],05.01. 12:20Awrd,dtsIc6sM
+Voronenkov V.,Sliuzenko V.,1,3,"['7', '8', '11', '8']","['11', '11', '3', '11']",05.01. 12:50,zXuMdQdS
+Kyi Y.,Makarenko R.,3,1,"['11', '6', '11', '11']","['6', '11', '9', '8']",05.01. 13:55,GWGuQC30
+Lykhytskyi O.,Sulim A.,3,2,"['9', '11', '11', '7', '11']","['11', '6', '6', '11', '5']",05.01. 14:25,fNFqPWI6
+Mishchenko O.,Makarenko R.,3,1,"['9', '15', '11', '11']","['11', '13', '6', '8']",05.01. 14:55,l8qOCxmQ
+Kyi Y.,Lykhytskyi O.,3,1,"['11', '11', '6', '11']","['7', '6', '11', '6']",05.01. 15:25,fkMj8des
+Mishchenko O.,Sulim A.,3,2,"['6', '11', '11', '10', '11']","['11', '9', '7', '12', '5']",05.01. 16:00,YuLf7GAm
+Lykhytskyi O.,Makarenko R.,0,3,"['11', '9', '10']","['13', '11', '12']",05.01. 16:25,2FPb6zQg
+Kyi Y.,Sulim A.,3,0,"['14', '11', '11']","['12', '4', '3']",05.01. 16:55,t6O25fu0
+Mishchenko O.,Lykhytskyi O.,3,1,"['11', '11', '10', '11']","['5', '9', '12', '3']",05.01. 17:30,OUD74Ef6
+Sulim A.,Makarenko R.,1,3,"['6', '7', '11', '8']","['11', '11', '9', '11']",05.01. 17:55,z5HB3Y9C
+Mishchenko O.,Kyi Y.,3,0,"['11', '11', '12']","['4', '5', '10']",05.01. 18:25,URGF2hPI
 Gubarev I.,Rutskiy S.,3,0,"['14', '11', '11']","['12', '8', '4']",04.01. 21:35,nwCjsegk
-=======
+=======,,,,,,,
 Kuzmenko A.,Klymenko K.,0,3,"['7', '9', '13']","['11', '11', '15']",03.01. 21:10,hY59CT3l
 Marchuk M.,Paniotov A.,0,3,"['6', '7', '9']","['11', '11', '11']",03.01. 21:05,MPmilEMM
 Zholubak M.,Yurchenko K.,3,0,"['11', '11', '11']","['6', '8', '8']",03.01. 21:05,MTw35CdL
@@ -31821,15 +31821,15 @@ Bondarenko S.,Gomilko O.,2,3,"['11', '7', '12', '11', '12']","['6', '11', '14', 
 Solomko R.,Rehotun D.,3,1,"['11', '10', '11', '11']","['6', '12', '5', '9']",06.01. 13:30,hv1BQbH1
 Marchuk M.,Gomilko O.,3,2,"['11', '4', '9', '11', '11']","['9', '11', '11', '6', '9']",06.01. 14:00,Es3onn2S
 Rehotun D.,Liushnia O.,-,-,[],[],06.01. 15:00,WMkDs6Aq
-Bondarenko S.,Solomko R.,-,-,[],[],06.01. 14:55,pQgHtQPk
+Bondarenko S.,Solomko R.,2,3,"['5', '11', '9', '11', '6']","['11', '2', '11', '3', '11']",06.01. 14:55,pQgHtQPk
 Marchuk M.,Rehotun D.,-,-,[],[],06.01. 15:25,SlqMupud
-Solomko R.,Gomilko O.,-,-,[],[],06.01. 15:55,6urQv4f2
-Bondarenko S.,Liushnia O.,-,-,[],[],06.01. 16:25,Kdo73mX2
-Marchuk M.,Solomko R.,-,-,[],[],06.01. 16:55,bmpB27n9
+Solomko R.,Gomilko O.,3,1,"['14', '11', '8', '11']","['12', '6', '11', '4']",06.01. 15:55,6urQv4f2
+Bondarenko S.,Liushnia O.,3,2,"['11', '6', '9', '11', '12']","['3', '11', '11', '5', '10']",06.01. 16:25,Kdo73mX2
+Marchuk M.,Solomko R.,3,2,"['11', '4', '6', '11', '12']","['5', '11', '11', '7', '10']",06.01. 16:55,bmpB27n9
 Bondarenko S.,Rehotun D.,-,-,[],[],06.01. 17:25,tCZF1R1F
-Gomilko O.,Liushnia O.,-,-,[],[],06.01. 17:55,fFwK0oHL
-Marchuk M.,Bondarenko S.,-,-,[],[],06.01. 18:25,lxwOa5WR
-Solomko R.,Liushnia O.,-,-,[],[],06.01. 18:55,joPkePvq
+Gomilko O.,Liushnia O.,3,2,"['7', '10', '11', '12', '11']","['11', '12', '8', '10', '4']",06.01. 17:55,fFwK0oHL
+Marchuk M.,Bondarenko S.,1,3,"['3', '6', '13', '8']","['11', '11', '11', '11']",06.01. 18:30,lxwOa5WR
+Solomko R.,Liushnia O.,0,3,"['7', '7', '8']","['11', '11', '11']",06.01. 18:55,joPkePvq
 Rehotun D.,Gomilko O.,-,-,[],[],06.01. 19:25,8MJffqfk
 Kovalenko Vi.,Marushchak V.,0,3,"['4', '8', '7']","['11', '11', '11']",05.01. 22:15,hKn5yMUQ
 Kovalov O.,Shcherbak D.,3,2,"['9', '11', '11', '6', '11']","['11', '8', '8', '11', '8']",05.01. 22:10,f1bDwifc
@@ -32027,7 +32027,7 @@ Seluchenko O.,Egorov K.,3,2,"['11', '7', '11', '5', '11']","['0', '11', '4', '11
 Lebed D.,Kryshtal D.,3,1,"['13', '12', '11', '11']","['11', '14', '6', '9']",04.01. 21:40,hd4ib3Ej
 Gubarev I.,Rutskiy S.,3,0,"['14', '11', '11']","['12', '8', '4']",04.01. 21:35,nwCjsegk
 Derevynskyi D.,Pokydko S.,3,2,"['11', '3', '2', '11', '11']","['2', '11', '11', '8', '7']",04.01. 21:30,pC2yBWCg
->>>>>>> master
+>>>>>>> master,,,,,,,
 Rikun M.,Redkov A.,1,3,"['8', '11', '3', '11']","['11', '8', '11', '13']",04.01. 21:30,Yo8r3Ckd
 Zenyuk A.,Sidorak N.,3,2,"['11', '9', '12', '11', '11']","['5', '11', '14', '9', '4']",04.01. 21:25,xSvqmos8
 Guchok A.,Zdrobylko B.,3,2,"['15', '11', '7', '3', '11']","['13', '8', '11', '11', '9']",04.01. 21:20,GGAQFLbL
@@ -32088,31 +32088,31 @@ Ivanica Y.,Puhach P.,3,1,"['6', '11', '11', '11']","['11', '7', '6', '5']",04.01
 Kryvorotko Y.,Pirveli R.,3,0,"['11', '11', '11']","['6', '5', '9']",04.01. 09:10,d0snzHmD
 Hordii A.,Kovalchuk N.,3,2,"['11', '5', '11', '9', '11']","['9', '11', '5', '11', '7']",04.01. 09:05,2cKgxp8a
 Vahta D.,Nechyporuk V.,1,3,"['11', '5', '8', '15']","['8', '11', '11', '17']",04.01. 09:00,2sK5hmuE
-<<<<<<< HEAD
-=======
+<<<<<<< HEAD,,,,,,,
+=======,,,,,,,
 Tsyhanenko V.,Protopopov V.,3,0,"['11', '11', '11']","['5', '5', '3']",04.01. 08:55,Ac01L7uj
 Gergeliuk S.,Omitsynskyi Y.,3,1,"['8', '11', '11', '11']","['11', '8', '9', '6']",04.01. 08:50,OvXeIsTt
->>>>>>> master
+>>>>>>> master,,,,,,,
 Yanishevskiy I.,Brezickyi O.,3,1,"['11', '10', '12', '11']","['5', '12', '10', '7']",04.01. 08:45,QekuXlWJ
 Ivanica Y.,Yarovoi O.,1,3,"['4', '4', '11', '6']","['11', '11', '8', '11']",04.01. 08:40,OjBd85gJ
 Kryvorotko Y.,Rubtsov E.,2,3,"['11', '9', '11', '10', '9']","['8', '11', '6', '12', '11']",04.01. 08:35,rcwrycY6
 Plishilo V.,Mosuk N.,3,1,"['11', '11', '11', '11']","['13', '2', '7', '9']",04.01. 08:30,8zLkwQhg
 Nechyporuk V.,Kotik A.,1,3,"['4', '11', '8', '6']","['11', '9', '11', '11']",04.01. 08:25,lvWNT32D
-<<<<<<< HEAD
-=======
+<<<<<<< HEAD,,,,,,,
+=======,,,,,,,
 Miniailo Y.,Zapletniuk A.,3,2,"['11', '8', '11', '8', '11']","['6', '11', '7', '11', '7']",04.01. 08:20,Gz1cMmQq
 Myrza A.,Matviienko S.,3,1,"['8', '18', '11', '13']","['11', '16', '9', '11']",04.01. 08:15,rokTMNKP
->>>>>>> master
+>>>>>>> master,,,,,,,
 Brezickyi O.,Puhach P.,3,0,"['13', '14', '11']","['11', '12', '9']",04.01. 08:10,WAgA8soI
 Yanishevskiy I.,Yarovoi O.,1,3,"['7', '9', '11', '7']","['11', '11', '9', '11']",04.01. 08:05,fBJuCmff
 Kuzo L.,Pirveli R.,1,3,"['12', '11', '10', '8']","['14', '9', '12', '11']",04.01. 08:00,0YmwxwJ0
 Mosuk N.,Hordii A.,3,0,"['12', '12', '11']","['10', '10', '9']",04.01. 07:55,d0Hov6wm
 Vahta D.,Gritsienko N.,3,1,"['11', '11', '8', '11']","['8', '7', '11', '4']",04.01. 07:55,x4SJUqm7
-<<<<<<< HEAD
+<<<<<<< HEAD,,,,,,,
 Pirveli R.,Rubtsov E.,3,0,"['11', '11', '11']","['9', '8', '6']",04.01. 07:25,MskZxJ3f
 Plishilo V.,Danyliuk N.,0,3,"['6', '9', '6']","['11', '11', '11']",04.01. 07:20,EyStunOt
 Gritsienko N.,Nazrin A.,3,1,"['11', '11', '10', '11']","['1', '9', '12', '5']",04.01. 07:15,fuwFVPX0
-=======
+=======,,,,,,,
 Zapletniuk A.,Tsyhanenko V.,2,3,"['11', '8', '7', '11', '7']","['9', '11', '11', '8', '11']",04.01. 07:45,EREVQTHS
 Matviienko S.,Gergeliuk S.,2,3,"['11', '6', '11', '12', '7']","['9', '11', '13', '10', '11']",04.01. 07:40,4fjPN35J
 Pirveli R.,Rubtsov E.,3,0,"['11', '11', '11']","['9', '8', '6']",04.01. 07:25,MskZxJ3f
@@ -32120,56 +32120,56 @@ Plishilo V.,Danyliuk N.,0,3,"['6', '9', '6']","['11', '11', '11']",04.01. 07:20,
 Gritsienko N.,Nazrin A.,3,1,"['11', '11', '10', '11']","['1', '9', '12', '5']",04.01. 07:15,fuwFVPX0
 Miniailo Y.,Holoborodko Y.,3,2,"['7', '11', '7', '11', '11']","['11', '6', '11', '9', '6']",04.01. 07:10,YFcYR92M
 Myrza A.,Korbut N.,2,3,"['5', '8', '11', '11', '4']","['11', '11', '8', '7', '11']",04.01. 07:05,ji2saKSI
->>>>>>> master
+>>>>>>> master,,,,,,,
 Grebenyuk A.,Kohut B.,3,1,"['8', '13', '11', '12']","['11', '11', '5', '10']",04.01. 07:00,tSPIJvd3
 Tuzhilin A.,May I.,3,2,"['11', '8', '8', '11', '11']","['3', '11', '11', '6', '9']",04.01. 06:55,2yREKKtc
 Kryvorotko Y.,Kuzo L.,3,0,"['11', '11', '17']","['7', '8', '15']",04.01. 06:50,MJAjosdE
 Danyliuk N.,Kovalchuk N.,3,2,"['11', '11', '10', '2', '14']","['9', '9', '12', '11', '12']",04.01. 06:45,CSuFqSFP
 Vahta D.,Kotik A.,1,3,"['12', '7', '8', '4']","['10', '11', '11', '11']",04.01. 06:40,GlvBW5If
-<<<<<<< HEAD
-=======
+<<<<<<< HEAD,,,,,,,
+=======,,,,,,,
 Holoborodko Y.,Protopopov V.,3,0,"['11', '11', '13']","['5', '8', '11']",04.01. 06:35,fPbUSkmG
 Korbut N.,Omitsynskyi Y.,3,0,"['14', '14', '11']","['12', '12', '9']",04.01. 06:30,vHbw00DC
->>>>>>> master
+>>>>>>> master,,,,,,,
 May I.,Grebenyuk A.,1,3,"['11', '7', '8', '10']","['9', '11', '11', '12']",04.01. 06:25,QJsWey4d
 Tuzhilin A.,Limonov A.,3,0,"['11', '11', '11']","['4', '5', '4']",04.01. 06:20,nTrSdHlj
 Kuzo L.,Rubtsov E.,3,0,"['11', '12', '11']","['4', '10', '7']",04.01. 06:15,EHkVwall
 Plishilo V.,Hordii A.,0,3,"['6', '12', '7']","['11', '14', '11']",04.01. 06:10,OCnXKrwP
 Nechyporuk V.,Gritsienko N.,3,1,"['11', '11', '6', '11']","['9', '7', '11', '8']",04.01. 06:05,nFZ6Xo3l
-<<<<<<< HEAD
-=======
+<<<<<<< HEAD,,,,,,,
+=======,,,,,,,
 Miniailo Y.,Tsyhanenko V.,1,3,"['8', '11', '8', '6']","['11', '2', '11', '11']",04.01. 06:00,02aQTVX9
 Myrza A.,Gergeliuk S.,2,3,"['9', '9', '13', '11', '8']","['11', '11', '11', '9', '11']",04.01. 05:55,dh9Y0tb6
->>>>>>> master
+>>>>>>> master,,,,,,,
 Limonov A.,Kohut B.,0,3,"['6', '11', '10']","['11', '13', '12']",04.01. 05:50,h6qOccZq
 Tuzhilin A.,Grebenyuk A.,3,0,"['11', '11', '11']","['6', '1', '8']",04.01. 05:45,IDhd2wRS
 Kryvorotko Y.,Pirveli R.,0,3,"['5', '9', '7']","['11', '11', '11']",04.01. 05:40,zRjRvuZs
 Mosuk N.,Danyliuk N.,3,2,"['13', '7', '4', '11', '11']","['11', '11', '11', '8', '5']",04.01. 05:35,pMmTLONI
 Vahta D.,Nazrin A.,3,0,"['11', '11', '11']","['7', '5', '7']",04.01. 05:30,8Oz3YRmr
-<<<<<<< HEAD
-=======
+<<<<<<< HEAD,,,,,,,
+=======,,,,,,,
 Zapletniuk A.,Holoborodko Y.,3,1,"['7', '11', '12', '11']","['11', '8', '10', '8']",04.01. 05:25,naeMUBI3
 Matviienko S.,Korbut N.,3,1,"['5', '11', '15', '11']","['11', '9', '13', '5']",04.01. 05:20,I1AU1Mr0
->>>>>>> master
+>>>>>>> master,,,,,,,
 May I.,Limonov A.,3,1,"['11', '12', '10', '11']","['6', '10', '12', '6']",04.01. 05:15,zk3i3JBM
 Tuzhilin A.,Kohut B.,2,3,"['6', '11', '4', '11', '8']","['11', '5', '11', '8', '11']",04.01. 05:10,db4m4adG
 Kryvorotko Y.,Rubtsov E.,1,3,"['6', '8', '11', '4']","['11', '11', '3', '11']",04.01. 05:05,UqEbqLQQ
 Plishilo V.,Kovalchuk N.,3,1,"['11', '10', '11', '11']","['9', '12', '7', '8']",04.01. 05:00,2cbOM48C
 Gritsienko N.,Kotik A.,3,0,"['11', '11', '11']","['8', '7', '5']",04.01. 04:55,fHfSvUAE
-<<<<<<< HEAD
-=======
+<<<<<<< HEAD,,,,,,,
+=======,,,,,,,
 Miniailo Y.,Protopopov V.,3,0,"['11', '11', '12']","['8', '9', '10']",04.01. 04:55,4z6HVi3c
 Myrza A.,Omitsynskyi Y.,3,2,"['7', '11', '9', '12', '11']","['11', '6', '11', '10', '3']",04.01. 04:45,lS5Q22Tg
->>>>>>> master
+>>>>>>> master,,,,,,,
 Limonov A.,Grebenyuk A.,3,1,"['9', '11', '11', '13']","['11', '8', '8', '11']",04.01. 04:40,SOaq5usA
 May I.,Kohut B.,2,3,"['9', '8', '11', '11', '3']","['11', '11', '5', '9', '11']",04.01. 04:35,lY0u6LR3
 Kuzo L.,Pirveli R.,2,3,"['9', '11', '9', '11', '10']","['11', '8', '11', '5', '12']",04.01. 04:30,GtAfp1BK
 Danyliuk N.,Hordii A.,3,0,"['11', '11', '11']","['7', '8', '8']",04.01. 04:25,p0Ch9ovD
-<<<<<<< HEAD
+<<<<<<< HEAD,,,,,,,
 Nechyporuk V.,Nazrin A.,3,0,"['11', '11', '11']","['9', '9', '8']",04.01. 04:20,GQeOuAe8
 Pirveli R.,Rubtsov E.,3,1,"['12', '7', '11', '11']","['10', '11', '6', '7']",04.01. 03:55,rTBnnNt8
 Mosuk N.,Kovalchuk N.,2,3,"['6', '11', '11', '7', '8']","['11', '8', '5', '11', '11']",04.01. 03:50,GQ7lARO6
-=======
+=======,,,,,,,
 Holoborodko Y.,Tsyhanenko V.,2,3,"['11', '6', '7', '12', '7']","['8', '11', '11', '10', '11']",04.01. 04:25,n39vzhxg
 Nechyporuk V.,Nazrin A.,3,0,"['11', '11', '11']","['9', '9', '8']",04.01. 04:20,GQeOuAe8
 Korbut N.,Gergeliuk S.,1,3,"['11', '2', '8', '7']","['4', '11', '11', '11']",04.01. 04:10,vcnDJWiC
@@ -32252,121 +32252,121 @@ Velchev A.,Maksymchuk I.,3,2,"['11', '6', '3', '11', '11']","['9', '11', '11', '
 Parhomenko V.,Ilyushchenko S.,3,2,"['5', '11', '7', '11', '11']","['11', '9', '11', '9', '9']",03.01. 21:50,WANGDJsC
 Zazimko S.,Tsykhotskiy A.,0,3,"['10', '9', '6']","['12', '11', '11']",03.01. 21:45,ridSkeY7
 Semenets O.,Kryshtal D.,3,0,"['11', '11', '11']","['9', '8', '6']",03.01. 21:40,pKS1wRro
->>>>>>> master
+>>>>>>> master,,,,,,,
 Laevskii M.,Veliev A.,1,3,"['6', '11', '5', '10']","['11', '4', '11', '12']",03.01. 21:35,zP1iXkMB
 Omelchuk B.,Khamurda V.,1,3,"['9', '11', '8', '4']","['11', '6', '11', '11']",03.01. 21:30,O045KRfd
 Zharskiy V.,Zenyuk A.,3,1,"['11', '7', '11', '11']","['6', '11', '5', '4']",03.01. 21:25,EXgRSzVP
 Malashevsky V.,Chyzh P.,3,2,"['11', '11', '11', '12', '11']","['13', '8', '6', '14', '9']",03.01. 21:20,6VY5LhNa
-<<<<<<< HEAD
+<<<<<<< HEAD,,,,,,,
 Zinov N.,Leymanovskyi U.,1,3,"['7', '3', '11', '5']","['11', '11', '8', '11']",03.01. 06:00,zq01A3G5
 Derevynskyi D.,Pokydko S.,3,2,"['11', '3', '2', '11', '11']","['2', '11', '11', '8', '7']",04.01. 21:30,pC2yBWCg
-Pidleteichuk P.,Zharskiy V.,-,-,[],[],04.01. 22:00,zcH9kv36
-Dubrovin D.,Zaderei P.,-,-,[],[],04.01. 22:05,zinRReSd
-Omelchuk B.,Khamurda V.,-,-,[],[],04.01. 22:05,O21uAjSa
-Ivanov R.,Vakulenko D.,-,-,[],[],04.01. 22:10,QTAftF8e
-Kinash S.,Kolos M.,-,-,[],[],04.01. 22:15,lOL86R6A
-Sapronov O.,Tsykhotskiy A.,-,-,[],[],04.01. 22:20,Otxm3cX5
-Gubarev O.,Parhomenko V.,-,-,[],[],04.01. 22:25,OfHLHdna
-Bosak V.,Guchok A.,-,-,[],[],04.01. 22:30,rRf58wie
-Mykytiuk M.,Zenyuk A.,-,-,[],[],04.01. 22:35,UJGDlbIC
-Dubrovin D.,Redkov A.,-,-,[],[],04.01. 22:40,nRkVQFs3
-Omelchuk B.,Pokydko S.,-,-,[],[],04.01. 22:40,tvdp9As6
-Veliev A.,Laevskii M.,-,-,[],[],04.01. 22:45,f3FbuZN1
-Semenets O.,Chaplianka A.,-,-,[],[],04.01. 22:50,0bPC5oMG
-Seluchenko O.,Krivenko V.,-,-,[],[],04.01. 22:55,2Xzi2HnC
-Nesterenko A.,Belanchik D.,-,-,[],[],04.01. 23:00,2oGPGG15
-Krysak A.,Zdrobylko B.,-,-,[],[],04.01. 23:05,QkpA7c61
-Pidleteichuk P.,Sidorak N.,-,-,[],[],04.01. 23:10,rNKHmIXI
-Derevynskyi D.,Khamurda V.,-,-,[],[],04.01. 23:15,KUfl8UdC
-Rikun M.,Zaderei P.,-,-,[],[],04.01. 23:15,tlkZPZd9
-Gubarev I.,Ivanov R.,-,-,[],[],04.01. 23:20,r3hWyLY6
-Lebed D.,Kinash S.,-,-,[],[],04.01. 23:25,f1rzNnii
-Tsykhotskiy A.,Egorov K.,-,-,[],[],04.01. 23:30,K8Ve1y2I
-Parhomenko V.,Ilyushchenko S.,-,-,[],[],04.01. 23:35,pA5UFzHB
-Guchok A.,Demchuk I.,-,-,[],[],04.01. 23:40,4tqE6HL7
-Zenyuk A.,Zharskiy V.,-,-,[],[],04.01. 23:45,pSb0C1AJ
-Dubrovin D.,Rikun M.,-,-,[],[],04.01. 23:50,fe9v4hzj
-Omelchuk B.,Derevynskyi D.,-,-,[],[],04.01. 23:50,z1icAaMr
-Laevskii M.,Rutskiy S.,-,-,[],[],04.01. 23:55,MgizyulD
-Chaplianka A.,Kryshtal D.,-,-,[],[],05.01. 00:00,84nvM66c
-Seluchenko O.,Tsykhotskiy A.,-,-,[],[],05.01. 00:05,baUa0eHO
-Nesterenko A.,Parhomenko V.,-,-,[],[],05.01. 00:10,bD9YEfWH
-Krysak A.,Guchok A.,-,-,[],[],05.01. 00:15,IcneV0b8
-Pidleteichuk P.,Zenyuk A.,-,-,[],[],05.01. 00:20,OIc4BLPP
-Pokydko S.,Khamurda V.,-,-,[],[],05.01. 00:25,Eifh7lCI
-Redkov A.,Zaderei P.,-,-,[],[],05.01. 00:25,KvlwPgCF
-Veliev A.,Vakulenko D.,-,-,[],[],05.01. 00:30,A9pIaOQD
-Semenets O.,Kolos M.,-,-,[],[],05.01. 00:35,2RorLQL3
-Sapronov O.,Krivenko V.,-,-,[],[],05.01. 00:40,C2IsPvfP
-Gubarev O.,Belanchik D.,-,-,[],[],05.01. 00:45,j9X1cS0p
-Bosak V.,Zdrobylko B.,-,-,[],[],05.01. 00:50,dloaUKDE
-Mykytiuk M.,Sidorak N.,-,-,[],[],05.01. 00:55,f1pW6uYt
-Derevynskyi D.,Pokydko S.,-,-,[],[],05.01. 01:00,QRcd68RO
-Rikun M.,Redkov A.,-,-,[],[],05.01. 01:00,zk777Rtr
-Gubarev I.,Laevskii M.,-,-,[],[],05.01. 01:05,l0qMbrtK
-Lebed D.,Chaplianka A.,-,-,[],[],05.01. 01:10,tIpnKpyA
-Seluchenko O.,Sapronov O.,-,-,[],[],05.01. 01:15,Y5O8Kb2t
-Nesterenko A.,Gubarev O.,-,-,[],[],05.01. 01:20,UaW5dnGj
-Krysak A.,Bosak V.,-,-,[],[],05.01. 01:25,xnaTChrs
-Pidleteichuk P.,Mykytiuk M.,-,-,[],[],05.01. 01:30,Yiqz6amm
-Dubrovin D.,Zaderei P.,-,-,[],[],05.01. 01:35,Eu6B6odl
-Omelchuk B.,Khamurda V.,-,-,[],[],05.01. 01:35,SWyuVi4P
-Veliev A.,Ivanov R.,-,-,[],[],05.01. 01:40,WOYQc2eQ
-Semenets O.,Kinash S.,-,-,[],[],05.01. 01:45,8vHrJ4jG
-Krivenko V.,Egorov K.,-,-,[],[],05.01. 01:50,GUDDJIHn
-Belanchik D.,Ilyushchenko S.,-,-,[],[],05.01. 01:55,UixsLVhi
-Zdrobylko B.,Demchuk I.,-,-,[],[],05.01. 02:00,jk3XBCcm
-Sidorak N.,Zharskiy V.,-,-,[],[],05.01. 02:05,GGYv5J2g
-Dubrovin D.,Redkov A.,-,-,[],[],05.01. 02:10,825F55Bf
-Omelchuk B.,Pokydko S.,-,-,[],[],05.01. 02:10,UuO6QBCt
-Rutskiy S.,Vakulenko D.,-,-,[],[],05.01. 02:15,6HPhgM3s
-Kryshtal D.,Kolos M.,-,-,[],[],05.01. 02:20,nVFnIO5M
-Derevynskyi D.,Khamurda V.,-,-,[],[],05.01. 02:45,bFSAPVRn
-Rikun M.,Zaderei P.,-,-,[],[],05.01. 02:45,M59J4PQ0
-Gubarev I.,Veliev A.,-,-,[],[],05.01. 02:50,0vPdhtJm
-Lebed D.,Semenets O.,-,-,[],[],05.01. 02:55,thFjHrLS
-Dubrovin D.,Rikun M.,-,-,[],[],05.01. 03:20,4UbO3qt7
-Omelchuk B.,Derevynskyi D.,-,-,[],[],05.01. 03:20,x6REOksg
-Laevskii M.,Vakulenko D.,-,-,[],[],05.01. 03:25,vVN0i0Yg
-Chaplianka A.,Kolos M.,-,-,[],[],05.01. 03:30,ID6IC2Tq
-Matviienko S.,Gergeliuk S.,-,-,[],[],05.01. 03:35,WtY9y5Ic
-Omitsynskyi Y.,Zapletniuk A.,-,-,[],[],05.01. 03:40,S8RIZrmA
-Rubtsov E.,Kryvorotko Y.,-,-,[],[],05.01. 03:55,0MPQXMHM
-Ivanov R.,Rutskiy S.,-,-,[],[],05.01. 04:00,d6I5jKm0
-Kinash S.,Kryshtal D.,-,-,[],[],05.01. 04:05,0xdNBMrj
-Korbut N.,Zazimko S.,-,-,[],[],05.01. 04:10,E5NEzPX3
-Tsyhanenko V.,Miniailo Y.,-,-,[],[],05.01. 04:15,MVQMY22G
-Pirveli R.,Rubtsov E.,-,-,[],[],05.01. 04:30,SrdNWtXS
-Myrza A.,Gergeliuk S.,-,-,[],[],05.01. 04:45,CYrUSXVf
-Gabrelian D.,Zapletniuk A.,-,-,[],[],05.01. 04:50,6e43sXpl
-Kuzo L.,Kryvorotko Y.,-,-,[],[],05.01. 05:05,hjZ5xo3i
-Matviienko S.,Korbut N.,-,-,[],[],05.01. 05:20,jPsYRio1
-Omitsynskyi Y.,Tsyhanenko V.,-,-,[],[],05.01. 05:25,pn37ti0f
-Kuzo L.,Rubtsov E.,-,-,[],[],05.01. 05:40,UirkS0up
-Myrza A.,Zazimko S.,-,-,[],[],05.01. 05:55,80xwRB07
-Gabrelian D.,Miniailo Y.,-,-,[],[],05.01. 06:00,SAhCuBF0
-Pirveli R.,Kryvorotko Y.,-,-,[],[],05.01. 06:15,OEsgRKfj
-Korbut N.,Gergeliuk S.,-,-,[],[],05.01. 06:30,niysQVFD
-Tsyhanenko V.,Zapletniuk A.,-,-,[],[],05.01. 06:35,tEdGvVU6
-Kuzo L.,Pirveli R.,-,-,[],[],05.01. 06:50,xIocQvAd
-Myrza A.,Korbut N.,-,-,[],[],05.01. 07:05,0fPOlFhE
-Gabrelian D.,Tsyhanenko V.,-,-,[],[],05.01. 07:10,zydKwkpD
-Rubtsov E.,Kryvorotko Y.,-,-,[],[],05.01. 07:25,vNPukOnc
-Matviienko S.,Zazimko S.,-,-,[],[],05.01. 07:40,EcTSmZ7K
-Omitsynskyi Y.,Miniailo Y.,-,-,[],[],05.01. 07:45,ERfOx9aJ
-Pirveli R.,Rubtsov E.,-,-,[],[],05.01. 08:00,IDOqlr23
-Myrza A.,Matviienko S.,-,-,[],[],05.01. 08:15,dMIXngNQ
-Gabrelian D.,Omitsynskyi Y.,-,-,[],[],05.01. 08:20,hCQ4o13J
-Kuzo L.,Kryvorotko Y.,-,-,[],[],05.01. 08:35,nmTmm2H9
-Zazimko S.,Gergeliuk S.,-,-,[],[],05.01. 08:50,bV4arDVs
-Miniailo Y.,Zapletniuk A.,-,-,[],[],05.01. 08:55,W2P8pLIP
-Kuzo L.,Rubtsov E.,-,-,[],[],05.01. 09:10,QwSinMWF
-Pirveli R.,Kryvorotko Y.,-,-,[],[],05.01. 09:45,6ytMUg1r
-Kuzo L.,Pirveli R.,-,-,[],[],05.01. 10:20,IBqQTDGl
+Pidleteichuk P.,Zharskiy V.,3,1,"['5', '11', '12', '11']","['11', '4', '10', '6']",04.01. 22:00,zcH9kv36
+Dubrovin D.,Zaderei P.,3,2,"['11', '16', '7', '9', '11']","['8', '14', '11', '11', '9']",04.01. 22:05,zinRReSd
+Omelchuk B.,Khamurda V.,0,3,"['7', '9', '4']","['11', '11', '11']",04.01. 22:05,O21uAjSa
+Ivanov R.,Vakulenko D.,3,1,"['11', '5', '11', '11']","['5', '11', '9', '4']",04.01. 22:10,QTAftF8e
+Kinash S.,Kolos M.,3,2,"['5', '17', '11', '8', '11']","['11', '15', '8', '11', '7']",04.01. 22:15,lOL86R6A
+Sapronov O.,Tsykhotskiy A.,2,3,"['11', '11', '6', '8', '4']","['6', '4', '11', '11', '11']",04.01. 22:25,Otxm3cX5
+Gubarev O.,Parhomenko V.,3,0,"['11', '11', '11']","['4', '6', '9']",04.01. 22:25,OfHLHdna
+Bosak V.,Guchok A.,3,0,"['11', '11', '13']","['9', '3', '11']",04.01. 22:30,rRf58wie
+Mykytiuk M.,Zenyuk A.,1,3,"['6', '11', '6', '9']","['11', '7', '11', '11']",04.01. 22:35,UJGDlbIC
+Dubrovin D.,Redkov A.,3,0,"['11', '15', '11']","['2', '13', '8']",04.01. 22:40,nRkVQFs3
+Omelchuk B.,Pokydko S.,2,3,"['1', '8', '12', '11', '12']","['11', '11', '10', '8', '14']",04.01. 22:40,tvdp9As6
+Veliev A.,Laevskii M.,3,0,"['11', '11', '11']","['8', '7', '7']",04.01. 22:45,f3FbuZN1
+Semenets O.,Chaplianka A.,3,0,"['11', '11', '11']","['6', '6', '4']",04.01. 22:50,0bPC5oMG
+Seluchenko O.,Krivenko V.,3,1,"['12', '4', '11', '13']","['10', '11', '5', '11']",04.01. 22:55,2Xzi2HnC
+Nesterenko A.,Belanchik D.,1,3,"['12', '9', '10', '11']","['10', '11', '12', '13']",04.01. 23:00,2oGPGG15
+Krysak A.,Zdrobylko B.,3,1,"['3', '12', '12', '11']","['11', '10', '10', '9']",04.01. 23:05,QkpA7c61
+Pidleteichuk P.,Sidorak N.,1,3,"['8', '7', '11', '9']","['11', '11', '8', '11']",04.01. 23:10,rNKHmIXI
+Derevynskyi D.,Khamurda V.,3,0,"['11', '11', '12']","['6', '8', '10']",04.01. 23:15,KUfl8UdC
+Rikun M.,Zaderei P.,2,3,"['7', '11', '11', '9', '5']","['11', '9', '8', '11', '11']",04.01. 23:15,tlkZPZd9
+Gubarev I.,Ivanov R.,0,3,"['6', '5', '8']","['11', '11', '11']",04.01. 23:20,r3hWyLY6
+Lebed D.,Kinash S.,3,0,"['11', '11', '11']","['8', '9', '9']",04.01. 23:25,f1rzNnii
+Tsykhotskiy A.,Egorov K.,3,0,"['11', '19', '11']","['7', '17', '9']",04.01. 23:30,K8Ve1y2I
+Parhomenko V.,Ilyushchenko S.,2,3,"['14', '5', '11', '4', '8']","['12', '11', '5', '11', '11']",04.01. 23:35,pA5UFzHB
+Guchok A.,Demchuk I.,0,3,"['5', '9', '9']","['11', '11', '11']",04.01. 23:40,4tqE6HL7
+Zenyuk A.,Zharskiy V.,3,2,"['11', '11', '6', '12', '11']","['13', '6', '11', '10', '9']",04.01. 23:45,pSb0C1AJ
+Dubrovin D.,Rikun M.,1,3,"['6', '7', '11', '6']","['11', '11', '9', '11']",04.01. 23:50,fe9v4hzj
+Omelchuk B.,Derevynskyi D.,2,3,"['11', '14', '6', '8', '8']","['7', '12', '11', '11', '11']",04.01. 23:50,z1icAaMr
+Laevskii M.,Rutskiy S.,2,3,"['7', '11', '9', '11', '9']","['11', '8', '11', '6', '11']",04.01. 23:55,MgizyulD
+Chaplianka A.,Kryshtal D.,3,1,"['11', '12', '4', '11']","['3', '10', '11', '7']",05.01. 00:00,84nvM66c
+Seluchenko O.,Tsykhotskiy A.,3,1,"['7', '11', '11', '11']","['11', '9', '9', '6']",05.01. 00:05,baUa0eHO
+Nesterenko A.,Parhomenko V.,3,1,"['9', '11', '11', '11']","['11', '9', '6', '8']",05.01. 00:10,bD9YEfWH
+Krysak A.,Guchok A.,3,1,"['11', '11', '9', '12']","['1', '8', '11', '10']",05.01. 00:15,IcneV0b8
+Pidleteichuk P.,Zenyuk A.,1,3,"['9', '8', '11', '4']","['11', '11', '9', '11']",05.01. 00:20,OIc4BLPP
+Pokydko S.,Khamurda V.,3,1,"['12', '11', '6', '11']","['10', '8', '11', '7']",05.01. 00:25,Eifh7lCI
+Redkov A.,Zaderei P.,3,0,"['11', '11', '13']","['6', '9', '11']",05.01. 00:25,KvlwPgCF
+Veliev A.,Vakulenko D.,2,3,"['11', '12', '5', '6', '10']","['4', '10', '11', '11', '12']",05.01. 00:30,A9pIaOQD
+Semenets O.,Kolos M.,1,3,"['6', '10', '11', '5']","['11', '12', '6', '11']",05.01. 00:35,2RorLQL3
+Sapronov O.,Krivenko V.,1,3,"['5', '11', '11', '7']","['11', '13', '4', '11']",05.01. 00:40,C2IsPvfP
+Gubarev O.,Belanchik D.,0,3,"['8', '9', '3']","['11', '11', '11']",05.01. 00:45,j9X1cS0p
+Bosak V.,Zdrobylko B.,1,3,"['7', '6', '11', '7']","['11', '11', '6', '11']",05.01. 00:50,dloaUKDE
+Mykytiuk M.,Sidorak N.,3,1,"['11', '7', '11', '11']","['8', '11', '8', '7']",05.01. 00:55,f1pW6uYt
+Derevynskyi D.,Pokydko S.,3,0,"['12', '11', '11']","['10', '9', '7']",05.01. 01:00,QRcd68RO
+Rikun M.,Redkov A.,2,3,"['8', '8', '11', '11', '8']","['11', '11', '9', '8', '11']",05.01. 01:00,zk777Rtr
+Gubarev I.,Laevskii M.,3,0,"['11', '13', '11']","['7', '11', '6']",05.01. 01:05,l0qMbrtK
+Lebed D.,Chaplianka A.,3,1,"['12', '11', '13', '11']","['14', '4', '11', '6']",05.01. 01:10,tIpnKpyA
+Seluchenko O.,Sapronov O.,3,1,"['11', '6', '14', '11']","['6', '11', '12', '9']",05.01. 01:15,Y5O8Kb2t
+Nesterenko A.,Gubarev O.,3,2,"['11', '4', '9', '11', '11']","['8', '11', '11', '4', '5']",05.01. 01:20,UaW5dnGj
+Krysak A.,Bosak V.,1,3,"['9', '7', '14', '7']","['11', '11', '12', '11']",05.01. 01:25,xnaTChrs
+Pidleteichuk P.,Mykytiuk M.,3,1,"['8', '11', '11', '16']","['11', '7', '7', '14']",05.01. 01:30,Yiqz6amm
+Dubrovin D.,Zaderei P.,2,3,"['11', '9', '9', '11', '11']","['6', '11', '11', '6', '13']",05.01. 01:35,Eu6B6odl
+Omelchuk B.,Khamurda V.,1,3,"['6', '6', '11', '6']","['11', '11', '9', '11']",05.01. 01:35,SWyuVi4P
+Veliev A.,Ivanov R.,2,3,"['11', '11', '9', '11', '7']","['13', '9', '11', '9', '11']",05.01. 01:40,WOYQc2eQ
+Semenets O.,Kinash S.,2,3,"['11', '6', '6', '11', '13']","['8', '11', '11', '9', '15']",05.01. 01:45,8vHrJ4jG
+Krivenko V.,Egorov K.,3,2,"['9', '12', '11', '11', '11']","['11', '14', '6', '3', '3']",05.01. 01:50,GUDDJIHn
+Belanchik D.,Ilyushchenko S.,3,1,"['16', '5', '12', '11']","['14', '11', '10', '9']",05.01. 01:55,UixsLVhi
+Zdrobylko B.,Demchuk I.,3,1,"['11', '11', '8', '11']","['8', '7', '11', '4']",05.01. 02:00,jk3XBCcm
+Sidorak N.,Zharskiy V.,3,1,"['11', '8', '11', '11']","['3', '11', '3', '7']",05.01. 02:05,GGYv5J2g
+Dubrovin D.,Redkov A.,3,1,"['10', '11', '11', '11']","['12', '5', '5', '7']",05.01. 02:10,825F55Bf
+Omelchuk B.,Pokydko S.,0,3,"['7', '5', '3']","['11', '11', '11']",05.01. 02:10,UuO6QBCt
+Rutskiy S.,Vakulenko D.,0,3,"['13', '3', '9']","['15', '11', '11']",05.01. 02:15,6HPhgM3s
+Kryshtal D.,Kolos M.,1,3,"['8', '7', '11', '7']","['11', '11', '9', '11']",05.01. 02:20,nVFnIO5M
+Derevynskyi D.,Khamurda V.,1,3,"['4', '11', '7', '7']","['11', '6', '11', '11']",05.01. 02:45,bFSAPVRn
+Rikun M.,Zaderei P.,3,1,"['11', '10', '11', '11']","['6', '12', '5', '9']",05.01. 02:45,M59J4PQ0
+Gubarev I.,Veliev A.,3,1,"['6', '11', '11', '11']","['11', '7', '7', '3']",05.01. 02:50,0vPdhtJm
+Lebed D.,Semenets O.,3,0,"['11', '11', '11']","['4', '9', '5']",05.01. 02:55,thFjHrLS
+Dubrovin D.,Rikun M.,3,2,"['10', '13', '11', '11', '11']","['12', '15', '6', '8', '7']",05.01. 03:20,4UbO3qt7
+Omelchuk B.,Derevynskyi D.,0,3,"['4', '8', '6']","['11', '11', '11']",05.01. 03:20,x6REOksg
+Laevskii M.,Vakulenko D.,3,0,"['11', '13', '11']","['9', '11', '3']",05.01. 03:25,vVN0i0Yg
+Chaplianka A.,Kolos M.,3,1,"['11', '11', '2', '11']","['8', '8', '11', '7']",05.01. 03:30,ID6IC2Tq
+Matviienko S.,Gergeliuk S.,3,2,"['14', '5', '11', '9', '11']","['12', '11', '9', '11', '6']",05.01. 03:35,WtY9y5Ic
+Omitsynskyi Y.,Zapletniuk A.,3,0,"['11', '11', '11']","['6', '5', '7']",05.01. 03:45,S8RIZrmA
+Rubtsov E.,Kryvorotko Y.,1,3,"['10', '2', '11', '5']","['12', '11', '8', '11']",05.01. 03:55,0MPQXMHM
+Ivanov R.,Rutskiy S.,3,2,"['8', '11', '12', '3', '11']","['11', '5', '10', '11', '9']",05.01. 04:00,d6I5jKm0
+Kinash S.,Kryshtal D.,3,0,"['11', '11', '11']","['6', '6', '5']",05.01. 04:05,0xdNBMrj
+Korbut N.,Zazimko S.,1,3,"['6', '11', '9', '6']","['11', '2', '11', '11']",05.01. 04:10,E5NEzPX3
+Tsyhanenko V.,Miniailo Y.,3,0,"['11', '11', '11']","['4', '6', '3']",05.01. 04:15,MVQMY22G
+Pirveli R.,Rubtsov E.,1,3,"['11', '10', '8', '5']","['8', '12', '11', '11']",05.01. 04:30,SrdNWtXS
+Myrza A.,Gergeliuk S.,3,2,"['11', '12', '5', '9', '11']","['8', '10', '11', '11', '9']",05.01. 04:45,CYrUSXVf
+Gabrelian D.,Zapletniuk A.,3,1,"['12', '12', '14', '11']","['14', '10', '12', '7']",05.01. 04:50,6e43sXpl
+Kuzo L.,Kryvorotko Y.,3,0,"['12', '11', '11']","['10', '8', '5']",05.01. 05:05,hjZ5xo3i
+Matviienko S.,Korbut N.,3,2,"['11', '12', '4', '11', '11']","['7', '14', '11', '6', '7']",05.01. 05:20,jPsYRio1
+Omitsynskyi Y.,Tsyhanenko V.,1,3,"['21', '5', '8', '10']","['19', '11', '11', '12']",05.01. 05:25,pn37ti0f
+Kuzo L.,Rubtsov E.,3,0,"['11', '13', '15']","['3', '11', '13']",05.01. 05:40,UirkS0up
+Myrza A.,Zazimko S.,0,3,"['9', '6', '9']","['11', '11', '11']",05.01. 05:55,80xwRB07
+Gabrelian D.,Miniailo Y.,1,3,"['9', '4', '11', '4']","['11', '11', '6', '11']",05.01. 06:00,SAhCuBF0
+Pirveli R.,Kryvorotko Y.,2,3,"['3', '8', '11', '12', '2']","['11', '11', '7', '10', '11']",05.01. 06:15,OEsgRKfj
+Korbut N.,Gergeliuk S.,2,3,"['13', '8', '11', '8', '4']","['11', '11', '3', '11', '11']",05.01. 06:30,niysQVFD
+Tsyhanenko V.,Zapletniuk A.,3,1,"['11', '5', '11', '11']","['6', '11', '4', '8']",05.01. 06:35,tEdGvVU6
+Kuzo L.,Pirveli R.,3,1,"['11', '11', '6', '11']","['9', '6', '11', '8']",05.01. 06:50,xIocQvAd
+Myrza A.,Korbut N.,1,3,"['11', '6', '8', '4']","['9', '11', '11', '11']",05.01. 07:10,0fPOlFhE
+Gabrelian D.,Tsyhanenko V.,3,0,"['11', '11', '11']","['2', '8', '7']",05.01. 07:10,zydKwkpD
+Rubtsov E.,Kryvorotko Y.,1,3,"['10', '11', '9', '4']","['12', '9', '11', '11']",05.01. 07:25,vNPukOnc
+Matviienko S.,Zazimko S.,3,2,"['11', '12', '9', '4', '11']","['4', '10', '11', '11', '7']",05.01. 07:40,EcTSmZ7K
+Omitsynskyi Y.,Miniailo Y.,2,3,"['11', '11', '10', '7', '5']","['9', '7', '12', '11', '11']",05.01. 07:45,ERfOx9aJ
+Pirveli R.,Rubtsov E.,0,3,"['3', '9', '8']","['11', '11', '11']",05.01. 08:00,IDOqlr23
+Myrza A.,Matviienko S.,1,3,"['8', '10', '13', '4']","['11', '12', '11', '11']",05.01. 08:15,dMIXngNQ
+Gabrelian D.,Omitsynskyi Y.,0,3,"['7', '12', '8']","['11', '14', '11']",05.01. 08:20,hCQ4o13J
+Kuzo L.,Kryvorotko Y.,1,3,"['11', '9', '3', '11']","['8', '11', '11', '13']",05.01. 08:35,nmTmm2H9
+Zazimko S.,Gergeliuk S.,2,3,"['11', '11', '9', '11', '9']","['13', '7', '11', '5', '11']",05.01. 08:50,bV4arDVs
+Miniailo Y.,Zapletniuk A.,1,3,"['7', '6', '11', '6']","['11', '11', '7', '11']",05.01. 08:55,W2P8pLIP
+Kuzo L.,Rubtsov E.,3,0,"['11', '15', '11']","['9', '13', '4']",05.01. 09:10,QwSinMWF
+Pirveli R.,Kryvorotko Y.,2,3,"['11', '9', '11', '7', '6']","['6', '11', '4', '11', '11']",05.01. 09:45,6ytMUg1r
+Kuzo L.,Pirveli R.,3,0,"['11', '11', '11']","['7', '5', '8']",05.01. 10:20,IBqQTDGl
 Prokopcov D.,Seibert J.,3,2,"['11', '11', '9', '6', '11']","['8', '8', '11', '11', '6']",04.01. 03:55,nTK0cq8D
 Seibert J.,Tymofieiev O.,2,3,"['11', '6', '11', '7', '4']","['9', '11', '7', '11', '11']",04.01. 02:30,Yw0ET9gg
 Zelinka J.,Reitspies D.,2,3,"['4', '11', '11', '9', '6']","['11', '6', '4', '11', '11']",04.01. 00:15,zkPMIbB9
-=======
+=======,,,,,,,
 Gubarev O.,Nesterenko A.,2,3,"['5', '11', '11', '9', '4']","['11', '9', '1', '11', '11']",03.01. 21:15,jyGVyE7t
 Krivenko V.,Egorov K.,3,1,"['11', '11', '11', '11']","['6', '13', '9', '7']",03.01. 21:10,pGpcNEhm
 Lebed D.,Kolos M.,3,2,"['11', '10', '11', '7', '11']","['8', '12', '4', '11', '4']",03.01. 21:05,rBtzr7zU
@@ -32674,7 +32674,7 @@ Kievskiy Y.,Pavlyuk R.,1,3,"['11', '9', '4', '4']","['9', '11', '11', '11']",04.
 Moroz K.,Oplachko A.,1,3,"['13', '6', '6', '8']","['11', '11', '11', '11']",04.01. 22:00,MkgujXP6
 Panin V.,Lukander D.,2,3,"['5', '12', '11', '6', '3']","['11', '10', '4', '11', '11']",04.01. 22:00,jVYzhvw4
 Zavada N.,Serikov V.,3,2,"['11', '11', '9', '2', '11']","['9', '9', '11', '11', '9']",04.01. 22:00,6cZQJ8qB
->>>>>>> master
+>>>>>>> master,,,,,,,
 Pavlyuk O.,Zotov G.,1,3,"['11', '3', '9', '8']","['9', '11', '11', '11']",04.01. 21:35,0KYUISbH
 Makarov V.,Metelskiy V.,2,3,"['12', '6', '11', '5', '8']","['10', '11', '8', '11', '11']",04.01. 21:30,MVQgvzRf
 Oplachko A.,Isakov V.,3,0,"['11', '11', '11']","['9', '4', '7']",04.01. 21:30,8nkyiDA0
@@ -32699,11 +32699,11 @@ Khorolsky V.,Novikov Y.,0,3,"['7', '8', '9']","['11', '11', '11']",04.01. 18:00,
 Kalenik S.,Khorolsky V.,1,3,"['14', '19', '3', '11']","['12', '21', '11', '13']",04.01. 17:30,dEOSPzC1
 Novikov Y.,Vavrenyuk S.,3,2,"['6', '11', '2', '11', '11']","['11', '9', '11', '6', '3']",04.01. 17:00,EkZNQGde
 Vavrenyuk S.,Khorolsky V.,2,3,"['11', '12', '11', '6', '11']","['8', '14', '3', '11', '13']",04.01. 16:30,zazKRdsk
-<<<<<<< HEAD
+<<<<<<< HEAD,,,,,,,
 Novikov Y.,Kalenik S.,2,3,"['11', '7', '9', '12', '9']","['2', '11', '11', '10', '11']",04.01. 16:00,6PVFSxSr
 Vavrenyuk S.,Kalenik S.,1,3,"['4', '8', '11', '4']","['11', '11', '5', '11']",04.01. 15:30,ro7osNOo
 Novikov Y.,Khorolsky V.,0,3,"['10', '18', '7']","['12', '20', '11']",04.01. 15:00,ttT2Iwno
-=======
+=======,,,,,,,
 Pisklov S.,Gusev V.,3,1,"['11', '8', '11', '11']","['4', '11', '8', '9']",04.01. 16:25,rZvlABdq
 Shapovalov O.,Rybakov Y.,0,3,"['8', '10', '6']","['11', '12', '11']",04.01. 16:10,4KiMs1tr
 Novikov Y.,Kalenik S.,2,3,"['11', '7', '9', '12', '9']","['2', '11', '11', '10', '11']",04.01. 16:00,6PVFSxSr
@@ -32838,202 +32838,202 @@ Oplachko A.,Isakov V.,3,2,"['5', '11', '7', '11', '11']","['11', '5', '11', '4',
 Shalgorodskiy N.,Krivoshey S.,3,2,"['7', '11', '12', '3', '11']","['11', '9', '10', '11', '8']",03.01. 22:00,AwKMnY5l
 Shekhovtsov A.,Zubko V.,3,0,"['11', '11', '11']","['8', '6', '3']",03.01. 22:00,OMeuzeMr
 Saenko O.,Grabskiy A.,1,3,"['16', '13', '14', '7']","['18', '15', '12', '11']",03.01. 21:45,0SY4aBkf
->>>>>>> master
+>>>>>>> master,,,,,,,
 Bratukhin Y.,Lukander D.,3,0,"['13', '11', '13']","['11', '8', '11']",03.01. 21:30,ncYBiNiG
 Butkov M.,Metelskiy V.,0,3,"['5', '6', '5']","['11', '11', '11']",03.01. 21:30,ra6zvmGm
 Isakov V.,Kutniy I.,3,1,"['4', '11', '12', '11']","['11', '6', '10', '6']",03.01. 21:30,ryKxbmjM
 Panin V.,Dyakov V.,2,3,"['8', '11', '10', '11', '8']","['11', '6', '12', '8', '11']",03.01. 21:30,WnLImEjr
 Pavlyuk O.,Zavada N.,2,3,"['6', '7', '11', '11', '5']","['11', '11', '8', '7', '11']",03.01. 21:30,MuWpwOxN
-<<<<<<< HEAD
-Grushko V.,Makarov V.,-,-,[],[],04.01. 22:00,0MPcwft1
-Kievskiy Y.,Pavlyuk R.,-,-,[],[],04.01. 22:00,4I68lQm9
-Moroz K.,Oplachko A.,-,-,[],[],04.01. 22:00,MkgujXP6
-Panin V.,Lukander D.,-,-,[],[],04.01. 22:00,jVYzhvw4
-Zavada N.,Serikov V.,-,-,[],[],04.01. 22:00,6cZQJ8qB
-Kutniy I.,Isakov V.,-,-,[],[],04.01. 22:30,4ErpkiuD
-Oleksenko B.,Metelskiy V.,-,-,[],[],04.01. 22:30,UeU1xEe7
-Pavlyuk O.,Serikov V.,-,-,[],[],04.01. 22:30,dj2RySn6
-Ptitsyn D.,Kievskiy Y.,-,-,[],[],04.01. 22:30,ILACmp3F
-Sharpay V.,Panin V.,-,-,[],[],04.01. 22:30,ULXvibhA
-Isakov V.,Moroz K.,-,-,[],[],04.01. 23:00,r5sllBfJ
-Kovorotushin E.,Pavlyuk R.,-,-,[],[],04.01. 23:00,0p0Hn4IL
-Metelskiy V.,Grushko V.,-,-,[],[],04.01. 23:00,8nT5yYAD
-Zavada N.,Zotov G.,-,-,[],[],04.01. 23:00,vF7Mx8Xa
-Zubko V.,Lukander D.,-,-,[],[],04.01. 23:00,bexqjI7G
-Kutniy I.,Oplachko A.,-,-,[],[],04.01. 23:30,ABVVCfXJ
-Lukander D.,Sharpay V.,-,-,[],[],04.01. 23:30,xnymkxNM
-Oleksenko B.,Makarov V.,-,-,[],[],04.01. 23:30,Ai7l0HmE
-Pavlyuk O.,Zavada N.,-,-,[],[],04.01. 23:30,nHf0Y7b4
-Pavlyuk R.,Ptitsyn D.,-,-,[],[],04.01. 23:30,vyaLoOXR
-Kovorotushin E.,Kievskiy Y.,-,-,[],[],05.01. 00:00,WSjmsrtq
-Kutniy I.,Moroz K.,-,-,[],[],05.01. 00:00,l2UZBEnQ
-Oleksenko B.,Grushko V.,-,-,[],[],05.01. 00:00,MRAhay3K
-Serikov V.,Zotov G.,-,-,[],[],05.01. 00:00,dnSwH6TT
-Zubko V.,Panin V.,-,-,[],[],05.01. 00:00,KAQildxT
-Isakov V.,Oplachko A.,-,-,[],[],05.01. 00:30,fq727Yfs
-Kovorotushin E.,Ptitsyn D.,-,-,[],[],05.01. 00:30,AJkit2ek
-Metelskiy V.,Makarov V.,-,-,[],[],05.01. 00:30,GlAdbeIQ
-Zubko V.,Sharpay V.,-,-,[],[],05.01. 00:30,dWHJqGpp
-Lukander D.,Panin V.,-,-,[],[],05.01. 01:00,jgHNrz0j
-Makarov V.,Grushko V.,-,-,[],[],05.01. 01:00,IcdOgFQs
-Oplachko A.,Moroz K.,-,-,[],[],05.01. 01:00,8nB66hAm
-Pavlyuk R.,Kievskiy Y.,-,-,[],[],05.01. 01:00,hruduMAe
-Serikov V.,Zavada N.,-,-,[],[],05.01. 01:00,Q16izUTi
-Isakov V.,Kutniy I.,-,-,[],[],05.01. 01:30,29AA5CPg
-Kievskiy Y.,Ptitsyn D.,-,-,[],[],05.01. 01:30,4Ir0vtQ1
-Metelskiy V.,Oleksenko B.,-,-,[],[],05.01. 01:30,zZjThZul
-Panin V.,Sharpay V.,-,-,[],[],05.01. 01:30,UqGRsfFd
-Serikov V.,Pavlyuk O.,-,-,[],[],05.01. 01:30,Cb2myAEo
-Lukander D.,Zubko V.,-,-,[],[],05.01. 02:00,W480jnJd
-Pavlyuk R.,Kovorotushin E.,-,-,[],[],05.01. 02:00,ILWs3P22
-Zavada N.,Pavlyuk O.,-,-,[],[],05.01. 02:00,vBXYHnEN
-Zotov G.,Pavlyuk O.,-,-,[],[],05.01. 02:00,8QedZmqb
-Kubrak S.,Ivchenko D.,-,-,[],[],05.01. 02:30,t09E4Wv0
-Shtaer A.,Oprysk M.,-,-,[],[],05.01. 02:30,by4J3jf6
-Zotov G.,Zavada N.,-,-,[],[],05.01. 02:30,beE5CQyo
-Rubtsov S.,Cherednichenko P.,-,-,[],[],05.01. 02:45,AgUwoWPJ
-Yunusov E.,Stasevskiy O.,-,-,[],[],05.01. 02:45,MwydMnmJ
-Bazyn F.,Korobeynik S.,-,-,[],[],05.01. 03:00,Wl2R1UOI
-Plyushch P.,Kostyuk A.,-,-,[],[],05.01. 03:00,xS2N2A9C
-Zotov G.,Serikov V.,-,-,[],[],05.01. 03:00,fsf4XRDA
-Cherednichenko P.,Kolesnik P.,-,-,[],[],05.01. 03:15,dCVo2qI8
-Rodin A.,Goloveshkin A.,-,-,[],[],05.01. 03:15,lpTspjuQ
-Ivchenko D.,Korobeynik S.,-,-,[],[],05.01. 03:30,4Kc6xawH
-Kostyuk A.,Bazyn F.,-,-,[],[],05.01. 03:30,bscAyJhN
-Kalyanov V.,Kovrikov A.,-,-,[],[],05.01. 03:45,zs1Vzn2C
+<<<<<<< HEAD,,,,,,,
+Grushko V.,Makarov V.,3,1,"['11', '11', '2', '11']","['8', '4', '11', '6']",04.01. 22:00,0MPcwft1
+Kievskiy Y.,Pavlyuk R.,1,3,"['11', '9', '4', '4']","['9', '11', '11', '11']",04.01. 22:00,4I68lQm9
+Moroz K.,Oplachko A.,1,3,"['13', '6', '6', '8']","['11', '11', '11', '11']",04.01. 22:00,MkgujXP6
+Panin V.,Lukander D.,2,3,"['5', '12', '11', '6', '3']","['11', '10', '4', '11', '11']",04.01. 22:00,jVYzhvw4
+Zavada N.,Serikov V.,3,2,"['11', '11', '9', '2', '11']","['9', '9', '11', '11', '9']",04.01. 22:00,6cZQJ8qB
+Kutniy I.,Isakov V.,1,3,"['4', '16', '11', '9']","['11', '18', '5', '11']",04.01. 22:30,4ErpkiuD
+Oleksenko B.,Metelskiy V.,1,3,"['6', '9', '12', '2']","['11', '11', '10', '11']",04.01. 22:30,UeU1xEe7
+Pavlyuk O.,Serikov V.,2,3,"['9', '11', '11', '8', '8']","['11', '6', '9', '11', '11']",04.01. 22:30,dj2RySn6
+Ptitsyn D.,Kievskiy Y.,2,3,"['11', '7', '11', '4', '4']","['9', '11', '8', '11', '11']",04.01. 22:30,ILACmp3F
+Sharpay V.,Panin V.,3,2,"['11', '7', '6', '11', '11']","['3', '11', '11', '8', '9']",04.01. 22:30,ULXvibhA
+Isakov V.,Moroz K.,2,3,"['7', '11', '8', '11', '7']","['11', '6', '11', '9', '11']",04.01. 23:00,r5sllBfJ
+Kovorotushin E.,Pavlyuk R.,0,3,"['3', '9', '9']","['11', '11', '11']",04.01. 23:00,0p0Hn4IL
+Metelskiy V.,Grushko V.,3,0,"['11', '11', '12']","['6', '9', '10']",04.01. 23:00,8nT5yYAD
+Zavada N.,Zotov G.,3,2,"['11', '8', '11', '7', '11']","['8', '11', '7', '11', '3']",04.01. 23:00,vF7Mx8Xa
+Zubko V.,Lukander D.,3,2,"['9', '8', '12', '11', '13']","['11', '11', '10', '6', '11']",04.01. 23:00,bexqjI7G
+Kutniy I.,Oplachko A.,0,3,"['7', '8', '9']","['11', '11', '11']",04.01. 23:30,ABVVCfXJ
+Lukander D.,Sharpay V.,3,1,"['11', '5', '11', '12']","['5', '11', '9', '10']",04.01. 23:30,xnymkxNM
+Oleksenko B.,Makarov V.,3,2,"['11', '11', '13', '5', '11']","['4', '7', '15', '11', '9']",04.01. 23:30,Ai7l0HmE
+Pavlyuk O.,Zavada N.,0,3,"['2', '9', '9']","['11', '11', '11']",04.01. 23:30,nHf0Y7b4
+Pavlyuk R.,Ptitsyn D.,2,3,"['8', '11', '11', '6', '10']","['11', '8', '4', '11', '12']",04.01. 23:30,vyaLoOXR
+Kovorotushin E.,Kievskiy Y.,2,3,"['13', '8', '11', '9', '6']","['11', '11', '7', '11', '11']",05.01. 00:00,WSjmsrtq
+Kutniy I.,Moroz K.,0,3,"['9', '9', '7']","['11', '11', '11']",05.01. 00:00,l2UZBEnQ
+Oleksenko B.,Grushko V.,3,0,"['11', '12', '11']","['8', '10', '8']",05.01. 00:00,MRAhay3K
+Serikov V.,Zotov G.,0,3,"['7', '8', '8']","['11', '11', '11']",05.01. 00:00,dnSwH6TT
+Zubko V.,Panin V.,0,3,"['4', '10', '4']","['11', '12', '11']",05.01. 00:00,KAQildxT
+Isakov V.,Oplachko A.,3,2,"['9', '13', '8', '11', '11']","['11', '11', '11', '8', '6']",05.01. 00:30,fq727Yfs
+Kovorotushin E.,Ptitsyn D.,2,3,"['11', '11', '7', '10', '8']","['9', '9', '11', '12', '11']",05.01. 00:30,AJkit2ek
+Metelskiy V.,Makarov V.,3,1,"['11', '11', '9', '11']","['8', '9', '11', '8']",05.01. 00:30,GlAdbeIQ
+Zubko V.,Sharpay V.,1,3,"['6', '11', '8', '9']","['11', '6', '11', '11']",05.01. 00:30,dWHJqGpp
+Lukander D.,Panin V.,1,3,"['2', '9', '11', '8']","['11', '11', '7', '11']",05.01. 01:00,jgHNrz0j
+Makarov V.,Grushko V.,1,3,"['9', '11', '9', '5']","['11', '8', '11', '11']",05.01. 01:00,IcdOgFQs
+Oplachko A.,Moroz K.,3,0,"['11', '11', '11']","['9', '9', '6']",05.01. 01:00,8nB66hAm
+Pavlyuk R.,Kievskiy Y.,1,3,"['7', '6', '12', '12']","['11', '11', '10', '14']",05.01. 01:00,hruduMAe
+Serikov V.,Zavada N.,3,2,"['11', '5', '11', '10', '11']","['7', '11', '3', '12', '7']",05.01. 01:00,Q16izUTi
+Isakov V.,Kutniy I.,2,3,"['12', '11', '8', '3', '11']","['10', '5', '11', '11', '13']",05.01. 01:30,29AA5CPg
+Kievskiy Y.,Ptitsyn D.,3,2,"['11', '11', '2', '11', '11']","['13', '5', '11', '6', '4']",05.01. 01:30,4Ir0vtQ1
+Metelskiy V.,Oleksenko B.,1,3,"['4', '5', '11', '9']","['11', '11', '6', '11']",05.01. 01:30,zZjThZul
+Panin V.,Sharpay V.,3,0,"['11', '11', '11']","['9', '5', '7']",05.01. 01:30,UqGRsfFd
+Serikov V.,Pavlyuk O.,3,2,"['12', '11', '5', '4', '13']","['10', '7', '11', '11', '11']",05.01. 01:30,Cb2myAEo
+Lukander D.,Zubko V.,1,3,"['11', '8', '4', '7']","['9', '11', '11', '11']",05.01. 02:00,W480jnJd
+Pavlyuk R.,Kovorotushin E.,0,3,"['10', '8', '7']","['12', '11', '11']",05.01. 02:00,ILWs3P22
+Zavada N.,Pavlyuk O.,3,0,"['11', '11', '11']","['2', '7', '2']",05.01. 02:00,vBXYHnEN
+Zotov G.,Pavlyuk O.,3,1,"['11', '11', '8', '11']","['1', '8', '11', '3']",05.01. 00:30,8QedZmqb
+Kubrak S.,Ivchenko D.,1,3,"['9', '8', '11', '7']","['11', '11', '7', '11']",05.01. 02:30,t09E4Wv0
+Shtaer A.,Oprysk M.,0,3,"['6', '8', '2']","['11', '11', '11']",05.01. 02:30,by4J3jf6
+Zotov G.,Zavada N.,2,3,"['12', '10', '9', '11', '10']","['10', '12', '11', '8', '12']",05.01. 02:30,beE5CQyo
+Rubtsov S.,Cherednichenko P.,0,3,"['9', '6', '5']","['11', '11', '11']",05.01. 02:45,AgUwoWPJ
+Yunusov E.,Stasevskiy O.,3,1,"['11', '11', '8', '14']","['5', '8', '11', '12']",05.01. 02:45,MwydMnmJ
+Bazyn F.,Korobeynik S.,2,3,"['10', '11', '11', '4', '3']","['12', '7', '8', '11', '11']",05.01. 03:00,Wl2R1UOI
+Plyushch P.,Kostyuk A.,3,2,"['8', '11', '8', '11', '11']","['11', '5', '11', '6', '3']",05.01. 03:00,xS2N2A9C
+Zotov G.,Serikov V.,1,3,"['11', '13', '5', '3']","['13', '11', '11', '11']",05.01. 03:00,fsf4XRDA
+Cherednichenko P.,Kolesnik P.,2,3,"['10', '11', '11', '8', '2']","['12', '9', '4', '11', '11']",05.01. 03:15,dCVo2qI8
+Rodin A.,Goloveshkin A.,0,3,"['8', '6', '8']","['11', '11', '11']",05.01. 03:15,lpTspjuQ
+Ivchenko D.,Korobeynik S.,3,0,"['11', '12', '11']","['5', '10', '7']",05.01. 03:30,4Kc6xawH
+Kostyuk A.,Bazyn F.,1,3,"['3', '11', '9', '5']","['11', '7', '11', '11']",05.01. 03:30,bscAyJhN
+Kalyanov V.,Kovrikov A.,3,1,"['11', '13', '11', '13']","['4', '15', '9', '11']",05.01. 03:45,zs1Vzn2C
 Medvedev Y.,Rodin A.,-,-,[],[],05.01. 03:45,hvPf0NnL
-Stasevskiy O.,Goloveshkin A.,-,-,[],[],05.01. 03:45,EmQj13XE
-Kubrak S.,Shtaer A.,-,-,[],[],05.01. 04:00,IRwsWdGp
-Oprysk M.,Plyushch P.,-,-,[],[],05.01. 04:00,xYeEzw8T
+Stasevskiy O.,Goloveshkin A.,1,3,"['8', '11', '10', '6']","['11', '7', '12', '11']",05.01. 03:50,EmQj13XE
+Kubrak S.,Shtaer A.,2,3,"['7', '11', '10', '11', '8']","['11', '4', '12', '6', '11']",05.01. 04:00,IRwsWdGp
+Oprysk M.,Plyushch P.,3,0,"['11', '12', '11']","['9', '10', '8']",05.01. 04:00,xYeEzw8T
 Kolesnik P.,Medvedev Y.,-,-,[],[],05.01. 04:15,fR5AuAms
-Nemchenko D.,Babenko P.,-,-,[],[],05.01. 04:15,U30ZZ5HI
-Yunusov E.,Rubtsov S.,-,-,[],[],05.01. 04:15,n1Obas2R
-Plyushch P.,Kubrak S.,-,-,[],[],05.01. 04:30,Y7oB9trP
-Shtaer A.,Ivchenko D.,-,-,[],[],05.01. 04:30,UZKU0lvP
-Kalyanov V.,Babenko P.,-,-,[],[],05.01. 04:45,YXh8WoTG
-Kolesnik P.,Yunusov E.,-,-,[],[],05.01. 04:45,6o5VgLPl
-Rubtsov S.,Stasevskiy O.,-,-,[],[],05.01. 04:45,OMFQf1Ar
-Bazyn F.,Plyushch P.,-,-,[],[],05.01. 05:00,zHXx50jt
-Korobeynik S.,Kostyuk A.,-,-,[],[],05.01. 05:00,4jxs4K5n
+Nemchenko D.,Babenko P.,3,1,"['11', '15', '11', '11']","['7', '17', '6', '7']",05.01. 04:20,U30ZZ5HI
+Yunusov E.,Rubtsov S.,3,0,"['11', '16', '11']","['8', '14', '6']",05.01. 04:15,n1Obas2R
+Plyushch P.,Kubrak S.,3,0,"['11', '11', '11']","['5', '8', '2']",05.01. 04:30,Y7oB9trP
+Shtaer A.,Ivchenko D.,1,3,"['11', '8', '5', '7']","['8', '11', '11', '11']",05.01. 04:30,UZKU0lvP
+Kalyanov V.,Babenko P.,3,0,"['11', '11', '11']","['9', '5', '6']",05.01. 04:45,YXh8WoTG
+Kolesnik P.,Yunusov E.,3,0,"['11', '12', '11']","['7', '10', '6']",05.01. 04:45,6o5VgLPl
+Rubtsov S.,Stasevskiy O.,3,1,"['4', '11', '11', '11']","['11', '6', '4', '2']",05.01. 04:40,OMFQf1Ar
+Bazyn F.,Plyushch P.,3,1,"['12', '12', '6', '11']","['10', '10', '11', '9']",05.01. 05:00,zHXx50jt
+Korobeynik S.,Kostyuk A.,3,1,"['12', '12', '13', '11']","['10', '10', '15', '7']",05.01. 05:00,4jxs4K5n
 Goloveshkin A.,Medvedev Y.,-,-,[],[],05.01. 05:15,vDIxhaf1
-Nemchenko D.,Kovrikov A.,-,-,[],[],05.01. 05:15,GdrDV5rN
-Rodin A.,Cherednichenko P.,-,-,[],[],05.01. 05:15,px4Zhuue
-Ivchenko D.,Kostyuk A.,-,-,[],[],05.01. 05:30,rsyo3vLh
-Oprysk M.,Korobeynik S.,-,-,[],[],05.01. 05:30,Q5Qk2bza
-Cherednichenko P.,Goloveshkin A.,-,-,[],[],05.01. 05:45,K8ePF2n8
-Kalyanov V.,Nemchenko D.,-,-,[],[],05.01. 05:45,UanHUPcT
+Nemchenko D.,Kovrikov A.,1,3,"['17', '9', '6', '4']","['15', '11', '11', '11']",05.01. 05:15,GdrDV5rN
+Rodin A.,Cherednichenko P.,3,1,"['11', '11', '11', '11']","['6', '4', '13', '9']",05.01. 05:15,px4Zhuue
+Ivchenko D.,Kostyuk A.,3,0,"['11', '12', '11']","['5', '10', '7']",05.01. 05:30,rsyo3vLh
+Oprysk M.,Korobeynik S.,3,2,"['7', '11', '11', '7', '11']","['11', '7', '6', '11', '8']",05.01. 05:30,Q5Qk2bza
+Cherednichenko P.,Goloveshkin A.,0,3,"['6', '8', '5']","['11', '11', '11']",05.01. 05:45,K8ePF2n8
+Kalyanov V.,Nemchenko D.,2,3,"['6', '11', '11', '6', '9']","['11', '4', '5', '11', '11']",05.01. 05:45,UanHUPcT
 Stasevskiy O.,Medvedev Y.,-,-,[],[],05.01. 05:45,I3HtiJ97
-Kubrak S.,Bazyn F.,-,-,[],[],05.01. 06:00,v9Ug1Ik5
-Shtaer A.,Plyushch P.,-,-,[],[],05.01. 06:00,YVTc0x5B
-Babenko P.,Kovrikov A.,-,-,[],[],05.01. 06:15,nuZrQq6p
-Rubtsov S.,Kolesnik P.,-,-,[],[],05.01. 06:15,Q7NdcfWt
-Yunusov E.,Rodin A.,-,-,[],[],05.01. 06:15,YBaTEM1E
-Bazyn F.,Shtaer A.,-,-,[],[],05.01. 06:30,j78OsUlp
-Plyushch P.,Ivchenko D.,-,-,[],[],05.01. 06:30,CMS1adKH
-Kolesnik P.,Stasevskiy O.,-,-,[],[],05.01. 06:45,4bM0dEom
-Kovrikov A.,Kalyanov V.,-,-,[],[],05.01. 06:45,QVXnP3Lj
-Rodin A.,Rubtsov S.,-,-,[],[],05.01. 06:45,MZG5eY0g
-Korobeynik S.,Plyushch P.,-,-,[],[],05.01. 07:00,Uc7Stl4j
-Kostyuk A.,Oprysk M.,-,-,[],[],05.01. 07:00,r1eA5Xti
-Babenko P.,Nemchenko D.,-,-,[],[],05.01. 07:15,2mHVmmbi
-Goloveshkin A.,Yunusov E.,-,-,[],[],05.01. 07:15,0QF9fhGa
+Kubrak S.,Bazyn F.,1,3,"['10', '5', '12', '8']","['12', '11', '10', '11']",05.01. 06:00,v9Ug1Ik5
+Shtaer A.,Plyushch P.,1,3,"['6', '6', '11', '9']","['11', '11', '5', '11']",05.01. 06:00,YVTc0x5B
+Babenko P.,Kovrikov A.,2,3,"['7', '11', '8', '11', '7']","['11', '8', '11', '9', '11']",05.01. 06:15,nuZrQq6p
+Rubtsov S.,Kolesnik P.,3,2,"['11', '7', '11', '6', '11']","['7', '11', '4', '11', '8']",05.01. 06:15,Q7NdcfWt
+Yunusov E.,Rodin A.,3,1,"['11', '12', '4', '11']","['9', '10', '11', '6']",05.01. 06:15,YBaTEM1E
+Bazyn F.,Shtaer A.,3,1,"['11', '11', '8', '12']","['4', '7', '11', '10']",05.01. 06:30,j78OsUlp
+Plyushch P.,Ivchenko D.,0,3,"['7', '9', '5']","['11', '11', '11']",05.01. 06:30,CMS1adKH
+Kolesnik P.,Stasevskiy O.,3,2,"['11', '11', '15', '5', '11']","['4', '6', '17', '11', '6']",05.01. 06:45,4bM0dEom
+Kovrikov A.,Kalyanov V.,1,3,"['11', '10', '8', '5']","['4', '12', '11', '11']",05.01. 06:50,QVXnP3Lj
+Rodin A.,Rubtsov S.,3,1,"['11', '11', '10', '11']","['9', '2', '12', '6']",05.01. 06:50,MZG5eY0g
+Korobeynik S.,Plyushch P.,1,3,"['11', '10', '11', '5']","['13', '12', '6', '11']",05.01. 07:00,Uc7Stl4j
+Kostyuk A.,Oprysk M.,0,3,"['2', '10', '6']","['11', '12', '11']",05.01. 07:00,r1eA5Xti
+Babenko P.,Nemchenko D.,1,3,"['7', '15', '11', '8']","['11', '17', '7', '11']",05.01. 07:25,2mHVmmbi
+Goloveshkin A.,Yunusov E.,3,2,"['7', '11', '11', '13', '11']","['11', '13', '6', '11', '8']",05.01. 07:25,0QF9fhGa
 Medvedev Y.,Cherednichenko P.,-,-,[],[],05.01. 07:15,fmFDgCV5
-Ivchenko D.,Oprysk M.,-,-,[],[],05.01. 07:30,d4aE4idc
-Kubrak S.,Kostyuk A.,-,-,[],[],05.01. 07:30,vTlJ3BB3
-Babenko P.,Kalyanov V.,-,-,[],[],05.01. 07:45,tvGZn7Dc
-Stasevskiy O.,Cherednichenko P.,-,-,[],[],05.01. 07:45,6NIHhWpC
+Ivchenko D.,Oprysk M.,0,3,"['9', '8', '10']","['11', '11', '12']",05.01. 07:30,d4aE4idc
+Kubrak S.,Kostyuk A.,3,0,"['11', '11', '15']","['9', '7', '13']",05.01. 07:30,vTlJ3BB3
+Babenko P.,Kalyanov V.,3,2,"['11', '8', '9', '11', '11']","['6', '11', '11', '5', '8']",05.01. 07:45,tvGZn7Dc
+Stasevskiy O.,Cherednichenko P.,0,3,"['5', '8', '9']","['11', '11', '11']",05.01. 07:45,6NIHhWpC
 Yunusov E.,Medvedev Y.,-,-,[],[],05.01. 07:45,ln8Mij0I
-Bazyn F.,Oprysk M.,-,-,[],[],05.01. 08:00,nghR1ktG
-Shtaer A.,Korobeynik S.,-,-,[],[],05.01. 08:00,IJmN2VQ9
-Kolesnik P.,Rodin A.,-,-,[],[],05.01. 08:15,Gh08FghP
-Kovrikov A.,Nemchenko D.,-,-,[],[],05.01. 08:15,z1FwnRS3
-Rubtsov S.,Goloveshkin A.,-,-,[],[],05.01. 08:15,Sx7QjAFO
-Bazyn F.,Ivchenko D.,-,-,[],[],05.01. 08:30,QqiV09eM
-Korobeynik S.,Kubrak S.,-,-,[],[],05.01. 08:30,88tz0TAS
-Goloveshkin A.,Kolesnik P.,-,-,[],[],05.01. 08:45,0QyuAXFn
-Nemchenko D.,Kalyanov V.,-,-,[],[],05.01. 08:45,nyJsoorA
-Rodin A.,Stasevskiy O.,-,-,[],[],05.01. 08:45,I1nzBD0t
-Kostyuk A.,Shtaer A.,-,-,[],[],05.01. 09:00,r1X1emJq
-Oprysk M.,Kubrak S.,-,-,[],[],05.01. 09:00,xOW5f7Yk
-Cherednichenko P.,Yunusov E.,-,-,[],[],05.01. 09:15,8jum8Bpa
-Kovrikov A.,Babenko P.,-,-,[],[],05.01. 09:15,Ua8np5cG
+Bazyn F.,Oprysk M.,0,3,"['7', '6', '3']","['11', '11', '11']",05.01. 08:00,nghR1ktG
+Shtaer A.,Korobeynik S.,3,2,"['13', '10', '11', '2', '11']","['11', '12', '4', '11', '9']",05.01. 08:00,IJmN2VQ9
+Kolesnik P.,Rodin A.,2,3,"['9', '10', '11', '11', '13']","['11', '12', '9', '5', '15']",05.01. 08:20,Gh08FghP
+Kovrikov A.,Nemchenko D.,3,2,"['11', '11', '10', '8', '11']","['9', '5', '12', '11', '5']",05.01. 08:25,z1FwnRS3
+Rubtsov S.,Goloveshkin A.,0,3,"['4', '7', '2']","['11', '11', '11']",05.01. 08:15,Sx7QjAFO
+Bazyn F.,Ivchenko D.,2,3,"['12', '10', '11', '8', '9']","['10', '12', '8', '11', '11']",05.01. 08:30,QqiV09eM
+Korobeynik S.,Kubrak S.,3,2,"['11', '4', '11', '1', '11']","['8', '11', '7', '11', '9']",05.01. 08:30,88tz0TAS
+Goloveshkin A.,Kolesnik P.,0,3,"['9', '9', '10']","['11', '11', '12']",05.01. 09:00,0QyuAXFn
+Nemchenko D.,Kalyanov V.,3,0,"['11', '11', '11']","['6', '6', '5']",05.01. 08:55,nyJsoorA
+Rodin A.,Stasevskiy O.,3,1,"['7', '12', '11', '11']","['11', '10', '9', '9']",05.01. 09:00,I1nzBD0t
+Kostyuk A.,Shtaer A.,1,3,"['8', '11', '6', '8']","['11', '6', '11', '11']",05.01. 09:00,r1X1emJq
+Oprysk M.,Kubrak S.,3,0,"['11', '11', '11']","['5', '9', '8']",05.01. 09:00,xOW5f7Yk
+Cherednichenko P.,Yunusov E.,1,3,"['1', '12', '7', '7']","['11', '10', '11', '11']",05.01. 09:25,8jum8Bpa
+Kovrikov A.,Babenko P.,3,0,"['11', '11', '11']","['4', '6', '3']",05.01. 09:15,Ua8np5cG
 Medvedev Y.,Rubtsov S.,-,-,[],[],05.01. 09:15,ETuq9iVh
-Kalenik S.,Novikov Y.,-,-,[],[],05.01. 09:45,619EvU2m
-Panasenko V.,Vedmid S.,-,-,[],[],05.01. 10:00,dIxoVGVj
-Vavrenyuk S.,Khorolsky V.,-,-,[],[],05.01. 10:20,0O8IwlIg
-Naida O.,Vedmid S.,-,-,[],[],05.01. 10:35,GEV9gRmd
-Kalenik S.,Khorolsky V.,-,-,[],[],05.01. 10:55,nsvi7Va5
-Panasenko V.,Pirveli R.,-,-,[],[],05.01. 11:10,hWEhIAQd
-Vavrenyuk S.,Novikov Y.,-,-,[],[],05.01. 11:30,Shel6kFB
-Naida O.,Pirveli R.,-,-,[],[],05.01. 11:45,ALQSg08i
-Kalenik S.,Vavrenyuk S.,-,-,[],[],05.01. 12:05,6qfh59UH
-Panasenko V.,Naida O.,-,-,[],[],05.01. 12:20,WMDdHUu3
-Khorolsky V.,Novikov Y.,-,-,[],[],05.01. 12:40,06gd4TqO
-Pirveli R.,Vedmid S.,-,-,[],[],05.01. 12:55,QqD0Gle9
-Novikov Y.,Kalenik S.,-,-,[],[],05.01. 13:15,E9c03maU
-Vedmid S.,Panasenko V.,-,-,[],[],05.01. 13:30,vmH4F8AF
-Khorolsky V.,Vavrenyuk S.,-,-,[],[],05.01. 13:50,vXO6OWUu
-Pirveli R.,Naida O.,-,-,[],[],05.01. 14:05,MB69ESPL
-Khorolsky V.,Kalenik S.,-,-,[],[],05.01. 14:25,INNANjpn
-Pirveli R.,Panasenko V.,-,-,[],[],05.01. 14:40,025DDnuS
-Novikov Y.,Vavrenyuk S.,-,-,[],[],05.01. 15:00,ncSEMAah
-Vedmid S.,Naida O.,-,-,[],[],05.01. 15:15,Ie7v96mq
-Vavrenyuk S.,Kalenik S.,-,-,[],[],05.01. 15:35,QmRILUEb
-Naida O.,Panasenko V.,-,-,[],[],05.01. 15:50,dn6r8Q2k
-Novikov Y.,Khorolsky V.,-,-,[],[],05.01. 16:10,8CGNKlU4
-Vedmid S.,Pirveli R.,-,-,[],[],05.01. 16:25,vBem7pIe
-Semenova D.,Vinogradova M.,-,-,[],[],05.01. 02:45,jZUZhgKK
-Ryazanova A.,Kandybina V.,-,-,[],[],05.01. 03:15,4xZwhDZQ
-Vinogradova M.,Ryazanova A.,-,-,[],[],05.01. 03:45,MHL5mXsr
-Kandybina V.,Semenova D.,-,-,[],[],05.01. 04:15,08K9nicl
-Semenova D.,Ryazanova A.,-,-,[],[],05.01. 04:45,SUj6oBCf
-Vinogradova M.,Kandybina V.,-,-,[],[],05.01. 05:15,6LkApVR0
+Kalenik S.,Novikov Y.,3,1,"['12', '7', '11', '11']","['10', '11', '9', '6']",05.01. 09:50,619EvU2m
+Panasenko V.,Vedmid S.,3,1,"['10', '11', '11', '11']","['12', '5', '6', '4']",05.01. 10:00,dIxoVGVj
+Vavrenyuk S.,Khorolsky V.,3,0,"['11', '11', '11']","['6', '8', '2']",05.01. 10:20,0O8IwlIg
+Naida O.,Vedmid S.,0,3,"['5', '8', '6']","['11', '11', '11']",05.01. 10:35,GEV9gRmd
+Kalenik S.,Khorolsky V.,0,3,"['10', '7', '9']","['12', '11', '11']",05.01. 10:55,nsvi7Va5
+Panasenko V.,Pirveli R.,2,3,"['11', '7', '5', '12', '6']","['5', '11', '11', '10', '11']",05.01. 11:10,hWEhIAQd
+Vavrenyuk S.,Novikov Y.,3,2,"['14', '7', '11', '6', '11']","['12', '11', '6', '11', '8']",05.01. 11:30,Shel6kFB
+Naida O.,Pirveli R.,1,3,"['7', '11', '8', '9']","['11', '9', '11', '11']",05.01. 11:45,ALQSg08i
+Kalenik S.,Vavrenyuk S.,0,3,"['7', '10', '9']","['11', '12', '11']",05.01. 12:05,6qfh59UH
+Panasenko V.,Naida O.,3,0,"['11', '11', '11']","['5', '5', '7']",05.01. 12:20,WMDdHUu3
+Khorolsky V.,Novikov Y.,0,3,"['6', '7', '1']","['11', '11', '11']",05.01. 12:40,06gd4TqO
+Pirveli R.,Vedmid S.,2,3,"['13', '10', '13', '8', '7']","['11', '12', '11', '11', '11']",05.01. 12:55,QqD0Gle9
+Novikov Y.,Kalenik S.,1,3,"['13', '11', '8', '3']","['11', '13', '11', '11']",05.01. 13:15,E9c03maU
+Vedmid S.,Panasenko V.,1,3,"['7', '1', '11', '4']","['11', '11', '7', '11']",05.01. 13:30,vmH4F8AF
+Khorolsky V.,Vavrenyuk S.,1,3,"['6', '11', '8', '11']","['11', '7', '11', '13']",05.01. 13:50,vXO6OWUu
+Pirveli R.,Naida O.,0,3,"['2', '10', '7']","['11', '12', '11']",05.01. 14:05,MB69ESPL
+Khorolsky V.,Kalenik S.,0,3,"['8', '8', '11']","['11', '11', '13']",05.01. 14:25,INNANjpn
+Pirveli R.,Panasenko V.,2,3,"['9', '8', '11', '11', '7']","['11', '11', '6', '8', '11']",05.01. 14:40,025DDnuS
+Novikov Y.,Vavrenyuk S.,1,3,"['9', '8', '11', '7']","['11', '11', '8', '11']",05.01. 15:00,ncSEMAah
+Vedmid S.,Naida O.,3,2,"['11', '11', '4', '8', '11']","['6', '6', '11', '11', '6']",05.01. 15:15,Ie7v96mq
+Vavrenyuk S.,Kalenik S.,2,3,"['11', '6', '6', '11', '7']","['6', '11', '11', '6', '11']",05.01. 15:35,QmRILUEb
+Naida O.,Panasenko V.,3,2,"['5', '5', '11', '11', '11']","['11', '11', '7', '9', '7']",05.01. 15:50,dn6r8Q2k
+Novikov Y.,Khorolsky V.,3,0,"['11', '11', '11']","['5', '5', '4']",05.01. 16:10,8CGNKlU4
+Vedmid S.,Pirveli R.,1,3,"['7', '7', '11', '7']","['11', '11', '9', '11']",05.01. 16:25,vBem7pIe
+Semenova D.,Vinogradova M.,0,3,"['7', '12', '4']","['11', '14', '11']",05.01. 02:45,jZUZhgKK
+Ryazanova A.,Kandybina V.,3,0,"['11', '11', '11']","['4', '6', '8']",05.01. 03:15,4xZwhDZQ
+Vinogradova M.,Ryazanova A.,3,1,"['11', '7', '12', '12']","['6', '11', '10', '10']",05.01. 03:50,MHL5mXsr
+Kandybina V.,Semenova D.,2,3,"['8', '4', '11', '11', '8']","['11', '11', '8', '7', '11']",05.01. 04:15,08K9nicl
+Semenova D.,Ryazanova A.,1,3,"['13', '12', '4', '5']","['11', '14', '11', '11']",05.01. 04:45,SUj6oBCf
+Vinogradova M.,Kandybina V.,2,3,"['11', '10', '11', '7', '8']","['8', '12', '5', '11', '11']",05.01. 05:15,6LkApVR0
 Kostiuk O.,Slashova M.,2,3,"['11', '9', '12', '5', '7']","['7', '11', '10', '11', '11']",04.01. 02:40,I7k69NVB
-Tsiupko O.,Mydvetska A.,-,-,[],[],05.01. 03:45,8IFJ1CvP
-Yureneva S.,Vakhrusheva E.,-,-,[],[],05.01. 04:15,n3o0A4rP
-Severina Y.,Gordinskaya A.,-,-,[],[],05.01. 04:25,lCXR5Ojt
-Mikhailik Y.,Mydvetska A.,-,-,[],[],05.01. 04:45,dxyz42Lh
-Lapa A.,Gubskaya E.,-,-,[],[],05.01. 04:55,rZWV4r6n
-Tsiupko O.,Yureneva S.,-,-,[],[],05.01. 05:15,v1Qv3Mza
-Kolosovska O.,Gordinskaya A.,-,-,[],[],05.01. 05:25,2c68I1zn
-Mikhailik Y.,Vakhrusheva E.,-,-,[],[],05.01. 05:45,IiPr2tj5
-Severina Y.,Lapa A.,-,-,[],[],05.01. 05:55,KY0DHLkh
-Yureneva S.,Mydvetska A.,-,-,[],[],05.01. 06:15,CSwn105B
-Kolosovska O.,Gubskaya E.,-,-,[],[],05.01. 06:25,bPaHGu5b
-Tsiupko O.,Vakhrusheva E.,-,-,[],[],05.01. 06:45,jJxj0KKH
-Lapa A.,Gordinskaya A.,-,-,[],[],05.01. 06:55,hnaLFaK4
-Mikhailik Y.,Yureneva S.,-,-,[],[],05.01. 07:15,YsSfavzO
-Severina Y.,Gubskaya E.,-,-,[],[],05.01. 07:25,4M2PEJZA
-Vakhrusheva E.,Mydvetska A.,-,-,[],[],05.01. 07:45,noWbbbkU
-Kolosovska O.,Lapa A.,-,-,[],[],05.01. 07:55,nohUDwkH
-Mikhailik Y.,Tsiupko O.,-,-,[],[],05.01. 08:15,O674JsLu
-Gubskaya E.,Gordinskaya A.,-,-,[],[],05.01. 08:25,QyiYCc4N
-Kolosovska O.,Severina Y.,-,-,[],[],05.01. 08:55,fBexCHJT
+Tsiupko O.,Mydvetska A.,1,3,"['8', '8', '11', '8']","['11', '11', '6', '11']",05.01. 03:45,8IFJ1CvP
+Yureneva S.,Vakhrusheva E.,1,3,"['9', '12', '3', '7']","['11', '10', '11', '11']",05.01. 04:15,n3o0A4rP
+Severina Y.,Gordinskaya A.,3,0,"['11', '11', '11']","['5', '6', '8']",05.01. 04:25,lCXR5Ojt
+Mikhailik Y.,Mydvetska A.,3,0,"['11', '13', '11']","['7', '11', '9']",05.01. 04:45,dxyz42Lh
+Lapa A.,Gubskaya E.,3,0,"['11', '11', '11']","['5', '7', '4']",05.01. 04:55,rZWV4r6n
+Tsiupko O.,Yureneva S.,3,2,"['7', '12', '11', '8', '11']","['11', '10', '5', '11', '9']",05.01. 05:15,v1Qv3Mza
+Kolosovska O.,Gordinskaya A.,0,3,"['5', '9', '9']","['11', '11', '11']",05.01. 05:25,2c68I1zn
+Mikhailik Y.,Vakhrusheva E.,3,0,"['11', '11', '12']","['4', '6', '10']",05.01. 05:45,IiPr2tj5
+Severina Y.,Lapa A.,2,3,"['11', '12', '8', '11', '9']","['8', '10', '11', '13', '11']",05.01. 05:55,KY0DHLkh
+Yureneva S.,Mydvetska A.,3,0,"['11', '11', '11']","['8', '6', '9']",05.01. 06:20,CSwn105B
+Kolosovska O.,Gubskaya E.,3,2,"['6', '11', '11', '3', '11']","['11', '3', '4', '11', '7']",05.01. 06:25,bPaHGu5b
+Tsiupko O.,Vakhrusheva E.,3,2,"['8', '9', '11', '11', '11']","['11', '11', '3', '9', '7']",05.01. 06:45,jJxj0KKH
+Lapa A.,Gordinskaya A.,3,1,"['11', '11', '12', '11']","['9', '8', '14', '3']",05.01. 06:55,hnaLFaK4
+Mikhailik Y.,Yureneva S.,0,3,"['8', '3', '8']","['11', '11', '11']",05.01. 07:15,YsSfavzO
+Severina Y.,Gubskaya E.,3,0,"['11', '12', '11']","['4', '10', '4']",05.01. 07:25,4M2PEJZA
+Vakhrusheva E.,Mydvetska A.,3,0,"['11', '11', '11']","['8', '6', '8']",05.01. 07:45,noWbbbkU
+Kolosovska O.,Lapa A.,1,3,"['11', '9', '8', '4']","['8', '11', '11', '11']",05.01. 07:55,nohUDwkH
+Mikhailik Y.,Tsiupko O.,3,1,"['11', '11', '11', '11']","['7', '13', '6', '5']",05.01. 08:15,O674JsLu
+Gubskaya E.,Gordinskaya A.,0,3,"['6', '4', '9']","['11', '11', '11']",05.01. 08:25,QyiYCc4N
+Kolosovska O.,Severina Y.,0,3,"['7', '8', '7']","['11', '11', '11']",05.01. 08:55,fBexCHJT
 Dotsenko M.,Lifanova O.,1,3,"['6', '11', '8', '7']","['11', '5', '11', '11']",04.01. 21:15,6HmZUmA2
 Zaytseva V.,Zoidze E.,1,3,"['4', '8', '11', '7']","['11', '11', '8', '11']",04.01. 20:45,GIXUOIF8
-Zaytseva V.,Lifanova O.,-,-,[],[],04.01. 21:45,nTUwuatm
-Dotsenko M.,Zoidze E.,-,-,[],[],04.01. 22:15,zcujR59R
-Zaytseva V.,Dotsenko M.,-,-,[],[],04.01. 22:45,UiKrvJeg
-Lifanova O.,Zoidze E.,-,-,[],[],04.01. 23:15,hELMLqXl
+Zaytseva V.,Lifanova O.,1,3,"['11', '9', '9', '8']","['9', '11', '11', '11']",04.01. 21:45,nTUwuatm
+Dotsenko M.,Zoidze E.,0,3,"['6', '12', '7']","['11', '14', '11']",04.01. 22:15,zcujR59R
+Zaytseva V.,Dotsenko M.,0,3,"['9', '4', '8']","['11', '11', '11']",04.01. 22:55,UiKrvJeg
+Lifanova O.,Zoidze E.,0,3,"['9', '9', '10']","['11', '11', '12']",04.01. 23:15,hELMLqXl
 Zoidze E.,Scheibel M.,-,-,[],[],04.01. 23:45,W4KQK3ne
-Lifanova O.,Dotsenko M.,-,-,[],[],05.01. 00:15,0vPUJN11
+Lifanova O.,Dotsenko M.,0,3,"['9', '9', '4']","['11', '11', '11']",05.01. 00:15,0vPUJN11
 Lifanova O.,Scheibel M.,-,-,[],[],05.01. 00:45,vVNYIsH7
-Zoidze E.,Dotsenko M.,-,-,[],[],05.01. 01:15,tz2HsRg8
+Zoidze E.,Dotsenko M.,3,2,"['11', '11', '6', '5', '11']","['6', '9', '11', '11', '6']",05.01. 01:15,tz2HsRg8
 Dotsenko M.,Scheibel M.,-,-,[],[],05.01. 01:45,fw6Lto9E
-Zoidze E.,Lifanova O.,-,-,[],[],05.01. 02:15,l05Pu5OK
-Kryzhevskaya A.,Ostroverkhova E.,-,-,[],[],05.01. 03:00,p8nwU7P8
-Rafikova D.,Yushkevich A.,-,-,[],[],05.01. 03:30,2qsrTRvF
-Kryzhevskaya A.,Yushkevich A.,-,-,[],[],05.01. 04:00,Sj4TvPwR
-Rafikova D.,Ostroverkhova E.,-,-,[],[],05.01. 04:30,WK8lzqnr
-Kryzhevskaya A.,Rafikova D.,-,-,[],[],05.01. 05:00,AB7hZ21l
-Yushkevich A.,Ostroverkhova E.,-,-,[],[],05.01. 05:30,4Y6dYMGf
-Ostroverkhova E.,Kryzhevskaya A.,-,-,[],[],05.01. 06:00,IyB0XtW0
-Yushkevich A.,Rafikova D.,-,-,[],[],05.01. 06:30,0005W0o7
-Yushkevich A.,Kryzhevskaya A.,-,-,[],[],05.01. 07:00,via9VK0D
-Ostroverkhova E.,Rafikova D.,-,-,[],[],05.01. 07:30,S6hif4wE
-Rafikova D.,Kryzhevskaya A.,-,-,[],[],05.01. 08:00,4WFKxx8t
-Ostroverkhova E.,Yushkevich A.,-,-,[],[],05.01. 08:30,ne5PydNn
-=======
+Zoidze E.,Lifanova O.,3,1,"['9', '11', '11', '11']","['11', '4', '8', '6']",05.01. 02:15,l05Pu5OK
+Kryzhevskaya A.,Ostroverkhova E.,1,3,"['12', '6', '4', '7']","['10', '11', '11', '11']",05.01. 03:00,p8nwU7P8
+Rafikova D.,Yushkevich A.,3,1,"['12', '11', '11', '11']","['14', '9', '2', '8']",05.01. 03:30,2qsrTRvF
+Kryzhevskaya A.,Yushkevich A.,2,3,"['11', '8', '5', '11', '7']","['3', '11', '11', '5', '11']",05.01. 04:00,Sj4TvPwR
+Rafikova D.,Ostroverkhova E.,3,0,"['11', '11', '11']","['7', '9', '7']",05.01. 04:30,WK8lzqnr
+Kryzhevskaya A.,Rafikova D.,0,3,"['8', '16', '3']","['11', '18', '11']",05.01. 05:00,AB7hZ21l
+Yushkevich A.,Ostroverkhova E.,0,3,"['2', '6', '7']","['11', '11', '11']",05.01. 05:30,4Y6dYMGf
+Ostroverkhova E.,Kryzhevskaya A.,2,3,"['11', '8', '12', '11', '3']","['6', '11', '14', '6', '11']",05.01. 06:00,IyB0XtW0
+Yushkevich A.,Rafikova D.,1,3,"['11', '8', '3', '3']","['7', '11', '11', '11']",05.01. 06:30,0005W0o7
+Yushkevich A.,Kryzhevskaya A.,3,2,"['6', '14', '11', '7', '11']","['11', '12', '5', '11', '5']",05.01. 07:00,via9VK0D
+Ostroverkhova E.,Rafikova D.,0,3,"['6', '9', '4']","['11', '11', '11']",05.01. 07:30,S6hif4wE
+Rafikova D.,Kryzhevskaya A.,2,3,"['11', '6', '13', '11', '6']","['4', '11', '15', '8', '11']",05.01. 08:00,4WFKxx8t
+Ostroverkhova E.,Yushkevich A.,3,0,"['11', '11', '11']","['7', '9', '9']",05.01. 08:30,ne5PydNn
+=======,,,,,,,
 Averyanov A.,Grabskiy A.,1,3,"['11', '6', '10', '2']","['9', '11', '12', '11']",03.01. 21:15,nPU00izl
 Makarov V.,Vedmid S.,0,3,"['10', '4', '10']","['12', '11', '12']",03.01. 21:00,0zHVvT0s
 Oplachko A.,Moroz K.,3,0,"['11', '11', '11']","['7', '9', '2']",03.01. 21:00,lEKYbTzG
@@ -33191,12 +33191,12 @@ Boychuk V.,Shapovalov O.,0,3,"['9', '9', '8']","['11', '11', '11']",06.01. 13:55
 Cherkas A.,Zezyulin A.,0,3,"['8', '9', '7']","['11', '11', '11']",06.01. 14:10,hbe6S5Ub
 Boychuk V.,Rybakov Y.,3,2,"['11', '6', '9', '13', '11']","['5', '11', '11', '11', '9']",06.01. 14:25,dzE7htyF
 Cherkas A.,Budyak I.,0,3,"['9', '4', '6']","['11', '11', '11']",06.01. 14:40,zNpBRPq5
-Nepochatov A.,Shapovalov O.,-,-,[],[],06.01. 15:00,zRCBi0jL
-Maleev Y.,Zezyulin A.,-,-,[],[],06.01. 15:15,EDqFQqaB
-Shapovalov O.,Rybakov Y.,-,-,[],[],06.01. 15:35,GxU8jK5R
-Zezyulin A.,Budyak I.,-,-,[],[],06.01. 15:50,rmlJP3EH
-Nepochatov A.,Boychuk V.,-,-,[],[],06.01. 16:10,IoGznvEr
-Maleev Y.,Cherkas A.,-,-,[],[],06.01. 16:25,MwmNONTN
+Nepochatov A.,Shapovalov O.,2,3,"['4', '13', '13', '12', '6']","['11', '15', '11', '10', '11']",06.01. 15:00,zRCBi0jL
+Maleev Y.,Zezyulin A.,2,3,"['11', '8', '9', '11', '6']","['8', '11', '11', '7', '11']",06.01. 15:15,EDqFQqaB
+Shapovalov O.,Rybakov Y.,1,3,"['11', '14', '11', '11']","['13', '16', '9', '13']",06.01. 15:35,GxU8jK5R
+Zezyulin A.,Budyak I.,3,2,"['18', '11', '9', '8', '11']","['16', '8', '11', '11', '9']",06.01. 15:50,rmlJP3EH
+Nepochatov A.,Boychuk V.,2,3,"['9', '12', '11', '11', '6']","['11', '10', '7', '13', '11']",06.01. 16:10,IoGznvEr
+Maleev Y.,Cherkas A.,1,3,"['8', '11', '10', '10']","['11', '9', '12', '12']",06.01. 16:25,MwmNONTN
 Vinogradova M.,Ryazanova A.,2,3,"['12', '11', '9', '7', '7']","['10', '9', '11', '11', '11']",05.01. 06:15,0SYEkYLQ
 Kandybina V.,Semenova D.,3,2,"['11', '11', '4', '3', '12']","['6', '6', '11', '11', '10']",05.01. 05:55,I3qAjE6K
 Vinogradova M.,Kandybina V.,2,3,"['11', '10', '11', '7', '8']","['8', '12', '5', '11', '11']",05.01. 05:15,6LkApVR0
@@ -33391,19 +33391,19 @@ Zirin A.,Ermilov A.,0,3,"['7', '10', '9']","['11', '12', '11']",05.01. 22:35,YPh
 Makarenkov E.,Klimentev V.,1,3,"['11', '9', '6', '8']","['7', '11', '11', '11']",05.01. 22:20,jcNaHtlH
 Poletaev I.,Matveyev I.,3,2,"['8', '10', '11', '13', '11']","['11', '12', '4', '11', '4']",05.01. 22:15,bNQ7FKIT
 Petrov A.,Myagkov S.,-,-,[],[],06.01. 15:00,rPBg4LI5
-Vshivkov P.,Karpovkin G.,-,-,[],[],06.01. 18:30,dCHhg19B
-Chahur V.,Vlasov A.,-,-,[],[],06.01. 18:45,0v7vYdxA
-Matveyev I.,Tsvetkov V.,-,-,[],[],06.01. 18:45,UPF0iuvO
-Belugin O.,Bogomolov A.,-,-,[],[],06.01. 19:00,z3GdhLOH
-Khomutov S.,Tolmachev I.,-,-,[],[],06.01. 19:15,t0J4jagU
-Nemashkalo V.,Minkov M.,-,-,[],[],06.01. 19:15,r3dqXGiG
-Karpovkin G.,Belugin O.,-,-,[],[],06.01. 19:30,0QR5JcNG
-Tsvetkov V.,Khomutov S.,-,-,[],[],06.01. 19:45,x6LqCFFj
-Vlasov A.,Nemashkalo V.,-,-,[],[],06.01. 19:45,MgemWz7M
-Bogomolov A.,Vshivkov P.,-,-,[],[],06.01. 20:00,rkHAIHxN
-Minkov M.,Chahur V.,-,-,[],[],06.01. 20:15,UJfiVfMS
-Tolmachev I.,Matveyev I.,-,-,[],[],06.01. 20:15,EN4Szahi
-Vshivkov P.,Belugin O.,-,-,[],[],06.01. 20:30,tzzEHyhT
+Vshivkov P.,Karpovkin G.,0,3,"['9', '9', '6']","['11', '11', '11']",06.01. 18:30,dCHhg19B
+Chahur V.,Vlasov A.,3,1,"['11', '11', '7', '11']","['7', '8', '11', '8']",06.01. 18:45,0v7vYdxA
+Matveyev I.,Tsvetkov V.,3,0,"['11', '11', '11']","['3', '7', '5']",06.01. 18:45,UPF0iuvO
+Belugin O.,Bogomolov A.,2,3,"['11', '11', '9', '7', '9']","['5', '6', '11', '11', '11']",06.01. 19:00,z3GdhLOH
+Khomutov S.,Tolmachev I.,3,2,"['11', '8', '4', '13', '11']","['3', '11', '11', '11', '5']",06.01. 19:15,t0J4jagU
+Nemashkalo V.,Minkov M.,0,3,"['2', '4', '4']","['11', '11', '11']",06.01. 19:15,r3dqXGiG
+Karpovkin G.,Belugin O.,1,3,"['11', '6', '5', '7']","['7', '11', '11', '11']",06.01. 19:30,0QR5JcNG
+Tsvetkov V.,Khomutov S.,1,3,"['5', '6', '11', '5']","['11', '11', '8', '11']",06.01. 19:50,x6LqCFFj
+Vlasov A.,Nemashkalo V.,1,3,"['8', '5', '11', '9']","['11', '11', '7', '11']",06.01. 19:45,MgemWz7M
+Bogomolov A.,Vshivkov P.,0,3,"['5', '3', '7']","['11', '11', '11']",06.01. 20:00,rkHAIHxN
+Minkov M.,Chahur V.,2,3,"['7', '6', '11', '11', '7']","['11', '11', '9', '8', '11']",06.01. 20:15,UJfiVfMS
+Tolmachev I.,Matveyev I.,2,3,"['11', '11', '11', '6', '4']","['13', '6', '4', '11', '11']",06.01. 20:20,EN4Szahi
+Vshivkov P.,Belugin O.,2,3,"['10', '11', '4', '11', '6']","['12', '3', '11', '3', '11']",06.01. 20:30,tzzEHyhT
 Chahur V.,Nemashkalo V.,-,-,[],[],06.01. 20:45,6NpBBrPu
 Matveyev I.,Khomutov S.,-,-,[],[],06.01. 20:45,hE3WZI7c
 Karpovkin G.,Bogomolov A.,-,-,[],[],06.01. 21:00,bFMuDe0p
@@ -33490,15 +33490,15 @@ Ramensky I.,Sukharnikov N.,-,-,[],[],07.01. 15:15,rPibH5Kr
 Shagarov O.,Petrochenko D.,-,-,[],[],07.01. 15:15,OzFspefn
 Kasianyk N.,Volkov P.,3,2,"['11', '11', '8', '7', '11']","['3', '5', '11', '11', '8']",05.01. 22:35,E3byVYPp
 Kozachuk I.,Yurchenko K.,0,3,"['9', '5', '7']","['11', '11', '11']",05.01. 22:30,tEd5ntvL
-Marchuk M.,Hnoievoi R.,-,-,[],[],06.01. 15:25,QZ7lWJag
-Hnoievoi R.,Gomilko O.,-,-,[],[],06.01. 19:25,GAHVeDAe
-Hrymovskyi O.,Lazuryk D.,-,-,[],[],06.01. 20:00,ARRqqiLi
-Khoroshun O.,Shyriaiev V.,-,-,[],[],06.01. 20:05,Yqo2EZGg
-Yurkov A.,Dombrovskyi A.,-,-,[],[],06.01. 20:10,bTySrrR8
-Skhabitskiy S.,Kolesnykov V.,-,-,[],[],06.01. 20:15,pAiGG4QI
-Efimenko I.,Kapinus R.,-,-,[],[],06.01. 20:30,4lRmrBzb
-Aleksandr G.,Buianover H.,-,-,[],[],06.01. 20:35,nmk6DgWa
-Nadporozhskyi O.,Mishchenko V.,-,-,[],[],06.01. 20:40,G4WWs2tF
+Marchuk M.,Hnoievoi R.,1,3,"['4', '13', '11', '7']","['11', '15', '8', '11']",06.01. 15:25,QZ7lWJag
+Hnoievoi R.,Gomilko O.,3,1,"['9', '11', '11', '12']","['11', '9', '6', '10']",06.01. 19:25,GAHVeDAe
+Hrymovskyi O.,Lazuryk D.,2,3,"['5', '11', '14', '11', '6']","['11', '8', '16', '5', '11']",06.01. 20:00,ARRqqiLi
+Khoroshun O.,Shyriaiev V.,3,2,"['15', '9', '11', '11', '11']","['17', '11', '2', '6', '9']",06.01. 20:05,Yqo2EZGg
+Yurkov A.,Dombrovskyi A.,2,3,"['11', '6', '11', '10', '8']","['7', '11', '6', '12', '11']",06.01. 20:15,bTySrrR8
+Skhabitskiy S.,Kolesnykov V.,1,3,"['3', '9', '11', '9']","['11', '11', '6', '11']",06.01. 20:15,pAiGG4QI
+Efimenko I.,Kapinus R.,1,3,"['10', '11', '10', '9']","['12', '8', '12', '11']",06.01. 20:30,4lRmrBzb
+Aleksandr G.,Buianover H.,1,3,"['14', '11', '9', '8']","['16', '6', '11', '11']",06.01. 20:40,nmk6DgWa
+Nadporozhskyi O.,Mishchenko V.,2,3,"['11', '1', '5', '13', '9']","['8', '11', '11', '11', '11']",06.01. 20:45,G4WWs2tF
 Koshkodan I.,Tkachenko A.,-,-,[],[],06.01. 20:45,reAJFOuP
 Bryzhevatyi O.,Hudushyn I.,-,-,[],[],06.01. 20:50,fLb3J6t0
 Volkov P.,Kasianyk N.,-,-,[],[],06.01. 20:55,IBRVIf7n
@@ -33719,17 +33719,17 @@ Didukh V.,Kushnir V.,1,3,"['5', '11', '8', '9']","['11', '9', '11', '11']",06.01
 Maksimov S.,Gaevy N.,1,3,"['9', '8', '11', '9']","['11', '11', '9', '11']",05.01. 22:35,UDqyylPN
 Kostiuk O.,Tsykhotskiy A.,2,3,"['6', '11', '13', '6', '17']","['11', '9', '11', '11', '19']",05.01. 22:30,lQlpcxim
 Molochko A.,Tkachenko A.,2,3,"['13', '8', '11', '11', '6']","['15', '11', '6', '3', '11']",05.01. 22:20,bLiJrwxf
-Cherevko R.,Shkurupii O.,-,-,[],[],06.01. 15:05,6J0X4vUj
-Prokhoruk I.,Naumchuk M.,-,-,[],[],06.01. 15:15,QTG6Jwqp
-Masko Y.,Cherevko R.,-,-,[],[],06.01. 15:35,8OvGTN6i
-Kotov V.,Prokhoruk I.,-,-,[],[],06.01. 15:45,r5BBIcbj
-Shkurupii O.,Tsybulin S.,-,-,[],[],06.01. 16:05,nFwKSsMc
-Naumchuk M.,Treshchetka M.,-,-,[],[],06.01. 16:15,MeAFHHDd
-Vovk V.,Simonchuk D.,-,-,[],[],06.01. 19:50,MX5CZOV4
-Presnyakov M.,Kozhenkov I.,-,-,[],[],06.01. 19:55,zud3uX8H
-Kovalov O.,Shcherbak D.,-,-,[],[],06.01. 20:25,KIOFYroB
-Metla O.,Kovalenko Vi.,-,-,[],[],06.01. 20:30,YPE6viON
-Pismennyi Y.,Molochko A.,-,-,[],[],06.01. 20:35,EP7fsgv5
+Cherevko R.,Shkurupii O.,3,2,"['11', '9', '12', '8', '11']","['9', '11', '10', '11', '9']",06.01. 15:05,6J0X4vUj
+Prokhoruk I.,Naumchuk M.,3,2,"['9', '11', '11', '7', '11']","['11', '2', '1', '11', '7']",06.01. 15:15,QTG6Jwqp
+Masko Y.,Cherevko R.,1,3,"['9', '11', '5', '5']","['11', '7', '11', '11']",06.01. 15:35,8OvGTN6i
+Kotov V.,Prokhoruk I.,2,3,"['6', '4', '11', '11', '9']","['11', '11', '8', '6', '11']",06.01. 15:45,r5BBIcbj
+Shkurupii O.,Tsybulin S.,1,1,"['11', '10', '0']","['9', '12', '0']",06.01. 16:05Abn,nFwKSsMc
+Naumchuk M.,Treshchetka M.,3,1,"['11', '9', '11', '11']","['9', '11', '6', '9']",06.01. 16:15,MeAFHHDd
+Vovk V.,Simonchuk D.,3,0,"['14', '11', '11']","['12', '6', '6']",06.01. 19:55,MX5CZOV4
+Presnyakov M.,Kozhenkov I.,3,0,"['11', '11', '11']","['0', '8', '4']",06.01. 19:55,zud3uX8H
+Kovalov O.,Shcherbak D.,2,3,"['10', '11', '11', '4', '10']","['12', '8', '8', '11', '12']",06.01. 20:30,KIOFYroB
+Metla O.,Kovalenko Vi.,3,1,"['11', '7', '11', '11']","['3', '11', '4', '6']",06.01. 20:30,YPE6viON
+Pismennyi Y.,Molochko A.,0,3,"['6', '4', '9']","['11', '11', '11']",06.01. 20:40,EP7fsgv5
 Gavrilyuk O.,Khvysiuk A.,-,-,[],[],06.01. 20:45,vB7qWkPC
 Krutko O.,Derypaska R.,-,-,[],[],06.01. 20:55,0IH3yo1h
 Velchev A.,Kalinichenko V.,-,-,[],[],06.01. 20:55,hhEew7Wu
@@ -33831,25 +33831,25 @@ Gutnichenko A.,Andreev O.,0,3,"['4', '2', '8']","['11', '11', '11']",05.01. 22:3
 Kuleshov N.,Shekhovtsov A.,3,0,"['11', '11', '11']","['6', '3', '5']",05.01. 22:30,b5yuUpy0
 Popov A.,Nikolenko M.,2,3,"['11', '4', '11', '5', '6']","['7', '11', '5', '11', '11']",05.01. 22:30,jatbz0Rq
 Treshchyov E.,Dotsenko V.,3,2,"['4', '6', '11', '11', '11']","['11', '11', '5', '8', '7']",05.01. 22:30,ryOLb2ub
-Novikov Y.,Kalenik S.,-,-,[],[],06.01. 15:00FRO,zo9HiKcQ
-Vavrenyuk S.,Khorolsky V.,-,-,[],[],06.01. 15:30FRO,xfeqmv6s
-Novikov Y.,Khorolsky V.,-,-,[],[],06.01. 16:00FRO,AeiS65LK
-Vavrenyuk S.,Kalenik S.,-,-,[],[],06.01. 16:30FRO,lnjW5PzR
-Novikov Y.,Vavrenyuk S.,-,-,[],[],06.01. 17:00FRO,6Rxb1qqr
-Khorolsky V.,Kalenik S.,-,-,[],[],06.01. 17:30FRO,KUt203bl
-Kalenik S.,Novikov Y.,-,-,[],[],06.01. 18:00FRO,2gW6aNDf
+Novikov Y.,Kalenik S.,3,0,"['11', '11', '11']","['9', '9', '4']",06.01. 15:00,zo9HiKcQ
+Vavrenyuk S.,Khorolsky V.,2,3,"['9', '8', '13', '11', '6']","['11', '11', '11', '5', '11']",06.01. 15:30,xfeqmv6s
+Novikov Y.,Khorolsky V.,0,3,"['12', '7', '8']","['14', '11', '11']",06.01. 16:00,AeiS65LK
+Vavrenyuk S.,Kalenik S.,3,2,"['11', '11', '8', '3', '11']","['9', '6', '11', '11', '5']",06.01. 16:30,lnjW5PzR
+Novikov Y.,Vavrenyuk S.,3,1,"['11', '12', '5', '11']","['7', '10', '11', '9']",06.01. 17:00,6Rxb1qqr
+Khorolsky V.,Kalenik S.,3,2,"['11', '7', '12', '5', '11']","['5', '11', '10', '11', '9']",06.01. 17:30,KUt203bl
+Kalenik S.,Novikov Y.,0,3,"['4', '8', '4']","['11', '11', '11']",06.01. 18:00,2gW6aNDf
 Khorolsky V.,Vavrenyuk S.,-,-,[],[],06.01. 18:30FRO,tpVAbsT0
 Khorolsky V.,Novikov Y.,-,-,[],[],06.01. 19:00FRO,lAUEc1r7
 Kalenik S.,Vavrenyuk S.,-,-,[],[],06.01. 19:30FRO,S0TIdLcD
-Nikolenko M.,Kats L.,-,-,[],[],06.01. 20:00,fVklnbLm
-Plyushch P.,Ivchenko K.,-,-,[],[],06.01. 20:00,z7CFSLss
+Nikolenko M.,Kats L.,0,3,"['8', '6', '3']","['11', '11', '11']",06.01. 20:00,fVklnbLm
+Plyushch P.,Ivchenko K.,0,3,"['5', '3', '6']","['11', '11', '11']",06.01. 20:00,z7CFSLss
 Vavrenyuk S.,Novikov Y.,-,-,[],[],06.01. 20:00FRO,U571L4zE
-Burylov V.,Kirsanov K.,-,-,[],[],06.01. 20:30,YLlhoIzf
+Burylov V.,Kirsanov K.,3,0,"['12', '11', '11']","['10', '3', '7']",06.01. 20:30,YLlhoIzf
 Kalenik S.,Khorolsky V.,-,-,[],[],06.01. 20:30FRO,r9B5KOkK
-Korobeynik S.,Bortsov D.,-,-,[],[],06.01. 20:30,lAGJRucm
-Rafikov R.,Shalgorodskiy N.,-,-,[],[],06.01. 20:30,GANmJai1
-Sharpay V.,Strelets V.,-,-,[],[],06.01. 20:30,rHFZt3q8
-Kovalenko S.,Nesterenko I.,-,-,[],[],06.01. 20:45,4M4lB5fG
+Korobeynik S.,Bortsov D.,3,1,"['12', '8', '11', '11']","['10', '11', '2', '9']",06.01. 20:30,lAGJRucm
+Rafikov R.,Shalgorodskiy N.,2,3,"['3', '13', '11', '7', '7']","['11', '11', '8', '11', '11']",06.01. 20:30,GANmJai1
+Sharpay V.,Strelets V.,3,2,"['11', '6', '11', '12', '11']","['3', '11', '9', '14', '2']",06.01. 20:30,rHFZt3q8
+Kovalenko S.,Nesterenko I.,3,2,"['10', '11', '8', '11', '11']","['12', '9', '11', '6', '6']",06.01. 20:45,4M4lB5fG
 Dotsenko V.,Gotsulyak E.,-,-,[],[],06.01. 21:00,M7EwtNbE
 Nikolenko M.,Kirsanov K.,-,-,[],[],06.01. 21:00,xWA9Jr5Q
 Pilguy A.,Dyakov V.,-,-,[],[],06.01. 21:00,UDRiIJ67
@@ -34038,4 +34038,15 @@ Agalakova I.,Havelia A.,-,-,[],[],07.01. 10:25,dQWx3odJ
 Nikichenko O.,Kabakova L.,-,-,[],[],07.01. 10:55,OWKKRUYJ
 Babii A.,Lieventsova K.,-,-,[],[],07.01. 11:25,2NJOQllQ
 Dotsenko M.,Zoidze E.,2,3,"['13', '5', '11', '7', '8']","['11', '11', '3', '11', '11']",05.01. 22:15,EXaw6a5E
->>>>>>> master
+>>>>>>> master,,,,,,,
+Kotov V.,Trachuk V.,3,2,"['11', '7', '10', '13', '11']","['8', '11', '12', '11', '4']",06.01. 14:50,OKUvOJzT
+Baystryuchenko D.,Kozenkov T.,-,-,[],[],07.01. 03:40,joLIfOVI
+Vakarash R.,Uchen N.,-,-,[],[],07.01. 04:15,hja1J78J
+Zinov N.,Kozenkov T.,-,-,[],[],07.01. 04:50,Wtb5IRNP
+Baystryuchenko D.,Vakarash R.,-,-,[],[],07.01. 05:25,2PpXDoWt
+Zinov N.,Uchen N.,-,-,[],[],07.01. 06:00,tGqyD5om
+Vakarash R.,Kozenkov T.,-,-,[],[],07.01. 06:35,OvZuCP0g
+Zinov N.,Vakarash R.,-,-,[],[],07.01. 07:10,xrwpBqGa
+Baystryuchenko D.,Uchen N.,-,-,[],[],07.01. 07:45,W4xlA3V5
+Zinov N.,Baystryuchenko D.,-,-,[],[],07.01. 08:20,Aeyh9NpC
+Uchen N.,Kozenkov T.,-,-,[],[],07.01. 08:55,SWVd8s0I
