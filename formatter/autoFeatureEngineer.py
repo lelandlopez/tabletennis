@@ -100,9 +100,6 @@ class autoFeatureEngineer:
     def getRollingSum(self, df, group, gbf, cols, num):
         name = self.createNames(group)
         names = [name + i + '_rolling_' + str(num) for i in cols]
-        # print(names)
-        # print(cols)
-        # print(gbf[cols].rolling(num).sum().reset_index(0, drop=True).reset_index(0, drop=True))
         df[names] = gbf[cols].rolling(num).sum().reset_index(0, drop=True).reset_index(0, drop=True)
         return df, names
 
