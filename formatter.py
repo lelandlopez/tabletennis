@@ -31,21 +31,21 @@ def formatter(df, save = False):
         df.loc[df['lScore'] < df['rScore'], ['lWin', 'rWin']] = [False, True]
 
         df = afe.applyOnBoth(df, 
-                [['lGames', 'lGames'], ['rGames', 'rGames']], 
+                ['Games', 'Games'],
                 literal_eval)
         df = afe.applyOnBoth(df, 
-                [['lGames', 'lGames'], ['rGames', 'rGames']], 
+                ['Games', 'Games'],
                 lambda x: [int(i) for i in x])
 
         df['lDiffGames'] = df.apply(lambda x: np.subtract(x['lGames'], x['rGames']), axis=1)
         df['rDiffGames'] = df['lDiffGames'].apply(lambda x: x * -1)
 
         df = afe.applyOnBoth(df, 
-                [['lDiffGamesSum', 'lDiffGames'], ['rDiffGamesSum', 'rDiffGames']], 
+                ['DiffGamesSum', 'DiffGames'],
                 lambda x: sum(x))
 
         df = afe.applyOnBoth(df, 
-                [['lGames_len', 'lGames'], ['rGames_len', 'rGames']], 
+                ['Games_len', 'Games'],
                 len)
 
         df.loc[df['lScore'] >= df['rScore'], 'toScore'] = df['lScore']
@@ -53,7 +53,7 @@ def formatter(df, save = False):
         df['toScore'] = df['toScore'].astype(float)
 
         df = afe.applyOnBoth(df, 
-                [['lFirstGameW', 'lDiffGames'], ['rFirstGameW', 'rDiffGames']],
+                ['FirstGameW', 'DiffGames'],
                 lambda x: x[0] > 0)
         return df
 

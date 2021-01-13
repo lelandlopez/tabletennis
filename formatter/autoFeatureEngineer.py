@@ -142,9 +142,9 @@ class autoFeatureEngineer:
             df[col] = df[col].astype(type)
         return df
 
-    def applyOnBoth(self, df, namesArr, func):
-        for i in namesArr:
-            df[i[0]] = df[i[1]].apply(func)
+    def applyOnBoth(self, df, base, func):
+        for i in ['l', 'r']:
+            df[i + base[0]] = df[i + base[1]].apply(func)
         return df
 
 
