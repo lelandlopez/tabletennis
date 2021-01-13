@@ -9,7 +9,7 @@ from ast import literal_eval
 from itertools import combinations
 import time
 import sys
-sys.path.insert(1, '..')
+sys.path.insert(1, './')
 from helpers import helpers
 from multiprocessing import Pool
 
@@ -134,6 +134,7 @@ class autoFeatureEngineer:
             difference.append(np.array(list1_i, dtype='object') - np.array(list2_i, dtype='object'))
         df[resultingCol] = difference
         return df
+
     def changeDType(self, df, col, type, paired = True):
         if paired:
             df[col + '_left'] = df[col + '_left'].astype(type)
@@ -144,7 +145,7 @@ class autoFeatureEngineer:
 
     def applyOnBoth(self, df, base, func):
         for i in ['l', 'r']:
-            df[i + base[0]] = df[i + base[1]].apply(func)
+            df[i + base[1]] = df[i + base[0]].apply(func)
         return df
 
 
