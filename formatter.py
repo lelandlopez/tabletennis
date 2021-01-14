@@ -77,10 +77,10 @@ def createStatsAfterSplit(df):
         gbf = df.sort_values(numMatchCol).groupby(group, as_index=False).filter(lambda x: len(x)> 1).groupby(group, as_index=False)
 
         # gbf = df.sort_values(numMatchCol).groupby(group, as_index=False)
-        df, cumsumCols = afe.getCumsum(df, group, gbf, cols)
+        df, cumsumCols = afe.getCumsum(df, group, cols)
         colsToShift = colsToShift + cumsumCols
 
-        df, rollingSumCols = afe.getRollingSum(df, group, gbf, cols, 5)  
+        df, rollingSumCols = afe.getRollingSum(df, group, cols, 5)  
         colsToShift = colsToShift + rollingSumCols
 
         names = afe.createDivNames(group, cols, numMatchCol, '_ave')

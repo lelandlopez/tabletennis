@@ -95,8 +95,8 @@ class autoFeatureEngineer:
         names = [name + i + '_cumsum' for i in cols]
         numMatchName = self.createNames(group, 'num_match')
         df = df.sort_values(group + [numMatchName])
-        df[names] = df.groupby(group)[cols].expanding().sum().reset_index(0, drop=True)
-        # df[names] = df.groupby(group)[cols].rolling(num).sum().reset_index(0, drop=True)
+        df[names] = df.groupby(group)[cols].expanding().sum().reset_index(0, drop=True).reset_index(0, drop=True)
+        print(df)
         return df, names
 
 
@@ -105,7 +105,7 @@ class autoFeatureEngineer:
         names = [name + i + '_rolling_' + str(num) for i in cols]
         numMatchName = self.createNames(group, 'num_match')
         df = df.sort_values(group + [numMatchName])
-        df[names] = df.groupby(group)[cols].rolling(num).sum().reset_index(0, drop=True)
+        df[names] = df.groupby(group)[cols].rolling(num).sum().reset_index(0, drop=True).reset_index(0, drop=True)
         return df, names
 
     def formatSequencer(self, df, seq):
