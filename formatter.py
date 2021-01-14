@@ -97,14 +97,6 @@ def createStatsAfterSplit(df):
     df = df[sn + ['Player', 'id']]
     return df
 
-def cleanup(df):
-    k= [i for i in df.columns if 'num_match' in i and 'last' not in i ]
-    df = df.drop(columns=k)
-    # k =[i for i in df.columns if 'last' not in i and 'Player' not in i and i != 'id']
-    # df = df.drop(columns=k)
-
-    df = afe.calculateDiffs(df)
-    return df
 
 def formatter(df, save = False):
     copy = df.copy()
@@ -116,6 +108,6 @@ def formatter(df, save = False):
     df = createStatsAfterSplit(df)
     k = copy
     df = afe.merge(df, k)
-    df = cleanup(df)
+    df = afe.cleanup(df)
     return df
 

@@ -116,3 +116,20 @@ def testRollingSum():
     print(resultingDF)
     print(correctDF)
     assert resultingDF.equals(correctDF) and resultingDiv == ['Player_Score_rolling_2']
+
+def test_cleanup():
+    afe = autoFeatureEngineer(False)
+    startArr = [
+        [1, '1', 1, 1, 1, 1]]
+    startDF = pd.DataFrame(
+        startArr, 
+        columns=['Score_cumsum', 'Player', 'Score', 'Player_num_match', 'last_Score_cumsum', 'id'])
+    endArr = [
+        ['1', 1, 1]]
+    correctDF = pd.DataFrame(
+        endArr,
+        columns=['Player', 'last_Score_cumsum', 'id'])
+    resultingDF = afe.cleanup(startDF)
+    print(resultingDF)
+    print(correctDF)
+    assert resultingDF.equals(correctDF)

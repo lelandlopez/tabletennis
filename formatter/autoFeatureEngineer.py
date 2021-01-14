@@ -171,3 +171,13 @@ class autoFeatureEngineer:
             right = bare + '_right'
             df[diff] = df[left] - df[right]
         return df
+
+
+    def cleanup(self, df):
+        k= [i for i in df.columns if 'num_match' in i and 'last' not in i ]
+        df = df.drop(columns=k)
+        k =[i for i in df.columns if 'last' not in i and 'Player' not in i and i != 'id']
+        df = df.drop(columns=k)
+
+        df = self.calculateDiffs(df)
+        return df
