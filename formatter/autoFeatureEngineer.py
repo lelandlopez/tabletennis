@@ -45,7 +45,6 @@ class autoFeatureEngineer:
     def shift(self, df, group, cols):
         numMatchName = self.createNames(group, 'num_match')
         df = df.sort_values(group + [numMatchName])
-        # df[['last_' + i for i in cols]] = gbf[cols].shift(1)
         names = ['last_' + i for i in cols]
         df[names] = df.groupby(group)[cols].shift(1)
         df = df.drop(columns=cols)

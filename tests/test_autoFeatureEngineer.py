@@ -133,3 +133,50 @@ def test_cleanup():
     print(resultingDF)
     print(correctDF)
     assert resultingDF.equals(correctDF)
+
+def test_shift():
+    afe = autoFeatureEngineer(False)
+    group = ['Player']
+    startArr = [
+        ['1', '2', '1'], 
+        ['2', '2', '1'], 
+        ['3', '2', '1'], 
+        ['4', '1', '2'], 
+        ['5', '1', '2'], 
+        ['6', '1', '2']]
+    random.shuffle(startArr)
+    splitArr = [
+        ['1', '1', 1], 
+        ['2', '1', 2], 
+        ['3', '1', 3], 
+        ['4', '1', 4], 
+        ['5', '1', 5], 
+        ['6', '1', 6],
+        ['1', '2', 7], 
+        ['2', '2', 8], 
+        ['3', '2', 9], 
+        ['4', '2', 10], 
+        ['5', '2', 11], 
+        ['6', '2', 12]]
+    random.shuffle(splitArr)
+    correctArr = [
+        ['1', '2', 7, '1', 1], 
+        ['2', '2', 8, '1', 2], 
+        ['3', '2', 9, '1', 3], 
+        ['4', '1', 4, '2', 10], 
+        ['5', '1', 5, '2', 11], 
+        ['6', '1', 6, '2', 12]]
+    startDF = pd.DataFrame(
+        startArr, 
+        columns=['id', 'lPlayer', 'rPlayer'])
+    splitDF = pd.DataFrame(
+        splitArr, 
+        columns=['id', 'Player', 'Score'])
+    correctDF = pd.DataFrame(
+        correctArr,
+        columns=['id', 'Player_left', 'Score_left', 'Player_right', 'Score_right'])
+    resultingDF = afe.merge(splitDF, startDF)
+    resultingDF = resultingDF.sort_values('id').reset_index(drop=True)
+    print(resultingDF)
+    print(correctDF)
+    assert resultingDF.equals(correctDF)
