@@ -74,9 +74,6 @@ def createStatsAfterSplit(df):
     for group in groups:
         colsToShift = []
         df, numMatchCol = afe.createNumMatch(df, group)
-        gbf = df.sort_values(numMatchCol).groupby(group, as_index=False).filter(lambda x: len(x)> 1).groupby(group, as_index=False)
-
-        # gbf = df.sort_values(numMatchCol).groupby(group, as_index=False)
         df, cumsumCols = afe.getCumsum(df, group, cols)
         colsToShift = colsToShift + cumsumCols
 
@@ -86,7 +83,6 @@ def createStatsAfterSplit(df):
         names = afe.createDivNames(group, cols, numMatchCol, '_ave')
         colsToShift = colsToShift + names
         df[names] = df[cumsumCols].div(df[numMatchCol] + 1, axis=0)
-        # df = afe.shift(df, names, df.sort_values(numMatchCol).groupby(group, as_index=False))
         for divider in dividers:
             n = afe.createDivNames(group, cols, divider, '_ave')
             div = afe.createNames(group)
@@ -94,7 +90,7 @@ def createStatsAfterSplit(df):
             colsToShift = colsToShift + n
 
 
-        df, shiftedNames = afe.shift(df, colsToShift, df.sort_values(numMatchCol).groupby(group, as_index=False))
+        df, shiftedNames = afe.shift(df, group, colsToShift)
         sn = sn + shiftedNames
 
         # df = afe.shiftBase(df, cols, group, df.sort_values(numMatchCol).groupby(group, as_index=False))

@@ -77,8 +77,13 @@ class autoFeatureEngineer:
         return df, div
 
     @helpers.printTime
-    def shift(self, df, cols, gbf):
-        df[['last_' + i for i in cols]] = gbf[cols].shift(1)
+    def shift(self, df, group, cols):
+        numMatchName = self.createNames(group, 'num_match')
+        df = df.sort_values(group + [numMatchName])
+        # df[['last_' + i for i in cols]] = gbf[cols].shift(1)
+        names = ['last_' + i for i in cols]
+        print(names)
+        df[names] = df.groupby(group)[cols].shift(1)
         df = df.drop(columns=cols)
         return df, ['last_' + i for i in cols]
 
@@ -100,6 +105,7 @@ class autoFeatureEngineer:
         return df, names
 
 
+    @helpers.printTime
     def getRollingSum(self, df, group, cols, num):
         name = self.createNames(group)
         names = [name + i + '_rolling_' + str(num) for i in cols]
