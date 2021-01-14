@@ -90,17 +90,22 @@ class autoFeatureEngineer:
         return df
 
     @helpers.printTime
-    def getCumsum(self, df, group, gbf, cols):
+    def getCumsum(self, df, group, cols):
         name = self.createNames(group)
         names = [name + i + '_cumsum' for i in cols]
-        df[names] = gbf[cols].expanding().sum().reset_index(0, drop=True)
+        numMatchName = self.createNames(group, 'num_match')
+        df = df.sort_values(group + [numMatchName])
+        df[names] = df.groupby(group)[cols].expanding().sum().reset_index(0, drop=True)
+        # df[names] = df.groupby(group)[cols].rolling(num).sum().reset_index(0, drop=True)
         return df, names
 
 
-    def getRollingSum(self, df, group, gbf, cols, num):
+    def getRollingSum(self, df, group, cols, num):
         name = self.createNames(group)
         names = [name + i + '_rolling_' + str(num) for i in cols]
-        df[names] = gbf[cols].rolling(num).sum().reset_index(0, drop=True).reset_index(0, drop=True)
+        numMatchName = self.createNames(group, 'num_match')
+        df = df.sort_values(group + [numMatchName])
+        df[names] = df.groupby(group)[cols].rolling(num).sum().reset_index(0, drop=True)
         return df, names
 
     def formatSequencer(self, df, seq):
@@ -142,7 +147,7 @@ class autoFeatureEngineer:
 
     def applyOnBoth(self, df, base, func):
         for i in ['l', 'r']:
-            df[i + base[1]] = df[i + base[0]].apply(func)
+            df[i + base[0]] = df[i + base[1]].apply(func)
         return df
 
 
