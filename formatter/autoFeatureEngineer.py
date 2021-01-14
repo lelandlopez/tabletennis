@@ -13,41 +13,6 @@ sys.path.insert(1, './')
 from helpers import helpers
 from multiprocessing import Pool
 
-def t(gbf, lf):
-    return gbf.transform(lf[0])
-
-def LECols(df, cols):
-    k = []
-    for i in cols:
-        k = k + list(df[i].unique())
-    le = preprocessing.LabelEncoder()
-    le.fit(seq)
-    for i in cols:
-        df[i] = le.transform(df[i])
-    return df
-
-def changeDType(df, col, type):
-    df[col] = df[col].astype(type)
-    return df
-
-def strArrToIntArr(arr):
-    return list(map(int, arr))
-
-def numCloseGamesL(series):
-    return len([x for x in series if (x < 0) & (x >= -2)])
-
-def numCloseGamesW(series):
-    return len([x for x in series if (x > 0) & (x <= 2)])
-
-def numCloseGames(series):
-    return len([x for x in series if (x <= 2) & (x >= -2)])
-
-def numBlowouts(series):
-    return len([x for x in series if x == 0])
-
-def flattenList(l):
-    return [item for sublist in l for item in sublist]
-
 
 class autoFeatureEngineer:
     def __init__(self, save = False):
@@ -82,7 +47,6 @@ class autoFeatureEngineer:
         df = df.sort_values(group + [numMatchName])
         # df[['last_' + i for i in cols]] = gbf[cols].shift(1)
         names = ['last_' + i for i in cols]
-        print(names)
         df[names] = df.groupby(group)[cols].shift(1)
         df = df.drop(columns=cols)
         return df, ['last_' + i for i in cols]
@@ -102,6 +66,7 @@ class autoFeatureEngineer:
         df = df.sort_values(group + [numMatchName])
         k = df.groupby(group)[cols].expanding().sum().reset_index(0, drop=True)
         k.columns = names
+        print(k.head())
         df = pd.concat([df, k], axis=1)
         return df, names
 
@@ -147,89 +112,9 @@ class autoFeatureEngineer:
         df[resultingCol] = difference
         return df
 
-    def changeDType(self, df, col, type, paired = True):
-        if paired:
-            df[col + '_left'] = df[col + '_left'].astype(type)
-            df[col + '_right'] = df[col + '_right'].astype(type)
-        else:
-            df[col] = df[col].astype(type)
-        return df
-
     def applyOnBoth(self, df, base, func):
         for i in ['l', 'r']:
             df[i + base[0]] = df[i + base[1]].apply(func)
-        return df
-
-
-    def cleanData(self):
-        def clean():
-            def dropDuplicateIds():
-                k = self.df.shape[0]
-                self.df = self.df.drop_duplicates(subset=self.id[0])
-                print(f'dropped duplicate id:', k-self.df.shape[0])
-
-            def dropSubjectVSubject():
-                k = self.df.shape[0]
-                l = self.df[self.df[self.subjects[0]] == self.df[self.subjects[1]]]
-                for i in l[self.subjects[0]].unique():
-                    self.df = self.df[self.df[self.subjects[0]] != i]
-                    self.df = self.df[self.df[self.subjects[1]] != i]
-                print(f'dropped SubjectVSubject :', k-self.df.shape[0])
-
-            def dropBadSubjectScore():
-                k = self.df.shape[0]
-                self.df = self.df[self.df[self.subjectScore[0]].str.isnumeric()]
-                self.df = self.df[self.df[self.subjectScore[1]].str.isnumeric()]
-                print(f'dropped dropBadSubjectScore :', k-self.df.shape[0])
-
-            dropDuplicateIds()
-            dropSubjectVSubject()
-            dropBadSubjectScore()
-            dropBadSequencer()
-            print(f'total remaining rows: ', self.df.shape[0])
-            return self
-
-        def format():
-            def formatSequencer():
-                k = self.sequencer[0]
-                self.df.loc[self.df[k].str.contains(' ') == False, k] = self.df[k] + '0000'
-                self.df.loc[self.df[k].str.contains(' '), k] = self.df[k].str[0:6] + '2020' + self.df[k].str[7:]
-                self.df[k] = self.df[k].str.replace('.', '')
-                self.df[k] = self.df[k].str.replace(':', '')
-                self.df[k] = self.df[k].str[4:8] + self.df[k].str[2:4] + self.df[k].str[0:2] + self.df[k].str[8:]
-                self.df[k] = self.df[k].astype(int)
-            def formatSubjects():
-                self.df = LECols(self.df, self.subjects)
-            #
-            def formatStringArrays():
-                for i in flattenList(self.arrStr):
-                    self.df[i] = self.df[i].apply(literal_eval).apply(strArrToIntArr)
-            # def formatSubjectScore():
-            #     self.df = changeDType(self.df, self.subjectScore[0], int)
-            #     self.df = changeDType(self.df, self.subjectScore[1], int)
-
-            formatSequencer()
-            # formatSubjects()
-            # formatSubjectScore()
-            formatStringArrays()
-
-        clean()
-        format()
-
-    def getCloseGames(self, df, col, resulting):
-        if resulting == 'numCloseGamesL':
-            func = numCloseGamesL
-        elif resulting == 'numCloseGamesW':
-            func = numCloseGamesW
-        elif resulting == 'numCloseGames':
-            func = numCloseGames
-        elif resulting == 'numBlowouts':
-            func = numCloseGames
-        else:
-            print("function not recognized")
-            return
-        df['l' + resulting] = df['l' + col].apply(func)
-        df['r' + resulting] = df['r' + col].apply(func)
         return df
 
     def split(self, df, stats, extraStats):
@@ -261,25 +146,6 @@ class autoFeatureEngineer:
     def dropBadGames(self, df):
         df = df[df['lGames'].str.len() > 2]
         return df
-
-
-
-    def dropVariance():
-        k = self.df.shape[1]
-        self.df = self.df.replace([np.inf, -np.inf], np.nan)
-        self.df = self.df.fillna(0)
-        self.df = self.df.drop(columns='datetime')
-
-        from sklearn.feature_selection import VarianceThreshold
-        sel = VarianceThreshold()
-        def variance_threshold_selector(data, threshold=0):
-            selector = VarianceThreshold(threshold)
-            selector.fit(data)
-            return data[data.columns[selector.get_support(indices=True)]]
-        id = self.df.id
-        self.df = variance_threshold_selector(self.df.drop(columns=['id']))
-        self.df['id'] = id
-        print('variance dropped: ', self.df.shape[1])
 
     def merge(self, l, df):
         if self.save == True:

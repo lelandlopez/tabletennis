@@ -63,8 +63,8 @@ def createStatsAfterSplit(df):
     df['ScoretoScore'] = df['toScore']-df['Score']
 
 
-    # groups = [['Player']]
-    groups = [['Player'], ['Player', 'other_label']]
+    groups = [['Player']]
+    # groups = [['Player'], ['Player', 'other_label']]
     # cols = ['Score']
     cols = ['Score', 'ScoretoScore', 'Win', 'Games_len']
     dividers = ['Games_len']
