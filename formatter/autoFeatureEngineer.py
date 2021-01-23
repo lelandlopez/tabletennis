@@ -65,7 +65,6 @@ class autoFeatureEngineer:
         df = df.sort_values(group + [numMatchName])
         k = df.groupby(group)[cols].expanding().sum().reset_index(0, drop=True)
         k.columns = names
-        print(k.head())
         df = pd.concat([df, k], axis=1)
         return df, names
 
@@ -79,7 +78,6 @@ class autoFeatureEngineer:
         k = df.groupby(group)[cols].rolling(num).sum().reset_index(0, drop=True)
         k.columns = names
         df = pd.concat([df, k], axis=1)
-        print(df)
         return df, names
 
     def formatSequencer(self, df, seq):
