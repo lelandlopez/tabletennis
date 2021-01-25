@@ -4,6 +4,7 @@ import os
 import sys
 import time
 import numpy as np
+import re
 import multiprocessing
 from sklearn import preprocessing
 from sklearn.metrics import roc_auc_score
@@ -18,6 +19,10 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.firefox.options import Options
 import psutil
 from datetime import date
+
+sys.path.insert(1, './')
+from helpers import helpers
+
 today = date.today()
 
 
@@ -164,19 +169,26 @@ def processPlayer(df, page_source, id):
 
 
 def insertSpecific():
-    df = pd.read_csv('./matchDF.csv')
+    df = helpers.createDF()
     df = df[df['lScore'] == '-']
-    df = df[df['datetime'].str.contains('WO') == False]
-    df = df[df['datetime'].str.contains('Awrd') == False]
-    df = df[df['datetime'].str.contains('CA') == False]
-    df = df[df['datetime'].str.startswith('14.10') == False]
-    df = df[df['datetime'].str.startswith('15.10') == False]
+
+    lc = 'abcdefghijklmnopqrstuvwxyz'  
+    uc = lc.upper()
+    k = lc + uc
+    p = ""
+    for i in k:
+        p = p + i + '|'
+    p = p.strip('|')
+    df = df[df['datetime'].str.contains(p) == False]
+
     print(df.shape)
-    for (index, i) in df.iterrows():
-        url = 'https://www.flashscore.com/match/' + i['id'] + '/#match-summary'
-        ps = getPlayer(url)
-        processPlayer(df, ps, i['id'])
-        print(index, df.shape[0])
+    print(df.head())
+    print(df['datetime'].str.len().unique())
+    # for (index, i) in df.iterrows():
+    #     url = 'https://www.flashscore.com/match/' + i['id'] + '/#match-summary'
+    #     ps = getPlayer(url)
+    #     processPlayer(df, ps, i['id'])
+    #     print(index, df.shape[0])
 
 
 
