@@ -102,7 +102,7 @@ mdf.loc[(mdf['datetime'].str[0:5] == today.strftime("%d.%m")) & (mdf['lScore'] =
 udf = mdf
 udf = mdf[(mdf['lPlayer'].isin(ul)) | (mdf['rPlayer'].isin(ul))]
 udf.to_csv('./test_before.csv')
-formatted = formatter(udf, True)
+formatted = formatter(udf, True, ignore_ids = cdf['id'])
 
 formatted = formatted[formatted['id'].isin(cdf['id'])]
 formatted.to_csv('./test.csv')

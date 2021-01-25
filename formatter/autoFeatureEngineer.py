@@ -140,8 +140,9 @@ class autoFeatureEngineer:
         return df
 
     @helpers.printTime
-    def dropBadGames(self, df):
-        df = df[df['lGames'].str.len() > 2]
+    def dropBadGames(self, df, ignore_ids):
+        df = df[(df['lGames'].str.len() > 2) | (df['id'].isin(ignore_ids))]
+        print(df.shape)
         return df
 
     def merge(self, l, df):

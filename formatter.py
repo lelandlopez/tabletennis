@@ -14,8 +14,8 @@ from autoFeatureEngineer import autoFeatureEngineer
 afe = autoFeatureEngineer(True)
 
 @helpers.printTime
-def dropAndFormat(df):
-    df = afe.dropBadGames(df)
+def dropAndFormat(df, ignore_ids = []):
+    df = afe.dropBadGames(df, ignore_ids)
     df = afe.dropBadSequencer(df, 'datetime')
     df = afe.formatSequencer(df, 'datetime')
     return df
@@ -52,7 +52,7 @@ def createColsBeforeSplit(df):
 
     df = afe.applyOnBoth(df, 
             ['FirstGameW', 'DiffGames'],
-            lambda x: x[0] > 0)
+            lambda x: x[0] > 0 if len(x) > 0 else False)
     return df
 
 def createStatsAfterSplit(df):
@@ -98,11 +98,16 @@ def createStatsAfterSplit(df):
     return df
 
 
-def formatter(df, save = False):
+def formatter(df, save = False, **kwargs):
     copy = df.copy()
     sys.path.insert(1, './formatter/')
+    print(df)
 
-    df = dropAndFormat(df)
+    if 'ignore_ids' in kwargs:
+        df = dropAndFormat(df, kwargs['ignore_ids'].tolist())
+    else:
+        df = dropAndFormat(df)
+
     df = createColsBeforeSplit(df)
     df = afe.split(df, ['Player', 'Score', 'Win', 'Games_len', 'DiffGamesSum'], ['id', 'datetime', 'toScore'])
     df = createStatsAfterSplit(df)
