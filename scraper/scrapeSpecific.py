@@ -27,21 +27,6 @@ sys.path.insert(1, '.')
 import scraperHelper
 
 
-
-
-# def getPlayers(page_source):
-#     players = []
-#     s = BeautifulSoup(str(page_source), 'html.parser')
-#     l = s.select('.participant-imglink')
-#     for p in l:
-#         if p.text != "":
-#             k = p.get('onclick')
-#             first = k.find("'")
-#             players.append([k[first+1 : k.find("'", first+2)], p.text])
-#     return players
-
-
-
 def initial():
     url = "https://www.flashscore.com/darts/"
     page_source = scraperHelper.fetchPageSource(url)
@@ -80,14 +65,12 @@ def insertSpecific(results, fixtures, url = ""):
         print(i)
         if results == True:
             k = i + 'results'
-            print(k)
             ps = scraperHelper.fetchPageSource(i + 'results')
             scraperHelper.processPlayer(ps, playerDF_filename, matchDF_filename)
 
 
         if fixtures == True:
             k = i + 'fixtures'
-            print(k)
             ps = scraperHelper.fetchPageSource(i + 'fixtures')
             scraperHelper.processPlayer(ps, playerDF_filename, matchDF_filename)
 

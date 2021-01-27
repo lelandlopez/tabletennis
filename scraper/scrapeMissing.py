@@ -127,6 +127,7 @@ def initial():
     page_source = fetchPageSource(url)
     processPlayer(page_source)
 
+matchDF_filename = './csv/static/matchDF_1.csv'
 
 def processPlayer(df, page_source, id):
     print(id)
@@ -134,48 +135,72 @@ def processPlayer(df, page_source, id):
 
     status = s.select('.error')
     if len(status) > 0:
-        bdf = pd.read_csv('./csv/static/matchDF.csv', index_col=False)
+        bdf = pd.read_csv(matchDF_filename, index_col=False)
         bdf.loc[bdf['id'] == id, 'datetime'] = bdf['datetime'] + 'Error'
-        bdf.to_csv('./csv/static/matchDF.csv', index=False)
+        bdf.to_csv(matchDF_filename, index=False)
+        return
     status = s.select('.status___XFO5ZlK')
+    print(status)
     if len(status) > 0:
-        bdf = pd.read_csv('./csv/static/matchDF.csv', index_col=False)
-        bdf.loc[bdf['id'] == id, 'datetime'] = bdf['datetime'] + 'CA'
-        bdf.to_csv('./csv/static/matchDF.csv', index=False)
-    # if len(status) > 0:
-    #     print('errer')
+        print('got in here')
+        if status[0].text == 'Cancelled':
+            bdf = pd.read_csv(matchDF_filename, index_col=False)
+            bdf.loc[bdf['id'] == id, 'datetime'] = bdf['datetime'] + 'CA'
+            bdf.to_csv(matchDF_filename, index=False)
+            return
+        if status[0].text == 'Walkover':
+            bdf = pd.read_csv(matchDF_filename, index_col=False)
+            bdf.loc[bdf['id'] == id, 'datetime'] = bdf['datetime'] + 'WO'
+            bdf.to_csv(matchDF_filename, index=False)
+            return
+        if status[0].text == 'Awarded':
+            bdf = pd.read_csv(matchDF_filename, index_col=False)
+            bdf.loc[bdf['id'] == id, 'datetime'] = bdf['datetime'] + 'AW'
+            bdf.to_csv(matchDF_filename, index=False)
+            return
+        if 'FRO' in status[0].text:
+            return
+        if status[0].text.strip() == '':
+            return
 
-    # status = s.select('.noData___1Tt1d17')
-    # if len(status) > 0:
-    #     if status[0].text == 'No live score information available now, the match has not started yet.':
-    #         return
-    # scores = s.select('.score___cth2ReO')
-    # print(scores[0].text)
-    # print(scores[1].text)
-    # def rsToString(rs):
-    #     k = []
-    #     for i in rs:
-    #         k.append(i.text)
-    #     return k
-    # lGamesStructured = []
-    # for i in range(1, 8):
-    #     k = s.select('.part___1Pd43ek.home___2CzqfVu.part--' + str(i))
-    #     if k[0].text != '':
-    #         lGamesStructured.append(k[0].text)
+    status = s.select('.noData___1Tt1d17')
+    if len(status) > 0:
+        if status[0].text == 'No live score information available now, the match has not started yet.':
+            return
+    scores = s.select('.score___3_4DOfL')
+    def rsToString(rs):
+        k = []
+        for i in rs:
+            k.append(i.text)
+        return k
+    lGames = []
+    rGames = []
+    for i in range(1, 8):
+        k = s.select('.part___PWW-lip.home___2hIlHif.part--' + str(i))
+        if len(k) == 0:
+            break
+        if k[0].text == "":
+            break
+        lGames.append(k[0].text)
+        k = s.select('.part___PWW-lip.away___2Q2jzQu.part--' + str(i))
+        rGames.append(k[0].text)
+    # if k[0].text != '':
+    #     lGamesStructured.append(k[0].text)
     # rGamesStructured = []
     # for i in range(1, 8):
-    #     k = s.select('.part___1Pd43ek.away___3Ys1r_C.part--' + str(i))
+    #     k = s.select('.away___2Q2jzQu.part--' + str(i))
     #     if k[0].text != '':
     #         rGamesStructured.append(k[0].text)
-    # date = s.select('.time___xAe_YNy')
-    # bDF = pd.read_csv('./matchDF.csv')
-    # row = [scores[0].text, scores[1].text, lGamesStructured, rGamesStructured, date[0].text]
-    # bDF.loc[bDF['id'] == id, ['lScore', 'rScore', 'lGames', 'rGames', 'datetime']] = row
-    # bDF.to_csv("./matchDF.csv", index=False)
+    date = s.select('.time___22qYh_R ')
+    bDF = pd.read_csv(matchDF_filename)
+    row = [scores[0].text, scores[1].text, lGames, rGames, date[0].text]
+    row = np.array(row, dtype="object")
+    bDF.loc[bDF['id'] == id, ['lScore', 'rScore', 'lGames', 'rGames', 'datetime']] = row
+    bDF.to_csv(matchDF_filename, index=False)
 
 
 def insertSpecific():
-    df = pd.read_csv('./csv/static/matchDF.csv')
+    df = pd.read_csv(matchDF_filename)
     print(df.shape)
     df = df[df['lScore'] == '-']
 
@@ -196,7 +221,6 @@ def insertSpecific():
         print(url)
         ps = getPlayer(url)
         processPlayer(df, ps, i['id'])
-        break
         # print(index, df.shape[0])
 
 

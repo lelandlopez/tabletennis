@@ -83,7 +83,9 @@ def processPlayer(page_source, playerDF_filename, matchDF_filename):
 
 
                 date = match.select('.event__time')
-                row = np.array([dropCountry(players[0].text), dropCountry(players[1].text), lScore[0].text, rScore[0].text, rsToString(lGames), rsToString(rGames), date[0].text, match.get('id')[5:]], dtype='object')
+                if date[0].text[6:7] == ' ':
+                    date = date[0].text[0:6] + str(today.year) + date[0].text[6:]
+                row = np.array([dropCountry(players[0].text), dropCountry(players[1].text), lScore[0].text, rScore[0].text, rsToString(lGames), rsToString(rGames), date, match.get('id')[5:]], dtype='object')
 
                 new = pd.DataFrame([row], columns=bDFCols)
                 bDF = bDF.append(new)
@@ -100,7 +102,9 @@ def processPlayer(page_source, playerDF_filename, matchDF_filename):
 
 
                 date = match.select('.event__time')
-                row = np.array([lScore[0].text, rScore[0].text, rsToString(lGames), rsToString(rGames), date[0].text], dtype='object')
+                if date[0].text[6:7] == ' ':
+                    date = date[0].text[0:6] + str(today.year) + date[0].text[6:]
+                row = np.array([lScore[0].text, rScore[0].text, rsToString(lGames), rsToString(rGames), date], dtype='object')
                 bDF.loc[bDF['id'] == match.get('id')[5:], ['lScore', 'rScore', 'lGames', 'rGames', 'datetime']] = row
                 # killPROC("geckodriver")
                 # killPROC("firefox")
