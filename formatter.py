@@ -24,8 +24,7 @@ def dropAndFormat(df, ignore_ids = []):
 
 @helpers.printTime
 def createColsBeforeSplit(df):
-    df['lWin'] = np.where((df.lScore > df.rScore), True, False)
-    df['rWin'] = np.where((df.lScore < df.rScore), False, True)
+    df = afe.createWinColumns(df, ['l', 'r'], 'Score')
 
     df = afe.applyOnBoth(df, 
             ['Games', 'Games'],
@@ -35,8 +34,7 @@ def createColsBeforeSplit(df):
             ['Games', 'Games'],
             lambda x: [int(i) for i in x])
 
-    df['lDiffGames'] = df.apply(lambda x: np.subtract(x['lGames'], x['rGames']), axis=1)
-    df['rDiffGames'] = df['lDiffGames'].apply(lambda x: x * -1)
+    df = afe.calculateDiffs(df)
 
     df = afe.applyOnBoth(df, 
             ['DiffGamesSum', 'DiffGames'],
