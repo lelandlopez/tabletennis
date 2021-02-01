@@ -208,7 +208,56 @@ def test_shift():
     o = afe.shift(startDF, group, ['Player_Score_cumsum'])
     resultingDF = o[0].reset_index(drop=True)
     resultingDiv = o[1]
-    print(resultingDF)
     print(correctDF)
     print(resultingDiv)
     assert resultingDF.equals(correctDF) and resultingDiv == ['last_Player_Score_cumsum']
+
+def test_createWinColumns():
+    afe = autoFeatureEngineer(False)
+    startArr = [
+        [0, 0],
+        [0, 1], 
+        [3, 2], 
+        [4, 0],
+        [0, 1], 
+        [2, 2]]
+    startDF = pd.DataFrame(
+        startArr, 
+        columns=['lScore', 'rScore'])
+    correctArr = [
+        [0, 0, False, False],
+        [0, 1, False, True], 
+        [3, 2, True, False], 
+        [4, 0, True, False],
+        [0, 1, False, True], 
+        [2, 2, False, False]]
+    correctDF = pd.DataFrame(
+        correctArr, 
+        columns=['lScore', 'rScore', 'lWin', 'rWin'])
+    resultingDF = afe.createWinColumns(startDF, ['l', 'r'], 'Score')
+    print(correctDF)
+    print(resultingDF)
+    assert resultingDF.equals(correctDF)
+
+def testCalculateDiffs():
+    afe = autoFeatureEngineer(False)
+    startArr = [
+        [[1], [2]],
+        [[2], [1]],
+        [[1, 2], [2, 2]]]
+        # [[2, 3], [2, 1]]]
+    startDF = pd.DataFrame(
+        startArr, 
+        columns=['lGames', 'rGames'])
+    correctArr = [
+        [[1], [2], np.array([-1]), np.array([1])],
+        [[2], [1], np.array([1]), np.array([-1])],
+        [[1, 2], [2, 2], np.array([-1, 0]), np.array([1, 0])]]
+        # [[2, 3], np.array([2, 1]), np.array([0, 2], np.array([0, -2])]]
+    correctDF = pd.DataFrame(
+        correctArr, 
+        columns=['lGames', 'rGames', 'lDiffGames', 'rDiffGames'])
+    resultingDF = afe.createDiffColumns(startDF)
+    print(correctDF)
+    print(resultingDF)
+    assert resultingDF.equals(correctDF)

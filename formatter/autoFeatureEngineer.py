@@ -17,6 +17,16 @@ from multiprocessing import Pool
 class autoFeatureEngineer:
     def __init__(self, save = False):
         self.save = save
+    
+    def createWinColumns(self, df, pre, col):
+        df['lWin'] = np.where((df.lScore > df.rScore), True, False)
+        df['rWin'] = np.where((df.lScore < df.rScore), True, False)
+        return df
+    
+    def createDiffColumns(self, df):
+        df['lDiffGames'] = df.apply(lambda x: np.subtract(x['lGames'], x['rGames']), axis=1)
+        df['rDiffGames'] = df['lDiffGames'].apply(lambda x: x * -1)
+        return df
 
 
     def createDivNames(self, group, cols, divider, append='', prepend=''):
@@ -136,7 +146,6 @@ class autoFeatureEngineer:
     @helpers.printTime
     def dropBadGames(self, df, ignore_ids):
         df = df[(df['lGames'].str.len() > 2) | (df['id'].isin(ignore_ids))]
-        print(df.shape)
         return df
 
     def merge(self, l, df):
