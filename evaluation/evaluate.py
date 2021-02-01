@@ -5,6 +5,7 @@ import numpy as np
 import pickle
 import sys
 from matplotlib import pyplot
+from sklearn.model_selection import train_test_split
 # sys.path.insert(1, './helpers')
 # from helpers import helpers
 
@@ -17,14 +18,15 @@ def splitForTraining(df, split):
     df = calculateLWIN(df)
     df = df.drop(columns=['id'])
 
-    df.shape
-    k = (2/3) * df.shape[0]
-    k = round(k)
-    print(df.index)
-    test = df.iloc[0:k]
-    train = df.iloc[k:]
-    print(test.shape)
-    print(train.shape)
+    # df.shape
+    # k = (2/3) * df.shape[0]
+    # k = round(k)
+    # print(df.index)
+    # test = df.iloc[0:k]
+    # train = df.iloc[k:]
+    # print(test.shape)
+    # print(train.shape)
+    train, test = train_test_split(df, test_size=0.2)
 
 
     train_features = train.drop(columns=['lwin', 'lScore', 'rScore'])

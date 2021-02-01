@@ -93,7 +93,6 @@ def createStatsAfterSplit(df):
         df, shiftedNames = afe.shift(df, group, colsToShift)
         sn = sn + shiftedNames
 
-        # df = afe.shiftBase(df, cols, group, df.sort_values(numMatchCol).groupby(group, as_index=False))
     df = df[sn + ['Player', 'id']]
     return df
 

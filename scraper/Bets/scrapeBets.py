@@ -12,7 +12,7 @@ from selenium.webdriver.firefox.options import Options
 from datetime import date
 
 sys.path.insert(1, './scraper/')
-from helper import fetchPageSource 
+from scraperHelper import fetchPageSource 
 sys.path.insert(1, '.')
 from formatter import formatter
 sys.path.insert(1, './evaluation/')
@@ -21,7 +21,8 @@ from evaluate import predict, prep
 
 matchDF_filename = './csv/static/matchDF.csv'
 test = False
-url = 'https://beta.betonline.ag/sportsbook/table-tennis/todaygames'
+url = 'https://www.bovada.lv/sports/table-tennis/russia/liga-pro'
+# url = 'https://beta.betonline.ag/sportsbook/table-tennis/todaygames'
 search_regex = '.offering-today-games__table'
 time_regex = '.offering-today-games__link'
 if len(sys.argv) > 1:
@@ -35,7 +36,13 @@ if len(sys.argv) > 1:
 
 
 
-def processBetOnline(page_source):
+def processBetOnline():
+    page_source = fetchPS('https://beta.betonline.ag/sportsbook/table-tennis/todaygames', test)
+    def formatTeamNames(teams):
+        def formatSide(side):
+            end = side.find(',')
+            return side[: end] + ' ' + side[end + 2: end + 3] + '.'
+        return [formatSide(teams[0].text), formatSide(teams[1].text)]
     s = BeautifulSoup(str(page_source), 'html.parser')
     cols = ['time', 'lTeam', 'rTeam', 'lLine', 'rLine']
     df = pd.DataFrame([], columns=cols)
@@ -44,18 +51,50 @@ def processBetOnline(page_source):
         teams = match.select('.lines-row__team-name')
         lines = match.select('.lines-row__money')
         time = match.select(time_regex)
-        k = pd.DataFrame([[time[0].text, teams[0].text, teams[1].text, lines[0].text, lines[1].text]], columns=cols)
+        teams = formatTeamNames(teams)
+        k = pd.DataFrame([[time[0].text, teams[0], teams[1], lines[0].text, lines[1].text]], columns=cols)
         df = df.append(k)
     return df.reset_index(0, drop=True)
 
-def formatName(str):
-    k = str.split(',')
-    return (k[0] + k[1][0:2] + '.').strip()
+def processBovada():
+    page_source = fetchPS('https://www.bovada.lv/sports/table-tennis/russia/liga-pro', test, waitFor=['class', 'grouped-events'])
+    def formatLines(lines):
+        return [lines[2].text, lines[3].text]
+    def formatTeamNames(teams):
+        def formatSide(side):
+            end = side.find(',')
+            if end == -1:
+                end = side.find(' ')
+                return side[end:] + ' ' + side[0:1] + '.'
+            return side[end:] + ' '
+        return [formatSide(teams[0].text), formatSide(teams[1].text)]
+    def formatTime(time):
+        text = time[0].text
+        e = text.find(' ', 2)
+        return text[e + 1:]
+    s = BeautifulSoup(str(page_source), 'html.parser')
+    cols = ['time', 'lTeam', 'rTeam', 'lLine', 'rLine']
+    df = pd.DataFrame([], columns=cols)
+    search_regex = '.coupon-content.more-info'
+    time_regex = '.period'
+    s = s.select('.next-events-bucket')[0]
+    matches = s.select(search_regex)
+    for (index, match) in enumerate(matches):
+        teams = match.select('.competitor-name')
+        lines = match.select('.bet-price')
+        time = match.select(time_regex)
+        lines = formatLines(lines)
+        teams = formatTeamNames(teams)
+        time = formatTime(time)
+        k = pd.DataFrame([[time, teams[0], teams[1], lines[0], lines[1]]], columns=cols)
+        df = df.append(k)
+    return df.reset_index(0, drop=True)
 
 def findCorresponding(df, l, r):
+    # print(l, r)
     today = date.today()
     d = today.strftime("%d.%m")
-    k = df.loc[((df['lPlayer'].str.startswith(l[:-1])) | (df['rPlayer'].str.startswith(l[:-1]))) & ((df['lPlayer'].str.startswith(r[0:-1])) | (df['rPlayer'].str.startswith(r[:-1]))) & (df['datetime'].str[0:5] == d)]
+    k = df.loc[((df['lPlayer'] == r.strip()) & (df['rPlayer'] == l.strip())) | ((df['lPlayer'] == l.strip()) & (df['rPlayer'] == r.strip()))]
     return k
             
 
@@ -65,7 +104,8 @@ def getCorrespondingGames(df):
     d = pd.DataFrame()
     o = pd.DataFrame()
     for index, i in df.iterrows():
-        k = findCorresponding(gameDF, formatName(i['lTeam']), formatName(i['rTeam']))
+        k = findCorresponding(gameDF, i['lTeam'], i['rTeam'])
+        # print(k)
         if k.shape[0] != 0:
             d = d.append(k.iloc[0])
             i['merge_index'] = k.id.values[0]
@@ -79,18 +119,28 @@ def americanToImplied(odds):
         odds = odds * -1
         return odds / (odds + 100)
 
+def fetchPS(url, test, **kwargs):
+    ps = ''
+    if test == False:
+        if 'waitFor' in kwargs:
+            ps = fetchPageSource(url, waitFor=kwargs['waitFor'])
+        else:
+            ps = fetchPageSource(url)
+        text_file = open("./Debug/ps.txt", "w")
+        text_file.write(ps)
+        text_file.close()
+    else:
+        file = open('./Debug/ps.txt', 'r')
+        ps = file.read()
+        file.close()
+    return ps
 
-if test == False:
-    ps = fetchPageSource(url)
-    text_file = open("./Debug/ps.txt", "w")
-    text_file.write(ps)
-    text_file.close()
-else:
-    file = open('./Debug/ps.txt', 'r')
-    ps = file.read()
-    file.close()
 
-df = processBetOnline(ps)
+df = processBetOnline()
+# print(df)
+# df = processBovada()
+# print(df)
+
 cdf, cbdf = getCorrespondingGames(df)
 
 

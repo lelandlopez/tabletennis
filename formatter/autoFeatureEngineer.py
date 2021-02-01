@@ -51,13 +51,6 @@ class autoFeatureEngineer:
         return df, ['last_' + i for i in cols]
 
     @helpers.printTime
-    def shiftBase(self, df, cols, group, gbf):
-        name = self.createNames(group) 
-        names = ['last_' + name + i for i in cols]
-        df[names] = gbf[cols].shift(1)
-        return df
-
-    @helpers.printTime
     def getCumsum(self, df, group, cols):
         name = self.createNames(group)
         names = [name + i + '_cumsum' for i in cols]
@@ -98,6 +91,7 @@ class autoFeatureEngineer:
         df = df[df[sequencer].str.contains('FRO') == False]
         df = df[df[sequencer].str.contains('Canc') == False]
         df = df[df[sequencer].str.contains('CA') == False]
+        df = df[df[sequencer].str.contains('Error') == False]
         print(f'dropped dropBadSequencer :', k-df.shape[0])
         return df
 

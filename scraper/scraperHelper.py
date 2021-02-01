@@ -9,13 +9,13 @@ from sklearn import preprocessing
 from sklearn.metrics import roc_auc_score
 import seaborn as sns
 import signal
-# np.warnings.filterwarnings('error', category=np.VisibleDeprecationWarning) 
-# import libraries
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.firefox.options import Options
 import psutil
 from datetime import date
@@ -29,19 +29,23 @@ def killPROC(str):
         if proc.name() == PROCNAME:
             proc.kill()
 
-def fetchPageSource(url):
+def fetchPageSource(url, **kwargs):
     from selenium.webdriver.firefox.options import Options
     options = Options()
     options.headless = True
     driver = webdriver.Firefox(options=options)
     page_source = ""
+    driver.get(url)
     try:
-        # run firefox webdriver from executable path of your choice
-        from selenium.webdriver.firefox.options import Options
-        options = Options()
-        options.headless = True
-        driver.get(url)
+        if 'waitFor' in kwargs:
+            if kwargs['waitFor'][0] == 'class':
+                element = WebDriverWait(driver, 10).until(
+                    EC.presence_of_element_located((By.CLASS_NAME, kwargs['waitFor'][1]))
+                )
+        # print(driver.page_source)
         page_source = driver.page_source
+    except TimeoutException:
+        print("took too much time")
     except:
         pass
     finally:

@@ -134,7 +134,7 @@ def test_cleanup():
     print(correctDF)
     assert resultingDF.equals(correctDF)
 
-def test_shift():
+def test_merge():
     afe = autoFeatureEngineer(False)
     group = ['Player']
     startArr = [
@@ -180,3 +180,35 @@ def test_shift():
     print(resultingDF)
     print(correctDF)
     assert resultingDF.equals(correctDF)
+
+def test_shift():
+    afe = autoFeatureEngineer(False)
+    group = ['Player']
+    startArr = [
+        ['1', 0, 1.0],
+        ['1', 1, 4.0], 
+        ['1', 2, 6.0], 
+        ['2', 0, 4.0],
+        ['2', 1, 9.0], 
+        ['2', 2, 15.0]]
+    startDF = pd.DataFrame(
+        startArr, 
+        columns=['Player', 'Player_num_match', 'Player_Score_cumsum'])
+    correctArr = [
+        ['1', 0, np.NaN],
+        ['1', 1, 1.0], 
+        ['1', 2, 4.0], 
+        ['2', 0, np.NaN],
+        ['2', 1, 4.0], 
+        ['2', 2, 9.0]]
+    correctDF= pd.DataFrame(
+        correctArr, 
+        columns=['Player', 'Player_num_match', 'last_Player_Score_cumsum'])
+
+    o = afe.shift(startDF, group, ['Player_Score_cumsum'])
+    resultingDF = o[0].reset_index(drop=True)
+    resultingDiv = o[1]
+    print(resultingDF)
+    print(correctDF)
+    print(resultingDiv)
+    assert resultingDF.equals(correctDF) and resultingDiv == ['last_Player_Score_cumsum']
