@@ -34,7 +34,9 @@ def createColsBeforeSplit(df):
             ['Games', 'Games'],
             lambda x: [int(i) for i in x])
 
-    df = afe.calculateDiffs(df)
+    print(df.columns)
+    df = afe.createDiffColumns(df)
+    print(df.columns)
 
     df = afe.applyOnBoth(df, 
             ['DiffGamesSum', 'DiffGames'],

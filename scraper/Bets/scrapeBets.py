@@ -150,7 +150,7 @@ mdf = pd.read_csv(matchDF_filename)
 today = date.today()
 mdf.loc[(mdf['datetime'].str[0:5] == today.strftime("%d.%m")) & (mdf['lScore'] == '-'), ['lScore', 'rScore']] = ['0', '0']
 udf = mdf
-udf = mdf[(mdf['lPlayer'].isin(ul)) | (mdf['rPlayer'].isin(ul))]
+# udf = mdf[(mdf['lPlayer'].isin(ul)) | (mdf['rPlayer'].isin(ul))]
 udf.to_csv('./test_before.csv')
 formatted = formatter(udf, True, ignore_ids = cdf['id'])
 
@@ -183,8 +183,14 @@ formatted['lOdds'] = formatted['lLine'].astype(int).apply(americanToImplied)
 formatted['rOdds'] = formatted['rLine'].astype(int).apply(americanToImplied)
 
 
-formatted['ledge'] = formatted['lWinPred'] - formatted['lOdds']
-formatted['redge'] = formatted['rWinPred'] - formatted['rOdds']
+formatted['ledge'] = round(formatted['lWinPred'] - formatted['lOdds'], 4)
+formatted['redge'] = round(formatted['rWinPred'] - formatted['rOdds'], 4)
+
+formatted['lOdds'] = round(formatted['lOdds'], 4)
+formatted['rOdds'] = round(formatted['rOdds'], 4)
+
+formatted['lWinPred'] = round(formatted['lWinPred'], 4)
+formatted['rWinPred'] = round(formatted['rWinPred'], 4)
 
 def toMilitary(time):
     if 'AM' in time:
@@ -207,7 +213,7 @@ formatted['time'] = formatted['time'].apply(toMilitary)
 formatted = formatted.sort_values('time')
 
 
-print(formatted[['time', 'id', 'Player_left', 'Player_right', 'lTeam', 'rTeam', 'lWinPred', 'rWinPred', 'lOdds', 'rOdds', 'lLine', 'rLine', 'ledge', 'redge']])
+print(formatted[['time', 'id', 'Player_left', 'Player_right', 'lWinPred', 'rWinPred', 'lOdds', 'rOdds', 'lLine', 'rLine', 'ledge', 'redge']])
 formatted[['time', 'id', 'Player_left', 'Player_right', 'lTeam', 'rTeam', 'lWinPred', 'rWinPred', 'lOdds', 'rOdds', 'lLine', 'rLine', 'ledge', 'redge']].to_csv('./predictions.csv')
 # print(formatted[['Player_left', 'Player_right'] + [i for i in formatted.columns if 'cumsum' in i]])
 # print(cbdf)
