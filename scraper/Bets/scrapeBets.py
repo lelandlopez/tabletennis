@@ -150,7 +150,7 @@ mdf = pd.read_csv(matchDF_filename)
 today = date.today()
 mdf.loc[(mdf['datetime'].str[0:5] == today.strftime("%d.%m")) & (mdf['lScore'] == '-'), ['lScore', 'rScore']] = ['0', '0']
 udf = mdf
-# udf = mdf[(mdf['lPlayer'].isin(ul)) | (mdf['rPlayer'].isin(ul))]
+udf = mdf[(mdf['lPlayer'].isin(ul)) | (mdf['rPlayer'].isin(ul))]
 udf.to_csv('./test_before.csv')
 formatted = formatter(udf, True, ignore_ids = cdf['id'])
 

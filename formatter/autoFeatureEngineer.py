@@ -56,14 +56,17 @@ class autoFeatureEngineer:
         numMatchName = self.createNames(group, 'num_match')
         df = df.sort_values(group + [numMatchName])
         names = ['last_' + i for i in cols]
+        print(cols)
         df[names] = df.groupby(group)[cols].shift(1)
         df = df.drop(columns=cols)
         return df, ['last_' + i for i in cols]
 
     @helpers.printTime
     def getCumsum(self, df, group, cols):
+        df = df.reset_index(drop=True)
         name = self.createNames(group)
         names = [name + i + '_cumsum' for i in cols]
+
         numMatchName = self.createNames(group, 'num_match')
         df = df.sort_values(group + [numMatchName])
         k = df.groupby(group)[cols].expanding().sum().reset_index(0, drop=True)

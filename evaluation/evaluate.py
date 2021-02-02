@@ -6,8 +6,8 @@ import pickle
 import sys
 from matplotlib import pyplot
 from sklearn.model_selection import train_test_split
-# sys.path.insert(1, './helpers')
-# from helpers import helpers
+sys.path.insert(1, './helpers')
+from helpers import helpers
 
 filename = './models/finalized_model.sav'
 cols_filename = './models/finalized_model_features.csv'
@@ -16,18 +16,10 @@ matchDF_filename = './csv/static/matchDF.csv'
 def splitForTraining(df, split):
     df = prep(df)
     df = calculateLWIN(df)
+    # df.to_csv('./test.csv', index=False)
     df = df.drop(columns=['id'])
 
-    # df.shape
-    # k = (2/3) * df.shape[0]
-    # k = round(k)
-    # print(df.index)
-    # test = df.iloc[0:k]
-    # train = df.iloc[k:]
-    # print(test.shape)
-    # print(train.shape)
     train, test = train_test_split(df, test_size=0.2)
-
 
     train_features = train.drop(columns=['lwin', 'lScore', 'rScore'])
     test_features = test.drop(columns=['lwin', 'lScore', 'rScore'])
@@ -37,28 +29,23 @@ def splitForTraining(df, split):
     test_features = test_features[[i for i in test_features.columns if test_features[i].dtypes != 'object']]
     return train_features, test_features, train_labels, test_labels
 
-def prep(df, dropID = True):
+
+def prep(df):
     if 'Player_left' in df.columns:
         df = df.drop(columns=['Player_left', 'Player_right'])
     df = df.replace([np.inf, -np.inf], np.nan)
     df = df.fillna(0)
     return df 
+
   
-def calculateLWIN(df):
-    k = pd.read_csv(matchDF_filename)
+def calculateLWIN(df, **kwargs):
+    if 'mergeDF' in kwargs:
+        k = kwargs['mergeDF']
+    else:
+        k = helpers.createDF()
     df = df.merge(k[['lScore', 'rScore', 'id']], on='id', how='left', suffixes=['', '_y'])
     df = df[df['lScore'] != df['rScore']]
     df['lwin'] = df['lScore'] > df['rScore']
-    return df
-
-
-def prepForPredict(df):
-    df = df.drop(columns=['Player_left', 'Player_right'])
-    k = pd.read_csv(matchDF_filename)
-    df = df.merge(k[['id']], on='id', how='left')
-    df = df.replace([np.inf, -np.inf], np.nan)
-    df = df.fillna(0)
-    df = df.drop(columns=['datetime_left', 'datetime_right'])
     return df
 
 def randomForest(train_features, test_features, train_labels, test_labels):
