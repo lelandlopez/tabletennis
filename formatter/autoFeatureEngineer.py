@@ -63,13 +63,12 @@ class autoFeatureEngineer:
 
     @helpers.printTime
     def getCumsum(self, df, group, cols):
-        df = df.reset_index(drop=True)
         name = self.createNames(group)
         names = [name + i + '_cumsum' for i in cols]
 
         numMatchName = self.createNames(group, 'num_match')
         df = df.sort_values(group + [numMatchName])
-        k = df.groupby(group)[cols].expanding().sum().reset_index(0, drop=True)
+        k = df.groupby(group, as_index=False)[cols].expanding().sum().reset_index(0, drop=True)
         k.columns = names
         df = pd.concat([df, k], axis=1)
         return df, names
@@ -81,7 +80,7 @@ class autoFeatureEngineer:
         names = [name + i + '_rolling_' + str(num) for i in cols]
         numMatchName = self.createNames(group, 'num_match')
         df = df.sort_values(group + [numMatchName])
-        k = df.groupby(group)[cols].rolling(num).sum().reset_index(0, drop=True)
+        k = df.groupby(group, as_index=False)[cols].rolling(num).sum().reset_index(0, drop=True)
         k.columns = names
         df = pd.concat([df, k], axis=1)
         return df, names
