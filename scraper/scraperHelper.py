@@ -126,3 +126,19 @@ def check_exists_by_xpath(driver, xpath):
     except NoSuchElementException:
         return False
     return True
+
+def swap(df, cols, otherCols):
+    def calculateArrs(cols, otherCols):
+        k = []
+        for i in otherCols:
+            k = k + [i[0], i[1]]
+        return k
+    def flipArrs(cols, otherCols):
+        k = []
+        for i in otherCols:
+            k = k + [i[1], i[0]]
+        return k
+
+    df.loc[df[cols[0]].str.strip() != df[cols[1]].str.strip(), 
+            calculateArrs(cols, otherCols)] = df.loc[df[cols[0]] != df[cols[1]]][flipArrs(cols, otherCols)].values
+    return df

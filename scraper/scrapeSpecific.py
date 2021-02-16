@@ -1,3 +1,4 @@
+import json
 from bs4 import BeautifulSoup
 import pandas as pd
 import os
@@ -26,15 +27,9 @@ from helpers import helpers
 sys.path.insert(1, '.')
 import scraperHelper
 
-
-def initial():
-    url = "https://www.flashscore.com/darts/"
-    page_source = scraperHelper.fetchPageSource(url)
-    scraperHelper.processPlayer(page_source, playerDF_filename, matchDF_filename)
-
+frontPage_url = 'https://www.flashscore.com/table-tennis/'
 matchDF_filename = './csv/static/matchDF.csv'
 playerDF_filename = './csv/static/playerDF.csv'
-
 
 
 def getTournaments(page_source):
@@ -51,7 +46,6 @@ def getTournaments(page_source):
 
 
 
-frontPage_url = 'https://www.flashscore.com/table-tennis/'
 
 @helpers.printTime
 def insertSpecific(results, fixtures, url = ""):
@@ -67,16 +61,25 @@ def insertSpecific(results, fixtures, url = ""):
             k = i + 'results'
             ps = scraperHelper.fetchPageSource(i + 'results')
             scraperHelper.processPlayer(ps, playerDF_filename, matchDF_filename)
-
-
         if fixtures == True:
             k = i + 'fixtures'
             ps = scraperHelper.fetchPageSource(i + 'fixtures')
             scraperHelper.processPlayer(ps, playerDF_filename, matchDF_filename)
 
+    import json
+    from datetime import datetime
+    websiteInfoFileDir = './websiteInfo.json'
+    with open(websiteInfoFileDir) as f:
+        websiteInfo = json.load(f)
+    websiteInfo['lastScraped'] = datetime.now().__str__()
+    with open(websiteInfoFileDir, 'w') as json_file:
+        json.dump(websiteInfo, json_file)
+    
 
-lenargs = len(sys.argv)
-if lenargs == 2:
-    insertSpecific(True, True, sys.argv[1])
-else:
-    insertSpecific(True, True)
+
+
+# lenargs = len(sys.argv)
+# if lenargs == 2:
+#     insertSpecific(True, True, sys.argv[1])
+# else:
+#     insertSpecific(True, True)

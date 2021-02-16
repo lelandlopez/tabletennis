@@ -48,6 +48,7 @@ def createColsBeforeSplit(df):
 
     df.loc[df['lScore'] >= df['rScore'], 'toScore'] = df['lScore']
     df.loc[df['lScore'] < df['rScore'], 'toScore'] = df['rScore']
+    df = df.replace(['-'], np.nan)
     df['toScore'] = df['toScore'].astype(float)
 
     df = afe.applyOnBoth(df, 
@@ -63,12 +64,9 @@ def createStatsAfterSplit(df):
     df['ScoretoScore'] = df['toScore']-df['Score']
 
 
-    groups = [['Player']]
-    # groups = [['Player'], ['Player', 'other_label']]
-    # cols = ['Score']
+    groups = [['Player'], ['Player', 'other_label']]
     cols = ['Score', 'ScoretoScore', 'Win', 'Games_len']
     dividers = ['Games_len']
-    # dividers = []
     sn = []
 
     for group in groups:
@@ -76,11 +74,13 @@ def createStatsAfterSplit(df):
         df, numMatchCol = afe.createNumMatch(df, group)
         df, cumsumCols = afe.getCumsum(df, group, cols)
         colsToShift = colsToShift + cumsumCols
-
         df, rollingSumCols = afe.getRollingSum(df, group, cols, 5)  
         colsToShift = colsToShift + rollingSumCols
 
         names = afe.createDivNames(group, cols, numMatchCol, '_ave')
+        # print(df.head())
+        # df = df.reset_index(drop=True)
+        # print(df.head())
         colsToShift = colsToShift + names
         df[names] = df[cumsumCols].div(df[numMatchCol] + 1, axis=0)
         for divider in dividers:
@@ -100,17 +100,19 @@ def createStatsAfterSplit(df):
 def formatter(df, save = False, **kwargs):
     copy = df.copy()
     sys.path.insert(1, './formatter/')
-    print(df)
 
     if 'ignore_ids' in kwargs:
         df = dropAndFormat(df, kwargs['ignore_ids'].tolist())
     else:
         df = dropAndFormat(df)
+    print(df)
 
     df = createColsBeforeSplit(df)
     df = afe.split(df, ['Player', 'Score', 'Win', 'Games_len', 'DiffGamesSum'], ['id', 'datetime', 'toScore'])
+    print(df)
     df = createStatsAfterSplit(df)
     k = copy
+
     df = afe.merge(df, k)
     df = afe.cleanup(df)
     return df

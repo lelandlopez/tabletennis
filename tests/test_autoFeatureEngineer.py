@@ -78,6 +78,41 @@ def test_getCumsum():
     print(resultingDF)
     print(correctDF)
     assert resultingDF.equals(correctDF) and resultingDiv == ['Player_Score_cumsum']
+    # assert False
+
+def test_getCumsum_multiple():
+    afe = autoFeatureEngineer(False)
+    group = ['Player', 'otherPlayer']
+    startArr = [
+        ['1', '1', 1, 2], 
+        ['2', '1', 3, 2], 
+        ['3', '1', 2, 2],
+        ['1', '2', 4, 1], 
+        ['2', '2', 5, 1], 
+        ['3', '2', 6, 1]]
+    random.shuffle(startArr)
+    startDF = pd.DataFrame(
+        startArr ,
+        columns=['datetime', 'Player', 'Score', 'otherPlayer'])
+    startDF, numMatchCol = afe.createNumMatch(startDF, group)
+    resultingArr = [
+        ['1', '1', 1, 2, 0, 1.0],
+        ['2', '1', 3, 2, 1, 4.0], 
+        ['3', '1', 2, 2, 2, 6.0], 
+        ['1', '2', 4, 1, 0, 4.0],
+        ['2', '2', 5, 1, 1, 9.0], 
+        ['3', '2', 6, 1, 2, 15.0]]
+    correctDF = pd.DataFrame(
+        resultingArr, 
+        columns=['datetime', 'Player', 'Score', 'otherPlayer', 'otherPlayer_Player_num_match', 'otherPlayer_Player_Score_cumsum'])
+
+    o = afe.getCumsum(startDF, group, ['Score'])
+    resultingDF = o[0].reset_index(drop=True)
+    resultingDiv = o[1]
+    print(resultingDF)
+    print(correctDF)
+    assert resultingDF.equals(correctDF) and resultingDiv == ['otherPlayer_Player_Score_cumsum']
+    # assert False
 
 def testRollingSum():
     afe = autoFeatureEngineer(False)

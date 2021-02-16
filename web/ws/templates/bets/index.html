@@ -1,0 +1,96 @@
+<head>
+
+</head>
+<body>
+    <div class="section">
+    <button class="inline" id="scrapeButton">Scrape Entire</button> 
+    <div class="lm-10 inline">Last Scraped: <div class="inline" id="lastScraped_text"></div>{{websiteInfo.lastScraped}}</div> 
+    </div>
+
+
+    <div class="section">
+        <div class="section-header">Bets to make</div> <button id="updateButton">Update</button>
+        <table>
+            <tr>
+                <td>time</td>
+                <td>id</td>
+                <td>lTeam</td>
+                <td>rTeam</td>
+                <td>lWinPred</td>
+                <td>rWinPred</td>
+                <td>lLine</td>
+                <td>rLine</td>
+                <td>ledge</td>
+                <td>redge</td>
+                <td>platform</td>
+                <td>bet</td>
+            </tr>
+            {% for o in bets %}
+                <tr>
+                    <td>{{o.time}}</td>
+                    <td>{{o.id}}</td>
+                    <td>{{o.lTeam}}</td>
+                    <td>{{o.rTeam}}</td>
+                    <td>{{o.lWinPred}}</td>
+                    <td>{{o.rWinPred}}</td>
+                    <td>{{o.lLine}}</td>
+                    <td>{{o.rLine}}</td>
+                    <td>{{o.ledge}}</td>
+                    <td>{{o.redge}}</td>
+                    <td><a href={{o.platform}}>{{o.platform}}</a></td>
+                    <td><button>Bet</button></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    {% block javascript %}
+    <script>
+        $("#scrapeButton").click(function () {
+            $("#scrapeButton").prop('disabled', true)
+            $("#scrapeButton").html("Scraping")
+            $.ajax({
+            url: 'scrapeEntire',
+            data: {
+            },
+            dataType: 'json',
+            success: function (data) {
+                $("#scrapeButton").prop('disabled', false)
+                $("#scrapeButton").html("Scrape Entire")
+            },
+            error: function (error) {
+                
+            }
+            });
+        });
+        $("#updateButton").click(function () {
+            console.log('asdfasdfasdf')
+            $("#updateButton").prop('disabled', true)
+            $("#updateButton").html("Updating")
+            $.ajax({
+            url: 'scrapeBets',
+            data: {
+            },
+            dataType: 'json',
+            success: function (data) {
+                $("#updateButton").prop('disabled', false)
+                $("#updateButton").html("Update")
+            },
+            error: function (error) {
+
+            }
+            });
+        });
+    </script>
+    {% endblock %}
+</body>
+<style>
+    .inline {display:inline}
+    .lm-10 {margin-left:20px}
+    .section {padding-bottom: 20px}
+    .section-header {font-size:30px; font-weight:bold}
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+</style>
