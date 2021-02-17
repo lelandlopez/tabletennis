@@ -29,11 +29,29 @@ def killPROC(str):
         if proc.name() == PROCNAME:
             proc.kill()
 
-def fetchPageSource(url, **kwargs):
-    from selenium.webdriver.firefox.options import Options
+def createDriver():
     options = Options()
     options.headless = True
     driver = webdriver.Firefox(options=options)
+    return driver
+
+def quitDriver(driver):
+    driver.quit()
+    try:
+        ffpid = int(driver.service.process.pid)
+        os.kill(ffpid, signal.SIGTERM)
+        killPROC("geckodriver")
+        killPROC("firefox")
+    except:
+        print('error in quit Driver')
+
+
+def fetchPageSource(url, **kwargs):
+    driver = "" 
+    if 'driver' in kwargs:
+        driver = kwargs['driver']
+    else:
+        driver = createDriver()
     page_source = ""
     driver.get(url)
     try:
@@ -42,23 +60,28 @@ def fetchPageSource(url, **kwargs):
                 element = WebDriverWait(driver, 10).until(
                     EC.presence_of_element_located((By.CLASS_NAME, kwargs['waitFor'][1]))
                 )
-        # print(driver.page_source)
+
+        if 'executeScript' in kwargs:
+            for i in kwargs['executeScript']:
+                driver.execute_script(i)
         page_source = driver.page_source
+        time.sleep(1)
     except TimeoutException:
         print("took too much time")
     except:
+        print("error in fetchPageSource")
         pass
     finally:
-        driver.close()
-        driver.quit()
-        try:
-            ffpid = int(driver.service.process.pid)
-            os.kill(ffpid, signal.SIGTERM)
-        except:
-            pass
-    return page_source
+        pass
+        # try:
+        #     ffpid = int(driver.service.process.pid)
+        #     os.kill(ffpid, signal.SIGTERM)
+        # except:
+        #     pass
+    return page_source, driver
 
 def processPlayer(page_source, playerDF_filename, matchDF_filename):
+    print('got in here')
     s = BeautifulSoup(str(page_source), 'html.parser')
     matches = s.select('.event__match')
     pDF = pd.read_csv(playerDF_filename, index_col = False)
@@ -114,8 +137,8 @@ def processPlayer(page_source, playerDF_filename, matchDF_filename):
                 # killPROC("firefox")
     # pDF.to_csv("./playerDFScrapeAgain.csv", index=False)
     bDF.to_csv(matchDF_filename, index=False)
-    killPROC("geckodriver")
-    killPROC("firefox")
+    # killPROC("geckodriver")
+    # killPROC("firefox")
 
 def dropCountry(name):
     return name[:name.find('(')-1]

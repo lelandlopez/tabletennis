@@ -14,6 +14,7 @@ from datetime import date
 sys.path.insert(1, './scraper/')
 from scraperHelper import fetchPageSource 
 from scraperHelper import swap 
+from scraperHelper import createDriver
 sys.path.insert(1, '.')
 from formatter import formatter
 sys.path.insert(1, './evaluation/')
@@ -32,9 +33,9 @@ def scrapeBets():
             time_regex = '.offering-games__link'
 
 
-    def processBetOnline():
+    def processBetOnline(driver):
         url = 'https://beta.betonline.ag/sportsbook/table-tennis/todaygames'
-        page_source = fetchPS(url, test)
+        page_source = fetchPS(url, test, driver)
         text_file = open("./temp/ps.txt", "w")
         text_file.write(page_source)
         text_file.close()
@@ -60,9 +61,9 @@ def scrapeBets():
         df['platform'] = url
         return df.reset_index(0, drop=True)
 
-    def processBovada():
+    def processBovada(driver):
         url = 'https://www.bovada.lv/sports/table-tennis/russia/liga-pro' 
-        page_source = fetchPS(url, test, waitFor=['class', 'grouped-events'])
+        page_source = fetchPS(url, test, driver, waitFor=['class', 'grouped-events'])
         text_file = open("./temp/bovada_ps.txt", "w")
         text_file.write(page_source)
         text_file.close()
@@ -117,11 +118,13 @@ def scrapeBets():
                 
 
     def getCorrespondingGames(df):
+        print(df)
         gameDF = pd.read_csv(matchDF_filename)
         gameDF = gameDF.loc[gameDF['lScore'] == '-']
         d = pd.DataFrame()
         o = pd.DataFrame()
         for index, i in df.iterrows():
+            print(i)
             k = findCorresponding(gameDF, i['lTeam'], i['rTeam'])
             if k.shape[0] != 0:
                 d = d.append(k.iloc[0])
@@ -136,13 +139,13 @@ def scrapeBets():
             odds = odds * -1
             return odds / (odds + 100)
 
-    def fetchPS(url, test, **kwargs):
+    def fetchPS(url, test, driver, **kwargs):
         ps = ''
         if test == False:
             if 'waitFor' in kwargs:
-                ps = fetchPageSource(url, waitFor=kwargs['waitFor'])
+                ps, driver = fetchPageSource(url, waitFor=kwargs['waitFor'], driver=driver)
             else:
-                ps = fetchPageSource(url)
+                ps, driver = fetchPageSource(url, driver=driver)
             text_file = open("./Debug/ps.txt", "w")
             text_file.write(ps)
             text_file.close()
@@ -156,28 +159,29 @@ def scrapeBets():
 
     def filterOnlyNew(df):
         k = []
-        l = False
         for index, i in df.iterrows():
-            if l == True:
+            if i['lTeam'] in k or i['rTeam'] in k:
                 df = df.drop([index])
-            else:
-                if i['lTeam'] in k or i['rTeam'] in k:
-                    df = df.drop([index])
-                    l = True
-                else:
+                if i['lTeam'] not in k:
                     k.append(i['lTeam'])
+                if i['rTeam'] not in k:
                     k.append(i['rTeam'])
+            else:
+                k.append(i['lTeam'])
+                k.append(i['rTeam'])
         return df
 
 
-    k = processBetOnline()
-    l = processBovada()
-    
-    k.to_csv('./temp/k.csv')
-    l.to_csv('./temp/l.csv')
+    driver = createDriver()
+    k = processBetOnline(driver)
+    l = processBovada(driver)
 
-    bettingSitesDF = [filterOnlyNew(processBetOnline()),
-                        filterOnlyNew(processBovada())]
+    
+    k.to_csv('./temp/betOnline.csv')
+    l.to_csv('./temp/bovada.csv')
+
+    bettingSitesDF = [filterOnlyNew(k),
+                        filterOnlyNew(l)]
 
 
 
@@ -195,7 +199,6 @@ def scrapeBets():
     else:
         df = pd.read_csv('./asdf.csv', index_col=False)
     df = getBestLines(df)
-
 
 
     cdf, cbdf = getCorrespondingGames(df)

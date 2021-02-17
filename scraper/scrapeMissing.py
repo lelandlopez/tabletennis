@@ -23,6 +23,11 @@ from datetime import date
 sys.path.insert(1, './')
 from helpers import helpers
 
+sys.path.insert(1, './scraper/')
+from scraperHelper import fetchPageSource 
+from scraperHelper import swap 
+from scraperHelper import createDriver
+from scraperHelper import quitDriver
 today = date.today()
 
 
@@ -47,23 +52,8 @@ def getPlayer(url):
     driver = webdriver.Firefox(options=options)
 
     try:
-        # run firefox webdriver from executable path of your choice
         driver.get(url)
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        time.sleep(1)
-        # more_xpath = "event__more"
-        # exists = check_exists_by_xpath(driver, more_xpath)
-        # #live-table > div.event.event--results > div > div > a
-        # if exists == False:
-        #   time.sleep(5)
-        # while(exists):
-        #     try:
-        #         driver.find_element_by_class_name(more_xpath).click()
-        #     except:
-        #         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        #         exists = check_exists_by_xpath(driver, more_xpath)
-
-        # time.sleep(1)
         results = driver.page_source
     except:
         pass
@@ -78,31 +68,31 @@ def getPlayer(url):
     return results
 
 
-def fetchPageSource(url):
-    print('fetching page source:', url)
-    from selenium.webdriver.firefox.options import Options
-    options = Options()
-    options.headless = True
-    driver = webdriver.Firefox(options=options)
-    page_source = ""
-    try:
-        # run firefox webdriver from executable path of your choice
-        from selenium.webdriver.firefox.options import Options
-        options = Options()
-        options.headless = True
-        driver.get(url)
-        page_source = driver.page_source
-    except:
-        pass
-    finally:
-        driver.close()
-        driver.quit()
-        try:
-            ffpid = int(driver.service.process.pid)
-            os.kill(ffpid, signal.SIGTERM)
-        except:
-            pass
-    return page_source
+# def fetchPageSource(url):
+#     print('fetching page source:', url)
+#     from selenium.webdriver.firefox.options import Options
+#     options = Options()
+#     options.headless = True
+#     driver = webdriver.Firefox(options=options)
+#     page_source = ""
+#     try:
+#         # run firefox webdriver from executable path of your choice
+#         from selenium.webdriver.firefox.options import Options
+#         options = Options()
+#         options.headless = True
+#         driver.get(url)
+#         page_source = driver.page_source
+#     except:
+#         pass
+#     finally:
+#         driver.close()
+#         driver.quit()
+#         try:
+#             ffpid = int(driver.service.process.pid)
+#             os.kill(ffpid, signal.SIGTERM)
+#         except:
+#             pass
+#     return page_source
 
 def getPlayers(page_source):
     players = []
@@ -122,12 +112,6 @@ def dropCountry(name):
 def seperateDateTime(date):
     return name[:name.find('(')-1]
 
-def initial():
-    url = "https://www.flashscore.com/darts/"
-    page_source = fetchPageSource(url)
-    processPlayer(page_source)
-
-matchDF_filename = './csv/static/matchDF_1.csv'
 
 def processPlayer(df, page_source, id):
     print(id)
@@ -216,13 +200,19 @@ def insertSpecific():
     print(df.shape)
     print(df.head())
     print(df['datetime'].str.len().unique())
+    driver = createDriver()
     for (index, i) in df.iterrows():
         url = 'https://www.flashscore.com/match/' + i['id'] + '/#match-summary'
         print(url)
-        ps = getPlayer(url)
+        try:
+            ps, driver = fetchPageSource(url, 
+                    driver=driver, executeScript=["window.scrollTo(0, document.body.scrollHeight);"])
+        except:
+            quitDriver(driver)
         processPlayer(df, ps, i['id'])
-        # print(index, df.shape[0])
 
 
 
+
+matchDF_filename = './csv/static/matchDF.csv'
 insertSpecific()

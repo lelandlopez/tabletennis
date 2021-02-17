@@ -49,21 +49,24 @@ def getTournaments(page_source):
 
 @helpers.printTime
 def insertSpecific(results, fixtures, url = ""):
+    driver = scraperHelper.createDriver()
+    print(driver)
     if url == "":
-        ps = scraperHelper.fetchPageSource(frontPage_url)
-        print(time.asctime( time.localtime(time.time())))
+        ps, driver = scraperHelper.fetchPageSource(frontPage_url, driver=driver)
         urls = getTournaments(ps)
     else:
         urls = [url]
     for i in urls:
-        print(i)
         if results == True:
             k = i + 'results'
-            ps = scraperHelper.fetchPageSource(i + 'results')
+
+            print(driver)
+            ps, driver = scraperHelper.fetchPageSource(i + 'results', driver=driver)
             scraperHelper.processPlayer(ps, playerDF_filename, matchDF_filename)
         if fixtures == True:
+            print(driver)
             k = i + 'fixtures'
-            ps = scraperHelper.fetchPageSource(i + 'fixtures')
+            ps, driver = scraperHelper.fetchPageSource(i + 'fixtures', driver=driver)
             scraperHelper.processPlayer(ps, playerDF_filename, matchDF_filename)
 
     import json
@@ -74,6 +77,7 @@ def insertSpecific(results, fixtures, url = ""):
     websiteInfo['lastScraped'] = datetime.now().__str__()
     with open(websiteInfoFileDir, 'w') as json_file:
         json.dump(websiteInfo, json_file)
+    scraperHelper.quitDriver(driver)
     
 
 
