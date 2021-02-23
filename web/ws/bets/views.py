@@ -8,16 +8,8 @@ import pandas as pd
 
 
 
-
-def index(request):
-    csvFilePath = './predictions.csv'
-    jsonArray = []
+def getPlacedBets():
     placedBets = []
-
-    with open('./websiteInfo.json') as f:
-        websiteInfo = json.load(f)
-
-
     with open('./scraper/Bets/placedBets.csv', encoding='utf-8') as csvf: 
         #load csv file data using csv library's dictionary reader
         csvReader = csv.DictReader(csvf) 
@@ -26,8 +18,12 @@ def index(request):
         for row in csvReader: 
             #add this python dict to json array
             placedBets.append(row['id'])
-    print(placedBets)
+    return placedBets
 
+def getBets():
+    csvFilePath = './predictions.csv'
+    placedBets = getPlacedBets()
+    jsonArray = []
     with open(csvFilePath, encoding='utf-8') as csvf: 
         #load csv file data using csv library's dictionary reader
         csvReader = csv.DictReader(csvf) 
@@ -36,15 +32,29 @@ def index(request):
         for row in csvReader: 
             #add this python dict to json array
             if row['id'] not in placedBets:
-                jsonArray.append(row)
+                if float(row['ledge']) > 0.05 or float(row['redge']) > 0.05:
+                    jsonArray.append(row)
+    return jsonArray
 
-    
+def index(request):
+    with open('./websiteInfo.json') as f:
+        websiteInfo = json.load(f)
+
+    jsonArray = getBets()
 
     context = {
         'bets': jsonArray,
         'websiteInfo': websiteInfo
     }
     return render(request, 'bets/index.html', context)
+
+def getBetsResponse(request):
+    jsonArray = getBets()
+    data = {
+        'bets': jsonArray
+    }
+    return JsonResponse(data)
+
 
 def calculateBets(request):
     data = {
@@ -55,7 +65,9 @@ def calculateBets(request):
 def scrapeEntire(request):
     sys.path.insert(1, './scraper')
     from scrapeSpecific import insertSpecific
-    insertSpecific(True, True)
+    fixtures = request.GET.get('fixtures') == 'true'
+    results = request.GET.get('results') == 'true'
+    insertSpecific(fixtures, results)
     data = {
     }
     return JsonResponse(data)
@@ -85,11 +97,7 @@ def placeBet(request):
     id = request.GET.get('id')
     placedBetsFilePath = './scraper/Bets/placedBets.csv'
     df = pd.read_csv(placedBetsFilePath)
-    print(df)
     k = pd.DataFrame([[now, id]], columns=['time', 'id'])
-    print("(*((((((((((((((((")
-    print(k)
-    print("(*((((((((((((((((")
     df = df.append(k)
     df.to_csv(placedBetsFilePath, index=False)
-    return 
+    return JsonResponse({})

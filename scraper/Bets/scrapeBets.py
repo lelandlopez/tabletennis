@@ -12,9 +12,8 @@ from selenium.webdriver.firefox.options import Options
 from datetime import date
 
 sys.path.insert(1, './scraper/')
-from scraperHelper import fetchPageSource 
-from scraperHelper import swap 
-from scraperHelper import createDriver
+from scraperHelper import fetchPageSource, swap, createDriver, doSomethingFetchPageSource
+from scraperHelper import getLargestInGroup, filterOnlyNew
 sys.path.insert(1, '.')
 from formatter import formatter
 sys.path.insert(1, './evaluation/')
@@ -32,13 +31,29 @@ def scrapeBets():
             search_regex = '.offering-games__table-row'
             time_regex = '.offering-games__link'
 
+    def processGamesPlaying(driver):
+        url = 'https://www.flashscore.com/table-tennis/'
+        def doSomething(driver):
+            button = driver.find_element_by_xpath('//*[@id="live-table"]/div[1]/div/div[2]/div[1]')
+            button.click()
+        page_source, driver = doSomethingFetchPageSource(url, driver=driver, doSomething=[doSomething])
+        text_file = open("./temp/gamesPlaying.txt", "w")
+        text_file.write(page_source)
+        text_file.close()
+
+        search_regex = '.event__participant'
+        s = BeautifulSoup(str(page_source), 'html.parser')
+        players = s.select(search_regex)
+        k = []
+        for (index, player) in enumerate(players):
+            p = player.text
+            p = p[:p.find('(')].strip()
+            k.append(p)
+        return k
 
     def processBetOnline(driver):
         url = 'https://beta.betonline.ag/sportsbook/table-tennis/todaygames'
         page_source = fetchPS(url, test, driver)
-        text_file = open("./temp/ps.txt", "w")
-        text_file.write(page_source)
-        text_file.close()
 
         def formatTeamNames(teams):
             def formatSide(side):
@@ -62,18 +77,21 @@ def scrapeBets():
         return df.reset_index(0, drop=True)
 
     def processBovada(driver):
-        url = 'https://www.bovada.lv/sports/table-tennis/russia/liga-pro' 
+        url = 'https://www.bovada.lv/sports/table-tennis' 
         page_source = fetchPS(url, test, driver, waitFor=['class', 'grouped-events'])
         text_file = open("./temp/bovada_ps.txt", "w")
         text_file.write(page_source)
         text_file.close()
         def formatLines(lines):
+
             def formatLine(line):
                 l = line.strip()
                 if l == 'EVEN':
                     return '+100'
                 return l
-            return [formatLine(lines[2].text), formatLine(lines[3].text)]
+            if len(lines) > 2:
+                return [formatLine(lines[2].text), formatLine(lines[3].text)]
+            return [formatLine(lines[0].text), formatLine(lines[1].text)]
 
         def formatTeamNames(teams):
             def formatSide(side):
@@ -118,13 +136,11 @@ def scrapeBets():
                 
 
     def getCorrespondingGames(df):
-        print(df)
         gameDF = pd.read_csv(matchDF_filename)
         gameDF = gameDF.loc[gameDF['lScore'] == '-']
         d = pd.DataFrame()
         o = pd.DataFrame()
         for index, i in df.iterrows():
-            print(i)
             k = findCorresponding(gameDF, i['lTeam'], i['rTeam'])
             if k.shape[0] != 0:
                 d = d.append(k.iloc[0])
@@ -157,70 +173,64 @@ def scrapeBets():
 
 
 
-    def filterOnlyNew(df):
-        k = []
-        for index, i in df.iterrows():
-            if i['lTeam'] in k or i['rTeam'] in k:
-                df = df.drop([index])
-                if i['lTeam'] not in k:
-                    k.append(i['lTeam'])
-                if i['rTeam'] not in k:
-                    k.append(i['rTeam'])
-            else:
-                k.append(i['lTeam'])
-                k.append(i['rTeam'])
-        return df
 
 
     driver = createDriver()
+    gamesPlaying = processGamesPlaying(driver)
     k = processBetOnline(driver)
     l = processBovada(driver)
-
-    
     k.to_csv('./temp/betOnline.csv')
     l.to_csv('./temp/bovada.csv')
+    bettingSitesDF = [k, l]
+    df = pd.concat(bettingSitesDF)
 
-    bettingSitesDF = [filterOnlyNew(k),
-                        filterOnlyNew(l)]
-
-
-
-    def getBestLines(df):
+    def formatLines(df):
         df.loc[df['rTeam'].str.strip() > df['lTeam'].str.strip(), 
                 ['lTeam', 'rTeam', 'lLine', 'rLine']] = df.loc[df['rTeam'].str.strip() > df['lTeam'].str.strip()][['rTeam', 'lTeam', 'rLine', 'lLine']].values
         df = df.sort_values('time')
+        df.to_csv('./temp/combined.csv')
         return df
         
 
-    df = pd.concat(bettingSitesDF)
     df.to_csv('./temp/bettingSitesDF.csv')
-    if test == False:
-        df.to_csv('./asdf.csv', index=False)
-    else:
-        df = pd.read_csv('./asdf.csv', index_col=False)
-    df = getBestLines(df)
-
-
+    df = formatLines(df).reset_index()
     cdf, cbdf = getCorrespondingGames(df)
-
+    print(cdf.to_csv('./temp/cdf.csv'))
+    print(cbdf.to_csv('./temp/cbdf.csv'))
 
     ul = set(list(cdf['lPlayer'].unique()) + list(cdf['rPlayer'].unique()))
     mdf = pd.read_csv(matchDF_filename)
-    today = date.today()
-    mdf.loc[(mdf['datetime'].str[0:5] == today.strftime("%d.%m")) & (mdf['lScore'] == '-'), ['lScore', 'rScore']] = ['0', '0']
-    udf = mdf
     udf = mdf[(mdf['lPlayer'].isin(ul)) | (mdf['rPlayer'].isin(ul))]
+
+
     udf.to_csv('./test_before.csv')
     formatted = formatter(udf, True, ignore_ids = cdf['id'])
 
     formatted = formatted[formatted['id'].isin(cdf['id'])]
-    formatted.to_csv('./test.csv')
+    formatted = formatted.merge(mdf, on ='id')
+
+    def formatSequencer(df, seq):
+        df.loc[df[seq].str.contains(' ') == False, seq] = df[seq] + '0000'
+        df.loc[df[seq].str.contains(' '), seq] = df[seq].str[0:6] + '2020' + df[seq].str[-5:]
+        df[seq] = df[seq].str.replace('.', '')
+        df[seq] = df[seq].str.replace(':', '')
+        df[seq] = df[seq].str[4:8] + df[seq].str[2:4] + df[seq].str[0:2] + df[seq].str[8:]
+        k = df[df[seq].str.contains(' ')][[seq]]
+        df[seq] = df[seq].astype(int)
+        return df
+
+    formatted = formatSequencer(formatted, 'datetime')
+    formatted.to_csv('./temp/merged.csv')
+    
     predictions = predict(formatted)
     formatted['predictions'] = predictions.tolist()
     formatted['rWinPred'] = formatted['predictions'].apply(lambda x: x[0])
     formatted['lWinPred'] = formatted['predictions'].apply(lambda x: x[1])
 
     formatted = formatted.merge(cbdf, left_on='id', right_on='merge_index')
+
+    formatted.to_csv('./temp/formatted.csv')
+
 
 
     formatted = formatted[formatted['lLine'] != '']
@@ -262,26 +272,24 @@ def scrapeBets():
 
     formatted = formatted.sort_values('time')
 
-    formatted = formatted[(formatted['ledge'] > 0) | (formatted['redge'] > 0)]
-    def getLargest(g):
-        high = 0
-        idx = 0 
-        k = 0
-        for index, i in g.iterrows():
-            if i['ledge'] > high:
-                high = i['ledge']
-                idx = k
-            if i['redge'] > high:
-                high = i['redge']
-                idx = k
-            k = k + 1
-        return g.iloc[idx]
+    formatted.to_csv('./temp/beforePruning.csv')
 
 
-    formatted = formatted.groupby(['id']).apply(getLargest).reset_index(['id'], drop=True)
-    formatted = formatted.sort_values('time')
 
-    cols = ['time', 'id', 'lTeam', 'rTeam', 'Player_left', 'Player_right', 'lWinPred', 'rWinPred', 'lOdds', 'rOdds', 'lLine', 'rLine', 'ledge', 'redge', 'platform']
+
+
+    formatted = formatted.sort_values('datetime')
+    formatted.to_csv('./temp/beforeGetLargest.csv')
+    formatted = getLargestInGroup(formatted, ['id'], 'ledge', 'redge')
+    formatted.to_csv('./temp/afterGetLarges.csv')
+    formatted = formatted.sort_values('datetime')
+    formatted.to_csv('./temp/beforeFilter.csv')
+    formatted = filterOnlyNew(formatted, gamesPlaying, 'datetime')
+    formatted.to_csv('./temp/afterFilterOnlyNew.csv')
+    formatted = formatted.sort_values('datetime')
+    # formatted = formatted[(formatted['ledge'] > 0) | (formatted['redge'] > 0)]
+
+    cols = ['datetime', 'time', 'id', 'lTeam', 'rTeam', 'Player_left', 'Player_right', 'lWinPred', 'rWinPred', 'lOdds', 'rOdds', 'lLine', 'rLine', 'ledge', 'redge', 'platform']
     formatted[cols].to_csv('./predictions.csv')
     print("done")
     # print(formatted[['Player_left', 'Player_right'] + [i for i in formatted.columns if 'cumsum' in i]])

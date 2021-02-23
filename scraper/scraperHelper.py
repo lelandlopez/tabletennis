@@ -45,6 +45,38 @@ def quitDriver(driver):
     except:
         print('error in quit Driver')
 
+def doSomethingFetchPageSource(url, **kwargs):
+    driver = "" 
+    if 'driver' in kwargs:
+        driver = kwargs['driver']
+    else:
+        driver = createDriver()
+    page_source = ""
+    driver.get(url)
+
+    try:
+        if 'doSomething' in kwargs:
+            for i in kwargs['doSomething']:
+                i(driver)
+        if 'waitFor' in kwargs:
+            if kwargs['waitFor'][0] == 'class':
+                element = WebDriverWait(driver, 10).until(
+                    EC.presence_of_element_located((By.CLASS_NAME, kwargs['waitFor'][1]))
+                )
+
+        if 'executeScript' in kwargs:
+            for i in kwargs['executeScript']:
+                driver.execute_script(i)
+        page_source = driver.page_source
+        time.sleep(1)
+    except TimeoutException:
+        print("took too much time")
+    except:
+        print("error in fetchPageSource")
+        pass
+    finally:
+        pass
+    return page_source, driver
 
 def fetchPageSource(url, **kwargs):
     driver = "" 
@@ -73,11 +105,6 @@ def fetchPageSource(url, **kwargs):
         pass
     finally:
         pass
-        # try:
-        #     ffpid = int(driver.service.process.pid)
-        #     os.kill(ffpid, signal.SIGTERM)
-        # except:
-        #     pass
     return page_source, driver
 
 def processPlayer(page_source, playerDF_filename, matchDF_filename):
@@ -165,3 +192,34 @@ def swap(df, cols, otherCols):
     df.loc[df[cols[0]].str.strip() != df[cols[1]].str.strip(), 
             calculateArrs(cols, otherCols)] = df.loc[df[cols[0]] != df[cols[1]]][flipArrs(cols, otherCols)].values
     return df
+
+def getLargest(g, l, r):
+    high = 0
+    idx = 0 
+    k = 0
+    for index, i in g.iterrows():
+        if i[l] > high:
+            high = i[l]
+            idx = k
+        if i[r] > high:
+            high = i[r]
+            idx = k
+        k = k + 1
+    return g.iloc[idx]
+
+def getLargestInGroup(df, group, l, r):
+    return df.groupby(group).apply(lambda x: getLargest(x, l, r)).reset_index(group, drop=True)
+
+def filterOnlyNew(df, k, sequencer):
+    df = df.sort_values(sequencer)
+    for index, i in df.iterrows():
+        if i['lTeam'] in k or i['rTeam'] in k:
+            df = df.drop([index])
+            if i['lTeam'] not in k:
+                k.append(i['lTeam'])
+            if i['rTeam'] not in k:
+                k.append(i['rTeam'])
+        else:
+            k.append(i['lTeam'])
+            k.append(i['rTeam'])
+    return df.reset_index(0, drop=True)

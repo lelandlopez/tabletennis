@@ -16,7 +16,6 @@ matchDF_filename = './csv/static/matchDF.csv'
 def splitForTraining(df, split):
     df = prep(df)
     df = calculateLWIN(df)
-    # df.to_csv('./test.csv', index=False)
     df = df.drop(columns=['id'])
 
     train, test = train_test_split(df, test_size=0.2)
@@ -60,9 +59,6 @@ def randomForest(train_features, test_features, train_labels, test_labels):
 
     filename = './finalized_model.sav'
     pickle.dump(rf, open(filename, 'wb'))
-    # k = pd.DataFrame(list(X_new[0]), columns=['features'])
-    # k.to_csv('../FinalModel.csv')
-    # rf = RFECV(RandomForestClassifier(n_estimators = 5000, n_jobs = -1)).fit(X_new, train_labels.values.ravel())
     test_features = test_features[selected_feat]
     predictions = rf.predict_proba(prep(test_features))
     predict = rf.predict(test_features)
@@ -79,7 +75,6 @@ def randomForest(train_features, test_features, train_labels, test_labels):
 
 
 def xgb(train_features, test_features, train_labels, test_labels):
-
     from xgboost import XGBClassifier
     from sklearn.feature_selection import SelectFromModel
     sel = SelectFromModel(XGBClassifier(n_estimators = 500, n_jobs = -1))
@@ -132,5 +127,4 @@ def evaluate(df, type):
     pyplot.yticks(range(len(indices)), [features[i] for i in indices])
     pyplot.xlabel('Relative Importance')
     pyplot.show()    # Make predictions and determine the error
-
 

@@ -50,7 +50,6 @@ def getTournaments(page_source):
 @helpers.printTime
 def insertSpecific(results, fixtures, url = ""):
     driver = scraperHelper.createDriver()
-    print(driver)
     if url == "":
         ps, driver = scraperHelper.fetchPageSource(frontPage_url, driver=driver)
         urls = getTournaments(ps)
@@ -79,11 +78,3 @@ def insertSpecific(results, fixtures, url = ""):
         json.dump(websiteInfo, json_file)
     scraperHelper.quitDriver(driver)
     
-
-
-
-# lenargs = len(sys.argv)
-# if lenargs == 2:
-#     insertSpecific(True, True, sys.argv[1])
-# else:
-#     insertSpecific(True, True)

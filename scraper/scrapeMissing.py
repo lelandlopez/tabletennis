@@ -68,31 +68,6 @@ def getPlayer(url):
     return results
 
 
-# def fetchPageSource(url):
-#     print('fetching page source:', url)
-#     from selenium.webdriver.firefox.options import Options
-#     options = Options()
-#     options.headless = True
-#     driver = webdriver.Firefox(options=options)
-#     page_source = ""
-#     try:
-#         # run firefox webdriver from executable path of your choice
-#         from selenium.webdriver.firefox.options import Options
-#         options = Options()
-#         options.headless = True
-#         driver.get(url)
-#         page_source = driver.page_source
-#     except:
-#         pass
-#     finally:
-#         driver.close()
-#         driver.quit()
-#         try:
-#             ffpid = int(driver.service.process.pid)
-#             os.kill(ffpid, signal.SIGTERM)
-#         except:
-#             pass
-#     return page_source
 
 def getPlayers(page_source):
     players = []
@@ -126,11 +101,11 @@ def processPlayer(df, page_source, id):
     status = s.select('.status___XFO5ZlK')
     print(status)
     if len(status) > 0:
-        print('got in here')
         if status[0].text == 'Cancelled':
             bdf = pd.read_csv(matchDF_filename, index_col=False)
             bdf.loc[bdf['id'] == id, 'datetime'] = bdf['datetime'] + 'CA'
             bdf.to_csv(matchDF_filename, index=False)
+            print('hello')
             return
         if status[0].text == 'Walkover':
             bdf = pd.read_csv(matchDF_filename, index_col=False)
@@ -177,6 +152,10 @@ def processPlayer(df, page_source, id):
     #         rGamesStructured.append(k[0].text)
     date = s.select('.time___22qYh_R ')
     bDF = pd.read_csv(matchDF_filename)
+    print(scores)
+    print(lGames)
+    print(rGames)
+    print(date)
     row = [scores[0].text, scores[1].text, lGames, rGames, date[0].text]
     row = np.array(row, dtype="object")
     bDF.loc[bDF['id'] == id, ['lScore', 'rScore', 'lGames', 'rGames', 'datetime']] = row
@@ -201,15 +180,21 @@ def insertSpecific():
     print(df.head())
     print(df['datetime'].str.len().unique())
     driver = createDriver()
+    loopcounter = 0
     for (index, i) in df.iterrows():
         url = 'https://www.flashscore.com/match/' + i['id'] + '/#match-summary'
         print(url)
         try:
             ps, driver = fetchPageSource(url, 
-                    driver=driver, executeScript=["window.scrollTo(0, document.body.scrollHeight);"])
+                    driver=driver, executeScript=["window.scrollTo(0, document.body.scrollHeight);"], waitFor=['class', 'detailStatus___2v20X7g'])
         except:
             quitDriver(driver)
         processPlayer(df, ps, i['id'])
+        loopcounter = loopcounter + 1
+        if loopcounter > 50:
+            quitDriver(driver)
+            driver = createDriver()
+            loopcounter = 0
 
 
 

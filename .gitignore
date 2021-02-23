@@ -9,3 +9,6 @@ csv/*.csv
 */test.csv
 */*.pyc
 *.pyc
+temp/*
+test.csv
+.gitignore
