@@ -54,6 +54,10 @@ def createColsBeforeSplit(df):
     df = afe.applyOnBoth(df, 
             ['FirstGameW', 'DiffGames'],
             lambda x: x[0] > 0 if len(x) > 0 else False)
+
+    df = afe.applyOnBoth(df, 
+            ['FirstGameW', 'DiffGames'],
+            lambda x: x[0] > 0 if len(x) > 0 else False)
     return df
 
 def createStatsAfterSplit(df):
@@ -65,7 +69,7 @@ def createStatsAfterSplit(df):
 
 
     groups = [['Player'], ['Player', 'other_label']]
-    cols = ['Score', 'ScoretoScore', 'Win', 'Games_len']
+    cols = ['Score', 'ScoretoScore', 'Win', 'Games_len', 'FirstGameW']
     dividers = ['Games_len']
     sn = []
 
@@ -103,11 +107,12 @@ def formatter(df, save = False, **kwargs):
         df = dropAndFormat(df, kwargs['ignore_ids'].tolist())
     else:
         df = dropAndFormat(df)
-    print(df)
 
     df = createColsBeforeSplit(df)
-    df = afe.split(df, ['Player', 'Score', 'Win', 'Games_len', 'DiffGamesSum'], ['id', 'datetime', 'toScore'])
-    print(df)
+    df = afe.split(df, ['Player', 'Score', 'Win', 'Games_len', 'DiffGamesSum', 'FirstGameW'], ['id', 'datetime', 'toScore'])
+    print("***************")
+    print(df.columns)
+    print("***************")
     df = createStatsAfterSplit(df)
     k = copy
 

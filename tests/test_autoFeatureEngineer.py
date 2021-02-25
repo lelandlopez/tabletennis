@@ -322,8 +322,36 @@ def test_createWinStreaks():
         columns=['Player', 'Win', 'datetime', 'Player_Win_streak'])
     group = ['Player']
     startDF, numMatchCol = afe.createNumMatch(startDF, group)
-    resultingDF = afe.createWinStreaks(startDF, group, ['Win'])
+    resultingDF, names = afe.createWinStreaks(startDF, group, ['Win'])
     resultingDF = resultingDF.drop(columns=['Player_num_match'])
+    print(correctDF)
+    print(resultingDF)
+    assert resultingDF.equals(correctDF)
+
+def test_findWinGame_1():
+    afe = autoFeatureEngineer(False)
+    group = ['Player']
+    startArr = [
+        [[1, -2, -3]],
+        [[-1, 2, 3]],
+        [[1, 2, -3]],
+        [[1, -2, 3]]]
+        # [[2, 3], [2, 1]]]
+    startDF = pd.DataFrame(
+        startArr, 
+        columns=['diff_games'])
+    correctArr = [
+        [[1, -2, -3], True, False, False],
+        [[-1, 2, 3], False, True, True],
+        [[1, 2, -3], True, True, False],
+        [[1, -2, 3], True, False, True]]
+        # [[2, 3], np.array([2, 1]), np.array([0, 2], np.array([0, -2])]]
+    correctDF = pd.DataFrame(
+        correctArr, 
+        columns=['diff_games', 'diff_games_win_game_0', 'diff_games_win_game_1', 'diff_games_win_game_2'])
+    resultingDF, names = afe.findWinGame_X(startDF, 'diff_games', 0)
+    resultingDF, names = afe.findWinGame_X(resultingDF, 'diff_games', 1)
+    resultingDF, names = afe.findWinGame_X(resultingDF, 'diff_games', 2)
     print(correctDF)
     print(resultingDF)
     assert resultingDF.equals(correctDF)

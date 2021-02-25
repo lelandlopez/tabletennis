@@ -199,7 +199,13 @@ class autoFeatureEngineer:
         def f(df):
             df = df.sort_values('datetime')
             return df['Win'].groupby((df['Win'] != df['Win'].shift()).cumsum()).cumcount()
-
         df[names[0]] = df.groupby(group).apply(f).reset_index(group, drop=True)
-   
         return df, names
+
+    @helpers.printTime
+    def findWinGame_X(self, df, col, game_num):
+        name = col + '_win_game_' + str(game_num)
+        def f(x):
+            return x[game_num] > 0
+        df[name] = df[col].apply(f)
+        return df, [name]
