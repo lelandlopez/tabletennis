@@ -15,6 +15,7 @@ from multiprocessing import Pool
 
 
 class autoFeatureEngineer:
+
     def __init__(self, save = False):
         self.save = save
     
@@ -187,3 +188,18 @@ class autoFeatureEngineer:
 
         df = self.calculateDiffs(df)
         return df
+
+    @helpers.printTime
+    def createWinStreaks(self, df, group, cols):
+        name = self.createNames(group)
+        names = [name + i + '_streak' for i in cols]
+
+        numMatchName = self.createNames(group, 'num_match')
+        df = df.sort_values(group + [numMatchName])
+        def f(df):
+            df = df.sort_values('datetime')
+            return df['Win'].groupby((df['Win'] != df['Win'].shift()).cumsum()).cumcount()
+
+        df[names[0]] = df.groupby(group).apply(f).reset_index(group, drop=True)
+   
+        return df, names

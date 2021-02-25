@@ -73,14 +73,12 @@ def createStatsAfterSplit(df):
         colsToShift = []
         df, numMatchCol = afe.createNumMatch(df, group)
         df, cumsumCols = afe.getCumsum(df, group, cols)
-        colsToShift = colsToShift + cumsumCols
+        df, streakCols = afe.createWinStreaks(df, group, ['Win'])
+        colsToShift = colsToShift + cumsumCols + streakCols
         df, rollingSumCols = afe.getRollingSum(df, group, cols, 5)  
         colsToShift = colsToShift + rollingSumCols
 
         names = afe.createDivNames(group, cols, numMatchCol, '_ave')
-        # print(df.head())
-        # df = df.reset_index(drop=True)
-        # print(df.head())
         colsToShift = colsToShift + names
         df[names] = df[cumsumCols].div(df[numMatchCol] + 1, axis=0)
         for divider in dividers:

@@ -296,3 +296,34 @@ def testCalculateDiffs():
     print(correctDF)
     print(resultingDF)
     assert resultingDF.equals(correctDF)
+
+def test_createWinStreaks():
+    afe = autoFeatureEngineer(False)
+    startArr = [
+        [0, 1, 1],
+        [0, 1, 2], 
+        [0, 0, 3], 
+        [1, 1, 4],
+        [1, 1, 5], 
+        [1, 1, 6]]
+    startDF = pd.DataFrame(
+        startArr, 
+        columns=['Player', 'Win', 'datetime'])
+    random.shuffle(startArr)
+    correctArr = [
+        [0, 1, 1, 0],
+        [0, 1, 2, 1], 
+        [0, 0, 3, 0], 
+        [1, 1, 4, 0],
+        [1, 1, 5, 1], 
+        [1, 1, 6, 2]]
+    correctDF = pd.DataFrame(
+        correctArr, 
+        columns=['Player', 'Win', 'datetime', 'Player_Win_streak'])
+    group = ['Player']
+    startDF, numMatchCol = afe.createNumMatch(startDF, group)
+    resultingDF = afe.createWinStreaks(startDF, group, ['Win'])
+    resultingDF = resultingDF.drop(columns=['Player_num_match'])
+    print(correctDF)
+    print(resultingDF)
+    assert resultingDF.equals(correctDF)
