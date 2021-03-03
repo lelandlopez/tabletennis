@@ -32,11 +32,16 @@ class autoFeatureEngineer:
 
     def createDivNames(self, group, cols, divider, append='', prepend=''):
         k = []
+        print(cols)
+        print(divider)
         for col in cols:
+            print(col)
             div = prepend
             for i in group:
                 div = i + '_' + div
+            print(div)
             div = div + col + '_' + divider + append
+            print(div)
             k.append(div)
         return k
 
@@ -209,3 +214,17 @@ class autoFeatureEngineer:
             return x[game_num] > 0
         df[name] = df[col].apply(f)
         return df, [name]
+    
+
+    @helpers.printTime
+    def createWinXWin_game_X(self, df, group, cols):
+        name = self.createNames(group)
+        n = name + cols[0] + 'X' + cols[1]
+        def f(x, n):
+            name = self.createNames(group)
+            x[n] = x[cols[0]] & x[cols[1]]
+            return x
+
+        df = df.groupby(group).apply(lambda x: f(x, n))
+        return df, n
+
