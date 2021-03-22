@@ -156,10 +156,13 @@ def processPlayer(df, page_source, id):
     print(lGames)
     print(rGames)
     print(date)
-    row = [scores[0].text, scores[1].text, lGames, rGames, date[0].text]
-    row = np.array(row, dtype="object")
-    bDF.loc[bDF['id'] == id, ['lScore', 'rScore', 'lGames', 'rGames', 'datetime']] = row
-    bDF.to_csv(matchDF_filename, index=False)
+    if scores == [] and lGames == [] and rGames == [] and date == []:
+        print('wrong', id)
+    else:
+        row = [scores[0].text, scores[1].text, lGames, rGames, date[0].text]
+        row = np.array(row, dtype="object")
+        bDF.loc[bDF['id'] == id, ['lScore', 'rScore', 'lGames', 'rGames', 'datetime']] = row
+        bDF.to_csv(matchDF_filename, index=False)
 
 
 def insertSpecific():

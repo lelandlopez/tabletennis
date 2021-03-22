@@ -355,3 +355,32 @@ def test_findWinGame_1():
     print(correctDF)
     print(resultingDF)
     assert resultingDF.equals(correctDF)
+
+def test_createWinXWin_game_X():
+    afe = autoFeatureEngineer(False)
+    startArr = [
+        [0, 1, 1],
+        [0, 1, 0], 
+        [0, 0, 1], 
+        [1, 1, 0],
+        [1, 1, 1], 
+        [1, 1, 0]]
+    startDF = pd.DataFrame(
+        startArr, 
+        columns=['Player', 'Win', 'Win_game_1'])
+    random.shuffle(startArr)
+    correctArr = [
+        [0, 1, 1, 1],
+        [0, 1, 0, 0], 
+        [0, 0, 1, 0], 
+        [1, 1, 0, 0],
+        [1, 1, 1, 1], 
+        [1, 1, 0, 0]]
+    correctDF = pd.DataFrame(
+        correctArr, 
+        columns=['Player', 'Win', 'Win_game_1', 'Player_WinXWin_game_1'])
+    group = ['Player']
+    resultingDF, name = afe.createWinXWin_game_X(startDF, group, ['Win', 'Win_game_1'])
+    print(correctDF)
+    print(resultingDF)
+    assert resultingDF.equals(correctDF) and name == 'Player_WinXWin_game_1'

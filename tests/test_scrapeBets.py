@@ -86,3 +86,8 @@ def test_filterOnlyNew():
     print(resultingDF)
     print(correctDF)
     assert resultingDF.equals(correctDF)
+
+def test_americanToImplied():
+    assert round(scraperHelper.americanToImplied(100), 2) == 0.50
+    assert round(scraperHelper.americanToImplied(-200), 2) == 0.67
+    assert round(scraperHelper.americanToImplied(200), 2) == 0.33

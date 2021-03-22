@@ -22,7 +22,7 @@
         <button id="updateButton" style="margin-right: 10px">Update</button><button id="refreshButton">Refresh</button>
         <table>
             <tr>
-                <td>time</td>
+                <td>datetime</td>
                 <td>id</td>
                 <td>lTeam</td>
                 <td>rTeam</td>
@@ -38,7 +38,7 @@
             <tbody id="betsTableBody">
             {% for o in bets %}
                 <tr id="{{o.id}}">
-                    <td>{{o.time}}</td>
+                    <td>{{o.datetime}}</td>
                     <td>{{o.id}}</td>
                     <td>{{o.lTeam}}</td>
                     <td>{{o.rTeam}}</td>

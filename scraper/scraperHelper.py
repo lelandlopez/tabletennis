@@ -223,3 +223,10 @@ def filterOnlyNew(df, k, sequencer):
             k.append(i['lTeam'])
             k.append(i['rTeam'])
     return df.reset_index(0, drop=True)
+
+def americanToImplied(odds):
+    if odds > 0:
+        return 100 / (odds + 100)
+    else:
+        odds = odds * -1
+        return odds / (odds + 100)

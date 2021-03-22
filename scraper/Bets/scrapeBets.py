@@ -13,7 +13,7 @@ from datetime import date
 
 sys.path.insert(1, './scraper/')
 from scraperHelper import fetchPageSource, swap, createDriver, doSomethingFetchPageSource
-from scraperHelper import getLargestInGroup, filterOnlyNew
+from scraperHelper import getLargestInGroup, filterOnlyNew, americanToImplied
 sys.path.insert(1, '.')
 from formatter import formatter
 sys.path.insert(1, './evaluation/')
@@ -54,6 +54,11 @@ def scrapeBets():
     def processBetOnline(driver):
         url = 'https://beta.betonline.ag/sportsbook/table-tennis/todaygames'
         page_source = fetchPS(url, test, driver)
+        print(page_source)
+
+        text_file = open("./temp/betonline.txt", "w")
+        text_file.write(page_source)
+        text_file.close()
 
         def formatTeamNames(teams):
             def formatSide(side):
@@ -71,7 +76,7 @@ def scrapeBets():
             lines = match.select('.lines-row__money')
             time = match.select(time_regex)
             teams = formatTeamNames(teams)
-            k = pd.DataFrame([[time[0].text, teams[0], teams[1], lines[0].text, lines[1].text]], columns=cols)
+            k = pd.DataFrame([[time[0].text, teams[0], teams[1], lines[0].text.strip('()'), lines[1].text.strip('()')]], columns=cols)
             df = df.append(k)
         df['platform'] = url
         return df.reset_index(0, drop=True)
@@ -122,7 +127,7 @@ def scrapeBets():
             lines = formatLines(lines)
             teams = formatTeamNames(teams)
             time = formatTime(time)
-            k = pd.DataFrame([[time, teams[0], teams[1], lines[0], lines[1]]], columns=cols)
+            k = pd.DataFrame([[time, teams[0], teams[1], lines[0].strip('()'), lines[1].strip('()')]], columns=cols)
             df = df.append(k)
         df['platform'] = url
         return df.reset_index(0, drop=True)
@@ -148,12 +153,6 @@ def scrapeBets():
                 o = o.append(i)
         return d, o
 
-    def americanToImplied(odds):
-        if odds > 0:
-            return 100 / (odds + 100)
-        else:
-            odds = odds * -1
-            return odds / (odds + 100)
 
     def fetchPS(url, test, driver, **kwargs):
         ps = ''
@@ -252,47 +251,17 @@ def scrapeBets():
     formatted['lWinPred'] = round(formatted['lWinPred'], 4)
     formatted['rWinPred'] = round(formatted['rWinPred'], 4)
 
-    def toMilitary(time):
-        if 'AM' in time:
-            time = time[:-3]
-            time = time.replace(':', '')
-            time = int(time)
-            if (time < 1300 and time >= 1200) == True:
-                return time + 1200
-            return time
-        else:
-            time = time[:-3]
-            time = time.replace(':', '')
-            time = int(time)
-            if (time < 1300 and time >= 1200) == False:
-                return time + 1200
-            return time
-
-    formatted['time'] = formatted['time'].apply(toMilitary)
-
-    formatted = formatted.sort_values('time')
-
-    formatted.to_csv('./temp/beforePruning.csv')
-
-
 
 
 
     formatted = formatted.sort_values('datetime')
-    formatted.to_csv('./temp/beforeGetLargest.csv')
     formatted = getLargestInGroup(formatted, ['id'], 'ledge', 'redge')
-    formatted.to_csv('./temp/afterGetLarges.csv')
     formatted = formatted.sort_values('datetime')
-    formatted.to_csv('./temp/beforeFilter.csv')
     formatted = filterOnlyNew(formatted, gamesPlaying, 'datetime')
-    formatted.to_csv('./temp/afterFilterOnlyNew.csv')
     formatted = formatted.sort_values('datetime')
-    # formatted = formatted[(formatted['ledge'] > 0) | (formatted['redge'] > 0)]
 
-    cols = ['datetime', 'time', 'id', 'lTeam', 'rTeam', 'Player_left', 'Player_right', 'lWinPred', 'rWinPred', 'lOdds', 'rOdds', 'lLine', 'rLine', 'ledge', 'redge', 'platform']
+    cols = ['datetime', 'id', 'lTeam', 'rTeam', 'Player_left', 'Player_right', 'lWinPred', 'rWinPred', 'lOdds', 'rOdds', 'lLine', 'rLine', 'ledge', 'redge', 'platform']
     formatted[cols].to_csv('./predictions.csv')
     print("done")
-    # print(formatted[['Player_left', 'Player_right'] + [i for i in formatted.columns if 'cumsum' in i]])
-    # print(cbdf)
 
 
