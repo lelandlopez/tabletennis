@@ -20,51 +20,131 @@
         <div class="section-header">Bets to make</div> 
         <div>Edge cutoff: <input disabled id="myRangeInput" class="inline" value=0.05></input></div>
         <button id="updateButton" style="margin-right: 10px">Update</button><button id="refreshButton">Refresh</button>
+    </div>
+    <div>
         <table>
-            <tr>
-                <td>datetime</td>
-                <td>id</td>
-                <td>lTeam</td>
-                <td>rTeam</td>
-                <td>lWinPred</td>
-                <td>rWinPred</td>
-                <td>lLine</td>
-                <td>rLine</td>
-                <td>ledge</td>
-                <td>redge</td>
-                <td>platform</td>
-                <td>bet</td>
-            </tr>
-            <tbody id="betsTableBody">
             {% for o in bets %}
-                <tr id="{{o.id}}">
-                    <td>{{o.datetime}}</td>
+                <tr id={{o.id}}>
                     <td>{{o.id}}</td>
-                    <td>{{o.lTeam}}</td>
-                    <td>{{o.rTeam}}</td>
-                    <td>{{o.lWinPred}}</td>
-                    <td>{{o.rWinPred}}</td>
-                    <td>{{o.lLine}}</td>
-                    <td>{{o.rLine}}</td>
-                    <td>{{o.ledge}}</td>
-                    <td>{{o.redge}}</td>
-                    <td><a href={{o.platform}}>{{o.platform}}</a></td>
-                    <td><button onclick='placeBet("{{o.id}}")'  >Bet</button></td>
+                    <td>{{o.lTeam}} v. {{o.rTeam}}</td>
+                    {% if o.ledge > o.redge %}
+                        <td>{{o.lTeam}}</td>
+                        <td>{{o.lLine}}</td>
+                        <td>{{o.ledge}}</td>
+                        <td><button onclick='placeBet("{{o.id}}", 0, "{{o.ledge}}", "{{o.lLine}}", "{{o.platform}}")'>Place Bet</button></td>
+                    {% else %}
+                        <td>{{o.rTeam}}</td>
+                        <td>{{o.rLine}}</td>
+                        <td>{{o.redge}}</td>
+                        <td><button onclick='placeBet("{{o.id}}", 1, "{{o.redge}}", "{{o.rLine}}", "{{o.platform}}")'>Place Bet</button></td>
+                    {% endif %}
                 </tr>
             {% endfor %}
-            </tbody>
         </table>
     </div>
+
+    <div class="section">
+        <div class="section-header">Model Performance  <button onclick='updateModelPerformance()'>Update</button></div> 
+        Bets Placed: <span id="numBets"></span>
+        <div id="TVA_chart" style="width: 900px; height: 500px"></div>
+    </div>
+
+
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+
+        getEstimatedVsActualProfit()
+      }
+    </script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     {% block javascript %}
     <script>
-        function placeBet(id) {
-            console.log('placing bets')
+        document.onload = load()
+        function load() {
+            getPlacedBets()
+        }
+        function getEstimatedVsActualProfit() {
+            d = ''
+            yAxis = {
+                title: '',
+            }
+            $.ajax({
+            url: 'getEstimatedVsActualProfit',
+            data: {},
+            dataType: 'json',
+            success: function (data) {
+                console.log(data)
+                d = [['bet', 'theoretical', 'actual']]
+                for(i = 0; i < data.actual.length; i++) {
+                    d.push([i, data['actual'][i], data['te'][i]])
+                }
+                console.log(d)
+                var data = google.visualization.arrayToDataTable(d);
+
+                var options = {
+                title: 'Theoretical vs Actual',
+                curveType: 'line',
+                legend: { position: 'bottom' }
+                };
+
+                var chart = new google.visualization.LineChart(document.getElementById('TVA_chart'));
+
+                chart.draw(data, options);
+            },
+            error: function (error) {
+            }
+            });
+        }
+        function getPlacedBets() {
+            d = ''
+            yAxis = {
+                title: 'Win %',
+                maximum: 100,
+                minimum: 0
+            }
+            $.ajax({
+            url: 'getPlacedBets',
+            data: {},
+            dataType: 'json',
+            success: function (data) {
+                console.log(data)
+                document.getElementById("numBets").innerHTML=JSON.stringify(data); 
+            },
+            error: function (error) {
+            }
+            });
+            return d
+        }
+        function updateModelPerformance() {
+            $.ajax({
+            url: 'updateModelPerformance',
+            data: {},
+            dataType: 'json',
+            success: function (data) {
+                console.log('completed')
+            },
+            error: function (error) {
+            }
+            });
+        }
+        function placeBet(id, team, edge, line, site) {
+            d = {
+                'id':id,
+                'teamSide':team,
+                'line':line,
+                'edge':edge,
+                'site':site
+            }
+            console.log(d)
             $.ajax({
             url: 'placeBet',
-            data: {
-                'id':id
-            },
+            data: d,
             dataType: 'json',
             success: function (data) {
                 console.log("placed bet")
