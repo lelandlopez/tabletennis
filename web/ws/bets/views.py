@@ -11,13 +11,24 @@ placedBetsFilePath = './scraper/Bets/placedBets.csv'
 matchDFFP = './csv/static/matchDF.csv'
 
 def getEstimatedVsActualProfit(request):
+    def getPayout(line):
+        p = 0 
+        if line > 0:
+            p = line
+        else:
+            p = 100 + 100/abs(line)
+        return p/100
+
     df = pd.read_csv(placedBetsFilePath)
     df = df[df['win'].isnull() == False]
-    df['theo'] = df['win'] * df['edge']
+
+    df['payout'] = df['line'].apply(getPayout)
+    df['payout'] = df['win'] * df['payout']
+    df.loc[df['payout'] == 0, 'payout'] = -1
+    print(df['payout'])
+    df['actual']= df['payout'].cumsum()
+
     te = df['edge'].cumsum().tolist()
-    df.loc[df['theo'] >  0, 'theo'] = df['theo'] + 1
-    df.loc[df['theo'] == 0, 'theo'] = -1
-    df['actual']= df['theo'].cumsum()
     df['te']= df['edge'].cumsum()
     actual = df['actual'].values.tolist()
     te = df['te'].values.tolist()
@@ -33,6 +44,7 @@ def updateModelPerformance(request):
     df = pd.read_csv(placedBetsFilePath)
     mdf = pd.read_csv(matchDFFP)
     missingWinDF = df[df['win'].isnull()]
+    print(missingWinDF.id)
     for (index, i) in missingWinDF.iterrows():
         k = mdf[mdf['id'] == i['id']]
         if k['lScore'].values != '-' and k['rScore'].values != '-':
@@ -66,15 +78,12 @@ def getPlacedBets(request):
             k.append(i/ix*100)
             ix += 1
         winPer = k
-        print(winPer)
         return {
             'numBets': numBets,
             'betsPending': betsPending,
             'betsWon': betsWon,
             'betsCompleted': betsCompleted,
             'percentWin': betsWon/betsCompleted,
-            'completedBets': completedBetsWins,
-            'winPer': winPer
         }
 
     p = _getStats(df)

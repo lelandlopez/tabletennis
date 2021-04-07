@@ -69,17 +69,6 @@ def getPlayer(url):
 
 
 
-def getPlayers(page_source):
-    players = []
-    s = BeautifulSoup(str(page_source), 'html.parser')
-    l = s.select('.participant-imglink')
-    for p in l:
-        if p.text != "":
-            k = p.get('onclick')
-            first = k.find("'")
-            players.append([k[first+1 : k.find("'", first+2)], p.text])
-    return players
-
 
 def dropCountry(name):
     return name[:name.find('(')-1]
@@ -90,6 +79,9 @@ def seperateDateTime(date):
 
 def processPlayer(df, page_source, id):
     print(id)
+
+    text_file = open("./temp/page_source.txt", "w")
+    text_file.write(page_source)
     s = BeautifulSoup(str(page_source), 'html.parser')
 
     status = s.select('.error')
@@ -105,7 +97,6 @@ def processPlayer(df, page_source, id):
             bdf = pd.read_csv(matchDF_filename, index_col=False)
             bdf.loc[bdf['id'] == id, 'datetime'] = bdf['datetime'] + 'CA'
             bdf.to_csv(matchDF_filename, index=False)
-            print('hello')
             return
         if status[0].text == 'Walkover':
             bdf = pd.read_csv(matchDF_filename, index_col=False)
@@ -143,14 +134,9 @@ def processPlayer(df, page_source, id):
         lGames.append(k[0].text)
         k = s.select('.part___PWW-lip.away___2Q2jzQu.part--' + str(i))
         rGames.append(k[0].text)
-    # if k[0].text != '':
-    #     lGamesStructured.append(k[0].text)
-    # rGamesStructured = []
-    # for i in range(1, 8):
-    #     k = s.select('.away___2Q2jzQu.part--' + str(i))
-    #     if k[0].text != '':
-    #         rGamesStructured.append(k[0].text)
     date = s.select('.time___22qYh_R ')
+    if date == []:
+        date = s.select('.time___FaD-OOU ')
     bDF = pd.read_csv(matchDF_filename)
     print(scores)
     print(lGames)
@@ -169,6 +155,8 @@ def insertSpecific():
     df = pd.read_csv(matchDF_filename)
     print(df.shape)
     df = df[df['lScore'] == '-']
+    df = df[df['datetime'].str.contains(today.strftime("%d/%m/%Y")) == False]
+    df = df.sort_values('datetime', ascending=False)
 
     lc = 'abcdefghijklmnopqrstuvwxyz'  
     uc = lc.upper()
