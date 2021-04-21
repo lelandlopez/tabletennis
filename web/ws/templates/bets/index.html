@@ -31,12 +31,12 @@
                         <td>{{o.lTeam}}</td>
                         <td>{{o.lLine}}</td>
                         <td>{{o.ledge}}</td>
-                        <td><button onclick='placeBet("{{o.id}}", 0, "{{o.ledge}}", "{{o.lLine}}", "{{o.platform}}")'>Place Bet</button></td>
+                        <td><button onclick='placeBet("{{o.id}}", 0, "{{o.ledge}}", "{{o.lLine}}", "{{o.redge}}", "{{o.rLine}}", "{{o.platform}}")'>Place Bet</button></td>
                     {% else %}
                         <td>{{o.rTeam}}</td>
                         <td>{{o.rLine}}</td>
                         <td>{{o.redge}}</td>
-                        <td><button onclick='placeBet("{{o.id}}", 1, "{{o.redge}}", "{{o.rLine}}", "{{o.platform}}")'>Place Bet</button></td>
+                        <td><button onclick='placeBet("{{o.id}}", 1, "{{o.ledge}}", "{{o.lLine}}", "{{o.redge}}", "{{o.rLine}}", "{{o.platform}}")'>Place Bet</button></td>
                     {% endif %}
                 </tr>
             {% endfor %}
@@ -76,13 +76,15 @@
             }
             $.ajax({
             url: 'getEstimatedVsActualProfit',
-            data: {},
+            data: {
+                betAmount: 0.10
+            },
+            type: 'get',
             dataType: 'json',
             success: function (data) {
-                console.log(data)
-                d = [['bet', 'theoretical', 'actual']]
+                d = [['bet', 'theoretical', 'actual', 'actualte']]
                 for(i = 0; i < data.actual.length; i++) {
-                    d.push([i, data['actual'][i], data['te'][i]])
+                    d.push([i, data['actual'][i], data['te'][i], data['actualte'][i]])
                 }
                 console.log(d)
                 var data = google.visualization.arrayToDataTable(d);
@@ -98,6 +100,7 @@
                 chart.draw(data, options);
             },
             error: function (error) {
+                console.log(error)
             }
             });
         }
@@ -113,10 +116,10 @@
             data: {},
             dataType: 'json',
             success: function (data) {
-                console.log(data)
                 document.getElementById("numBets").innerHTML=JSON.stringify(data); 
             },
             error: function (error) {
+                console.log(error)
             }
             });
             return d
@@ -127,27 +130,28 @@
             data: {},
             dataType: 'json',
             success: function (data) {
-                console.log('completed')
+                getEstimatedVsActualProfit()
             },
             error: function (error) {
+                console.log(error)
             }
             });
         }
-        function placeBet(id, team, edge, line, site) {
+        function placeBet(id, team, ledge, lline, rline, redge, site) {
             d = {
                 'id':id,
                 'teamSide':team,
-                'line':line,
-                'edge':edge,
+                'lline':lline,
+                'ledge':ledge,
+                'rline':rline,
+                'redge':redge,
                 'site':site
             }
-            console.log(d)
             $.ajax({
             url: 'placeBet',
             data: d,
             dataType: 'json',
             success: function (data) {
-                console.log("placed bet")
                 $("#" + id).remove()
             },
             error: function (error) {
@@ -156,7 +160,6 @@
             });
         }
         function refreshBets() {
-            console.log('refreshing')
             $.ajax({
             url: 'getBets',
             dataType: 'json',
@@ -221,7 +224,6 @@
             },
             error: function (error) {
                 console.log(error)
-
             }
             });
         });

@@ -17,6 +17,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.firefox.options import Options
+from selenium.common.exceptions import TimeoutException
 import psutil
 from datetime import date
 
@@ -137,6 +138,8 @@ def processPlayer(df, page_source, id):
     date = s.select('.time___22qYh_R ')
     if date == []:
         date = s.select('.time___FaD-OOU ')
+    if date == []:
+        date = s.select('.startTime___2oy0czV')
     bDF = pd.read_csv(matchDF_filename)
     print(scores)
     print(lGames)
@@ -155,7 +158,12 @@ def insertSpecific():
     df = pd.read_csv(matchDF_filename)
     print(df.shape)
     df = df[df['lScore'] == '-']
-    df = df[df['datetime'].str.contains(today.strftime("%d/%m/%Y")) == False]
+    df = df[df['datetime'].str.contains(today.strftime("%d.%m.%Y")) == False]
+    df = df[df['datetime'].str.contains('CA') == False]
+    df = df[df['datetime'].str.contains('WO') == False]
+    df = df[df['datetime'].str.contains('AW') == False]
+    print(df.shape)
+
     df = df.sort_values('datetime', ascending=False)
 
     lc = 'abcdefghijklmnopqrstuvwxyz'  
@@ -178,6 +186,10 @@ def insertSpecific():
         try:
             ps, driver = fetchPageSource(url, 
                     driver=driver, executeScript=["window.scrollTo(0, document.body.scrollHeight);"], waitFor=['class', 'detailStatus___2v20X7g'])
+
+        except TimeoutException as e:
+            print("took to much time")
+            quitDriver(driver)
         except:
             quitDriver(driver)
         processPlayer(df, ps, i['id'])

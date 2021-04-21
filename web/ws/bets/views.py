@@ -11,31 +11,63 @@ placedBetsFilePath = './scraper/Bets/placedBets.csv'
 matchDFFP = './csv/static/matchDF.csv'
 
 def getEstimatedVsActualProfit(request):
+    betAmount = float(request.GET.get('betAmount'))
+    print(betAmount)
     def getPayout(line):
         p = 0 
         if line > 0:
             p = line
         else:
             p = 100 + 100/abs(line)
-        return p/100
+        return p/100 * betAmount
 
     df = pd.read_csv(placedBetsFilePath)
-    df = df[df['win'].isnull() == False]
+    df = df[df['wonBet'].isnull() == False]
+    print("***********")
+    df['line'] = 0
+    print(df.head())
+    print(df.shape)
+    print(df.columns)
+    df.loc[df['team'] == 0, ['line']] = df['lline']
+    df.loc[df['team'] == 0, ['edge']] = df['ledge']
+    df.loc[df['team'] == 1, ['line']] = df['rline']
+    df.loc[df['team'] == 1, ['edge']] = df['redge']
+    print(df.shape)
+    # df = df.loc[df['team'] == 0, 'line'] = df['lline']
+    # df = df.loc[df['team'] == 0, 'edge'] = df['ledge']
+    # df = df.loc[df['team'] == 1, 'line'] = df['rline']
+    # df = df.loc[df['team'] == 1, 'edge'] = df['redge']
+    # df = df.loc[df['team'] == 1, ['line', 'edge']] = df[['rline', 'redge']]
+    print("***************")
+
+    df['tepayout'] = df['line'].apply(getPayout)
+    df['tepayout'] = df['tepayout'] * 100
+    df['tepayout'] = df['tepayout'].apply(np.floor)
+    df['tepayout'] = df['tepayout']/100
+    print(df)
 
     df['payout'] = df['line'].apply(getPayout)
-    df['payout'] = df['win'] * df['payout']
-    df.loc[df['payout'] == 0, 'payout'] = -1
-    print(df['payout'])
+
+    df['tepayout'] = df['wonBet'] * df['tepayout']
+    df['payout'] = df['wonBet'] * df['payout']
+    df.loc[df['tepayout'] == 0, 'tepayout'] = -betAmount
+    df.loc[df['payout'] == 0, 'payout'] = -betAmount
+
+    df['actualte']= df['tepayout'].cumsum()
     df['actual']= df['payout'].cumsum()
 
-    te = df['edge'].cumsum().tolist()
+    df['edge'] = df['edge'] * betAmount
     df['te']= df['edge'].cumsum()
+    actualte = df['actualte'].values.tolist()
     actual = df['actual'].values.tolist()
     te = df['te'].values.tolist()
+    print(df[['te', 'actual', 'actualte']])
     te = {
+        'actualte':actualte,
         'actual':actual,
         'te':te,
     }
+    print(te)
     return JsonResponse(te)
 
 
@@ -43,8 +75,9 @@ def updateModelPerformance(request):
 
     df = pd.read_csv(placedBetsFilePath)
     mdf = pd.read_csv(matchDFFP)
-    missingWinDF = df[df['win'].isnull()]
-    print(missingWinDF.id)
+    missingWinDF = df
+    # side = 1
+    # missingWinDF = df[df['win'].isnull()]
     for (index, i) in missingWinDF.iterrows():
         k = mdf[mdf['id'] == i['id']]
         if k['lScore'].values != '-' and k['rScore'].values != '-':
@@ -52,15 +85,19 @@ def updateModelPerformance(request):
             rScore = int(k['rScore'].values[0])
             if int(lScore) >= 3 or int(rScore) >= 3:
                 if lScore > rScore:
-                    if i['team'] == 0:
-                        df.loc[df['id'] == i['id'], 'win'] = 1
-                    else:
-                        df.loc[df['id'] == i['id'], 'win'] = 0
-                if lScore < rScore:
-                    if i['team'] == 1:
-                        df.loc[df['id'] == i['id'], 'win'] = 0
-                    else:
-                        df.loc[df['id'] == i['id'], 'win'] = 1
+                    # if i['team'] == side:
+                    df.loc[df['id'] == i['id'], 'sideWin'] = 0
+                    # else:
+                    #     df.loc[df['id'] == i['id'], 'win'] = 0
+                else:
+                    df.loc[df['id'] == i['id'], 'sideWin'] = 1
+            df['wonBet'] = df['sideWin'] == df['team']
+
+                # if lScore < rScore:
+                #     if i['team'] == side:
+                #         df.loc[df['id'] == i['id'], 'win'] = 0
+                #     else:
+                #         df.loc[df['id'] == i['id'], 'win'] = 1
     df = df.to_csv(placedBetsFilePath, index=False)
     return JsonResponse({})
 
@@ -68,10 +105,10 @@ def getPlacedBets(request):
     df = pd.read_csv(placedBetsFilePath)
     def _getStats(df):
         numBets = len(df)
-        betsPending = len(df[df['win'].isnull()])
-        betsCompleted = len(df[df['win'].isnull() == False])
-        betsWon = len(df[df['win'] == 1])
-        completedBetsWins = df[df['win'].isnull() == False]['win'].cumsum().tolist()
+        betsPending = len(df[df['wonBet'].isnull()])
+        betsCompleted = len(df[df['wonBet'].isnull() == False])
+        betsWon = len(df[df['wonBet'] == 1])
+        completedBetsWins = df[df['wonBet'].isnull() == False]['wonBet'].cumsum().tolist()
         k = []
         ix = 1
         for i in completedBetsWins:
@@ -178,14 +215,16 @@ def placeBet(request):
     from datetime import datetime
     now = datetime.now() 
     id = request.GET.get('id')
-    line = request.GET.get('line')
-    edge = request.GET.get('edge')
+    lline = request.GET.get('lline')
+    ledge = request.GET.get('ledge')
+    rline = request.GET.get('rline')
+    redge = request.GET.get('redge')
     site = request.GET.get('site')
     team = request.GET.get('teamSide')
     print(request.GET)
     placedBetsFilePath = './scraper/Bets/placedBets.csv'
     df = pd.read_csv(placedBetsFilePath)
-    k = pd.DataFrame([[now, id, team, line, edge, site]], columns=['time', 'id', 'team', 'line', 'edge', 'site'])
+    k = pd.DataFrame([[now, id, team, lline, ledge, rline, redge, site]], columns=['time', 'id', 'team', 'lline', 'ledge', 'redge', 'rline', 'site'])
     df = df.append(k)
     df.to_csv(placedBetsFilePath, index=False)
     return JsonResponse({})

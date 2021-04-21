@@ -98,8 +98,8 @@ def fetchPageSource(url, **kwargs):
                 driver.execute_script(i)
         page_source = driver.page_source
         time.sleep(1)
-    except TimeoutException:
-        print("took too much time")
+    except TimeoutException as e:
+        raise e
     except:
         print("error in fetchPageSource")
         pass
