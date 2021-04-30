@@ -9,42 +9,31 @@ import numpy as np
 
 placedBetsFilePath = './scraper/Bets/placedBets.csv'
 matchDFFP = './csv/static/matchDF.csv'
+betAmount = 0.1
+
+def getPayout(line):
+    p = 0 
+    if line > 0:
+        p = betAmount * (line/100)
+    else:
+        p = betAmount / (abs(line)/100)
+    return p
 
 def getEstimatedVsActualProfit(request):
     betAmount = float(request.GET.get('betAmount'))
-    print(betAmount)
-    def getPayout(line):
-        p = 0 
-        if line > 0:
-            p = line
-        else:
-            p = 100 + 100/abs(line)
-        return p/100 * betAmount
 
     df = pd.read_csv(placedBetsFilePath)
-    df = df[df['wonBet'].isnull() == False]
-    print("***********")
+    df = df[df['sideWin'].isnull() == False].copy()
     df['line'] = 0
-    print(df.head())
-    print(df.shape)
-    print(df.columns)
     df.loc[df['team'] == 0, ['line']] = df['lline']
     df.loc[df['team'] == 0, ['edge']] = df['ledge']
     df.loc[df['team'] == 1, ['line']] = df['rline']
     df.loc[df['team'] == 1, ['edge']] = df['redge']
-    print(df.shape)
-    # df = df.loc[df['team'] == 0, 'line'] = df['lline']
-    # df = df.loc[df['team'] == 0, 'edge'] = df['ledge']
-    # df = df.loc[df['team'] == 1, 'line'] = df['rline']
-    # df = df.loc[df['team'] == 1, 'edge'] = df['redge']
-    # df = df.loc[df['team'] == 1, ['line', 'edge']] = df[['rline', 'redge']]
-    print("***************")
 
     df['tepayout'] = df['line'].apply(getPayout)
     df['tepayout'] = df['tepayout'] * 100
     df['tepayout'] = df['tepayout'].apply(np.floor)
     df['tepayout'] = df['tepayout']/100
-    print(df)
 
     df['payout'] = df['line'].apply(getPayout)
 
@@ -61,13 +50,19 @@ def getEstimatedVsActualProfit(request):
     actualte = df['actualte'].values.tolist()
     actual = df['actual'].values.tolist()
     te = df['te'].values.tolist()
-    print(df[['te', 'actual', 'actualte']])
+    id = df['id'].values.tolist()
+    line = df['line'].values.tolist()
+    tepayout = df['tepayout'].values.tolist()
+    payout = df['payout'].values.tolist()
     te = {
+        'id':id,
         'actualte':actualte,
         'actual':actual,
         'te':te,
+        'payout':payout,
+        'line':line,
+        'tepayout':tepayout,
     }
-    print(te)
     return JsonResponse(te)
 
 
@@ -75,9 +70,8 @@ def updateModelPerformance(request):
 
     df = pd.read_csv(placedBetsFilePath)
     mdf = pd.read_csv(matchDFFP)
+
     missingWinDF = df
-    # side = 1
-    # missingWinDF = df[df['win'].isnull()]
     for (index, i) in missingWinDF.iterrows():
         k = mdf[mdf['id'] == i['id']]
         if k['lScore'].values != '-' and k['rScore'].values != '-':
@@ -85,30 +79,29 @@ def updateModelPerformance(request):
             rScore = int(k['rScore'].values[0])
             if int(lScore) >= 3 or int(rScore) >= 3:
                 if lScore > rScore:
-                    # if i['team'] == side:
                     df.loc[df['id'] == i['id'], 'sideWin'] = 0
-                    # else:
-                    #     df.loc[df['id'] == i['id'], 'win'] = 0
                 else:
                     df.loc[df['id'] == i['id'], 'sideWin'] = 1
             df['wonBet'] = df['sideWin'] == df['team']
-
-                # if lScore < rScore:
-                #     if i['team'] == side:
-                #         df.loc[df['id'] == i['id'], 'win'] = 0
-                #     else:
-                #         df.loc[df['id'] == i['id'], 'win'] = 1
     df = df.to_csv(placedBetsFilePath, index=False)
     return JsonResponse({})
 
 def getPlacedBets(request):
     df = pd.read_csv(placedBetsFilePath)
+
     def _getStats(df):
         numBets = len(df)
-        betsPending = len(df[df['wonBet'].isnull()])
-        betsCompleted = len(df[df['wonBet'].isnull() == False])
+        colNull = 'sideWin'
+        betsPending = len(df[df[colNull].isnull()])
+        betsCompleted = len(df[df[colNull].isnull() == False])
         betsWon = len(df[df['wonBet'] == 1])
-        completedBetsWins = df[df['wonBet'].isnull() == False]['wonBet'].cumsum().tolist()
+        completedBetsWins = df[df[colNull].isnull() == False]['wonBet'].cumsum().tolist()
+        aw = df[(df[colNull].isnull() == False) & (df['wonBet'] == True)]
+        aw.loc[aw['team'] == 0, ['line']] = df['lline']
+        aw.loc[aw['team'] == 0, ['edge']] = df['ledge']
+        aw.loc[aw['team'] == 1, ['line']] = df['rline']
+        aw.loc[aw['team'] == 1, ['edge']] = df['redge']
+        aw = aw['line'].apply(getPayout).mean()
         k = []
         ix = 1
         for i in completedBetsWins:
@@ -121,6 +114,8 @@ def getPlacedBets(request):
             'betsWon': betsWon,
             'betsCompleted': betsCompleted,
             'percentWin': betsWon/betsCompleted,
+            'averageWin': aw,
+            'betAmount': 0.1
         }
 
     p = _getStats(df)
@@ -156,15 +151,39 @@ def getBets():
                     jsonArray.append(row)
     return jsonArray
 
+def getPending():
+    csvFilePath = './scraper/Bets/placedBets.csv'
+    jsonArray = []
+    with open(csvFilePath, encoding='utf-8') as csvf: 
+        #load csv file data using csv library's dictionary reader
+        csvReader = csv.DictReader(csvf) 
+
+        #convert each csv row into python dict
+        for row in csvReader: 
+            #add this python dict to json array
+            if row['sideWin'] == '':
+                jsonArray.append(row)
+    return jsonArray
+
+def removePlaced(request):
+    id = request.GET.get('id')
+    csvFilePath = './scraper/Bets/placedBets.csv'
+    df = pd.read_csv(csvFilePath)
+    df = df.loc[df['id'] != id]
+    df = df.to_csv(csvFilePath, index=False)
+    return JsonResponse({})
+
 def index(request):
     with open('./websiteInfo.json') as f:
         websiteInfo = json.load(f)
 
     jsonArray = getBets()
+    pending = getPending()
 
     context = {
         'bets': jsonArray,
-        'websiteInfo': websiteInfo
+        'websiteInfo': websiteInfo,
+        'pending': pending
     }
     return render(request, 'bets/index.html', context)
 
@@ -185,8 +204,10 @@ def calculateBets(request):
 def scrapeEntire(request):
     sys.path.insert(1, './scraper')
     from scrapeSpecific import insertSpecific
+    from scrapeSpecific import scrapeSpecificForever
     fixtures = request.GET.get('fixtures') == 'true'
     results = request.GET.get('results') == 'true'
+    # scrapeSpecificForever()
     insertSpecific(fixtures, results)
     data = {
     }

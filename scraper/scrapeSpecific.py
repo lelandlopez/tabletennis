@@ -78,3 +78,26 @@ def insertSpecific(results, fixtures, url = ""):
         json.dump(websiteInfo, json_file)
     scraperHelper.quitDriver(driver)
     
+def scrapeSpecificForever(dResults = 300, dFixtures = 3600):
+
+    sys.path.insert(1, './scraper/Bets')
+    jsonArray = []
+    from scrapeBets import scrapeBets
+    tStartResults = time.time()
+    tStartFixtures = time.time()
+    print('scraping')
+    insertSpecific(True, True)
+    print('finished')
+    while(True):
+        if time.time() - tStartResults > dResults:
+            insertSpecific(True, False)
+            tStartResults = time.time()
+            scrapeBets()
+        if time.time() - tStartFixtures > dFixtures:
+            insertSpecific(False, True)
+            tStartFixtures = time.time()
+            scrapeBets()
+
+
+
+

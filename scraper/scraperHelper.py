@@ -40,8 +40,8 @@ def quitDriver(driver):
     try:
         ffpid = int(driver.service.process.pid)
         os.kill(ffpid, signal.SIGTERM)
-        killPROC("geckodriver")
-        killPROC("firefox")
+        # killPROC("geckodriver")
+        # killPROC("firefox")
     except:
         print('error in quit Driver')
 

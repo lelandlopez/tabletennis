@@ -51,10 +51,12 @@ def scrapeBets():
             k.append(p)
         return k
 
+    cols = ['time', 'lTeam', 'rTeam', 'lLine', 'rLine', 'link']
+
     def processBetOnline(driver):
         url = 'https://beta.betonline.ag/sportsbook/table-tennis/todaygames'
+        base = 'https://beta.betonline.ag'
         page_source = fetchPS(url, test, driver)
-        print(page_source)
 
         text_file = open("./temp/betonline.txt", "w")
         text_file.write(page_source)
@@ -66,7 +68,6 @@ def scrapeBets():
                 return (side[: end] + ' ' + side[end + 2: end + 3] + '.').strip()
             return [formatSide(teams[0].text), formatSide(teams[1].text)]
         s = BeautifulSoup(str(page_source), 'html.parser')
-        cols = ['time', 'lTeam', 'rTeam', 'lLine', 'rLine']
         df = pd.DataFrame([], columns=cols)
         search_regex = '.offering-today-games__table-row'
         time_regex = '.offering-today-games__link'
@@ -76,13 +77,15 @@ def scrapeBets():
             lines = match.select('.lines-row__money')
             time = match.select(time_regex)
             teams = formatTeamNames(teams)
-            k = pd.DataFrame([[time[0].text, teams[0], teams[1], lines[0].text.strip('()'), lines[1].text.strip('()')]], columns=cols)
+            link = base + time[0].get('href')
+            k = pd.DataFrame([[time[0].text, teams[0], teams[1], lines[0].text.strip('()'), lines[1].text.strip('()'), link]], columns=cols)
             df = df.append(k)
         df['platform'] = url
         return df.reset_index(0, drop=True)
 
     def processBovada(driver):
         url = 'https://www.bovada.lv/sports/table-tennis' 
+        base = 'https://www.bovada.lv'
         page_source = fetchPS(url, test, driver, waitFor=['class', 'grouped-events'])
         text_file = open("./temp/bovada_ps.txt", "w")
         text_file.write(page_source)
@@ -111,7 +114,6 @@ def scrapeBets():
             e = text.find(' ', 2)
             return text[e + 1:]
         s = BeautifulSoup(str(page_source), 'html.parser')
-        cols = ['time', 'lTeam', 'rTeam', 'lLine', 'rLine']
         df = pd.DataFrame([], columns=cols)
         search_regex = '.coupon-content.more-info'
         time_regex = '.period'
@@ -122,12 +124,15 @@ def scrapeBets():
         matches = s.select(search_regex)
         for (index, match) in enumerate(matches):
             teams = match.select('.competitor-name')
+            link = match.select('.game-view-cta')
+            link = link[0].find_all('a', href=True)[0].get('href')
+            link = base + link
             lines = match.select('.bet-price')
             time = match.select(time_regex)
             lines = formatLines(lines)
             teams = formatTeamNames(teams)
             time = formatTime(time)
-            k = pd.DataFrame([[time, teams[0], teams[1], lines[0].strip('()'), lines[1].strip('()')]], columns=cols)
+            k = pd.DataFrame([[time, teams[0], teams[1], lines[0].strip('()'), lines[1].strip('()'), link]], columns=cols)
             df = df.append(k)
         df['platform'] = url
         return df.reset_index(0, drop=True)
@@ -260,7 +265,7 @@ def scrapeBets():
     formatted = filterOnlyNew(formatted, gamesPlaying, 'datetime')
     formatted = formatted.sort_values('datetime')
 
-    cols = ['datetime', 'id', 'lTeam', 'rTeam', 'Player_left', 'Player_right', 'lWinPred', 'rWinPred', 'lOdds', 'rOdds', 'lLine', 'rLine', 'ledge', 'redge', 'platform']
+    cols = ['datetime', 'id', 'lTeam', 'rTeam', 'Player_left', 'Player_right', 'lWinPred', 'rWinPred', 'lOdds', 'rOdds', 'lLine', 'rLine', 'ledge', 'redge', 'platform', 'link']
     formatted[cols].to_csv('./predictions.csv')
     print("done")
 

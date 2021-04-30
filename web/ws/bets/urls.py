@@ -11,5 +11,6 @@ urlpatterns = [
     path('getBets', views.getBetsResponse, name='getBets'),
     path('getPlacedBets', views.getPlacedBets, name='getPlacedBets'),
     path('updateModelPerformance', views.updateModelPerformance, name='updateModelPerformance'),
-    path('getEstimatedVsActualProfit', views.getEstimatedVsActualProfit, name='getEstimatedVsActualProfit')
+    path('getEstimatedVsActualProfit', views.getEstimatedVsActualProfit, name='getEstimatedVsActualProfit'),
+    path('removePlaced', views.removePlaced, name='removePlaced')
 ]
