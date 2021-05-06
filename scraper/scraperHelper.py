@@ -29,9 +29,9 @@ def killPROC(str):
         if proc.name() == PROCNAME:
             proc.kill()
 
-def createDriver():
+def createDriver(headless = True):
     options = Options()
-    options.headless = True
+    options.headless = headless
     driver = webdriver.Firefox(options=options)
     return driver
 

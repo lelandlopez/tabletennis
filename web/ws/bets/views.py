@@ -5,7 +5,14 @@ import sys
 import json
 import pandas as pd
 import numpy as np
-    
+
+from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.firefox.options import Options
+
 
 placedBetsFilePath = './scraper/Bets/placedBets.csv'
 matchDFFP = './csv/static/matchDF.csv'
@@ -18,6 +25,20 @@ def getPayout(line):
     else:
         p = betAmount / (abs(line)/100)
     return p
+
+
+def openBrowser(request):
+    options = Options()
+    options.headless = False
+    driver = webdriver.Firefox(options=options)
+    driver.get("https://www.bovada.lv/")
+    driver.find_element_by_xpath("/html/body/bx-site/ng-component/bx-header-ch/div/nav/aside[2]/bx-header-unlogged-actions/div/a[3]").click()
+    # email = driver.find_element_by_xpath("/html/body/bx-site/bx-overlay-ch/bx-overlay/div/div/bx-login-overlay/bx-overlay-container/div/bx-overlay-body/section/bx-login-placeholder/bx-login/div/bx-form/form/bx-form-group/div/bx-input-field-container[1]/div/input")
+    WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/bx-site/bx-overlay-ch/bx-overlay/div/div/bx-login-overlay/bx-overlay-container/div/bx-overlay-body/section/bx-login-placeholder/bx-login/div/bx-form/form/bx-form-group/div/bx-input-field-container[1]/div/input"))).send_keys("lelandlopez@gmail.com")
+    WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/bx-site/bx-overlay-ch/bx-overlay/div/div/bx-login-overlay/bx-overlay-container/div/bx-overlay-body/section/bx-login-placeholder/bx-login/div/bx-form/form/bx-form-group/div/bx-input-field-container[2]/div/input"))).send_keys("Waiakea2009!")
+    WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/bx-site/bx-overlay-ch/bx-overlay/div/div/bx-login-overlay/bx-overlay-container/div/bx-overlay-body/section/bx-login-placeholder/bx-login/div/bx-form/form/div[2]/button"))).click()
+
+    return JsonResponse({})
 
 def getEstimatedVsActualProfit(request):
     betAmount = float(request.GET.get('betAmount'))
